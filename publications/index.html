@@ -22,103 +22,77 @@
     EXTERNAL PUBLICATIONS — how to handle them:
     - Set "url" to the original article URL on the external site
     - Set "publisher" name + url to the external publication
-    - Keep "author" as { "@id": "https://barrettahern.com/#person" }
-    This is exactly what Google expects. The schema tells crawlers
-    "Barrett wrote this; it lives on [other site]" — fully supported.
-
-    SELF-PUBLISHED ARTICLES (on barrettahern.com):
-    - Set "url" to the barrettahern.com article URL
-    - Set "publisher" name: "Barrett Ahern", url: "https://barrettahern.com"
-
-    TO ADD A NEW PUBLICATION:
-    1. Add an Article block to the @graph array below
-    2. Add a matching <article class="pub-item"> in the HTML below
-  -->
-  <script type="application/ld+json">
-  {
+    - Keep "author" as {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://barrettahern.com" },
-          { "@type": "ListItem", "position": 2, "name": "Publications", "item": "https://barrettahern.com/publications.html" }
+          { "@type": "ListItem", "position": 2, "name": "Publications", "item": "https://barrettahern.com/publications" }
         ]
       },
       {
         "@type": "CollectionPage",
-        "@id": "https://barrettahern.com/publications.html",
+        "@id": "https://barrettahern.com/publications",
         "name": "Publications by Barrett Ahern",
         "description": "Articles and writing by Barrett Ahern on eCommerce strategy, Shopify Plus, and international growth.",
-        "url": "https://barrettahern.com/publications.html",
+        "url": "https://barrettahern.com/publications",
         "author": { "@id": "https://barrettahern.com/#person" }
       },
       {
         "@type": "Article",
-        "headline": "Shopify Markets: A Comprehensive Guide",
-        "url": "https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores",
-        "datePublished": "2025-10-01",
+        "headline": "SEO in an AI-First Search Landscape: What eCommerce Brands Need to Reassess",
+        "url": "https://vervaunt.com/seo-in-an-ai-first-search-landscape",
+        "datePublished": "2026-03-25",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Vervaunt",
-          "url": "https://vervaunt.com"
-        },
-        "description": "A comprehensive guide comparing Shopify Markets vs expansion stores for international growth.",
-        "keywords": ["Shopify Markets", "eCommerce internationalisation", "Shopify Plus", "expansion stores"]
-      },
-      {
-        "@type": "Article",
-        "headline": "Navigating eCommerce Trade Turbulence in 2025",
-        "url": "https://www.dash.app/blog/ecommerce-tarrifs",
-        "datePublished": "2025-06-27",
-        "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Barrett Ahern",
-          "url": "https://barrettahern.com"
-        },
-        "description": "How eCommerce brands can navigate global trade disruption, tariffs, and supply chain uncertainty."
+        "publisher": { "@type": "Organization", "name": "Vervaunt", "url": "https://vervaunt.com" },
+        "description": "The essential shift from tracking clicks to managing brand presence across AI surfaces."
       },
       {
         "@type": "Article",
         "headline": "The State of Ecommerce 2025",
         "url": "https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/",
-        "datePublished": "2026-02-01",
+        "datePublished": "2025-11-06",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Quickfire Digital",
-          "url": "https://barrettahern.com"
-        },
-        "description": "An overview of the current state of eCommerce, key trends, and what brands need to prioritise."
+        "publisher": { "@type": "Organization", "name": "Quickfire Digital", "url": "https://www.quickfiredigital.com" },
+        "description": "Why ethics is retail's oldest, newest frontier and how brands can build frameworks around fairness, transparency, and privacy."
       },
       {
         "@type": "Article",
-        "headline": "Future of eCommerce and AI",
-        "url": "https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai",
-        "datePublished": "2025-05-01",
+        "headline": "Shopify Store Consolidation Guide & When to Use Markets vs. Expansion Stores",
+        "url": "https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores",
+        "datePublished": "2025-10-15",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Barrett Ahern",
-          "url": "https://barrettahern.com"
-        },
-        "description": "How AI is changing eCommerce — from machine learning to generative AI, LLMs, and agentic automation."
-      }
-,
+        "publisher": { "@type": "Organization", "name": "Vervaunt", "url": "https://vervaunt.com" },
+        "description": "When to deploy Shopify Markets vs independent expansion stores for international growth."
+      },
       {
         "@type": "Article",
-        "headline": "SEO in an AI-First Search Landscape: What eCommerce Brands Need to Reassess",
-        "url": "https://vervaunt.com/seo-in-an-ai-first-search-landscape",
-        "datePublished": "2026-03-01",
+        "headline": "How eCommerce Brands are Navigating 2025's Trade Turbulence",
+        "url": "https://www.dash.app/blog/ecommerce-tarrifs",
+        "datePublished": "2025-06-27",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Vervaunt",
-          "url": "https://vervaunt.com"
-        },
-        "description": "Over the past 18 months, the platforms where product discovery happens have expanded significantly. Google remains central, but ChatGPT, Perplexity, Gemini, and other AI-powered interfaces now handle a meaningful share of product research and purchase consideration."
+        "publisher": { "@type": "Organization", "name": "Dash", "url": "https://www.dash.app" },
+        "description": "Strategic insights on navigating US tariff volatility and supply chain disruptions."
+      },
+      {
+        "@type": "Article",
+        "headline": "The Future of Commerce and The State of AI",
+        "url": "https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai",
+        "datePublished": "2025-05-15",
+        "author": { "@id": "https://barrettahern.com/#person" },
+        "publisher": { "@type": "Organization", "name": "Vervaunt", "url": "https://vervaunt.com" },
+        "description": "How Agentic AI and the Model Context Protocol are moving retail from hype to high-performance architecture."
+      },
+      {
+        "@type": "Article",
+        "headline": "Creating The Perfect E-Commerce Tech Stack",
+        "url": "https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack",
+        "datePublished": "2024-05-15",
+        "author": { "@id": "https://barrettahern.com/#person" },
+        "publisher": { "@type": "Organization", "name": "WeMakeWebsites", "url": "https://www.wemakewebsites.com" },
+        "description": "Factors to consider when selecting technology partners for your e-commerce store."
       }
     ]
   }
@@ -174,96 +148,7 @@
 
       <div class="publications-list">
 
-        <!-- ── Publication ───────────────────────────────── -->
-        <article class="pub-item">
-          <div class="pub-item__content">
-            <h2 class="pub-item__title">
-              <a href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener">
-                Shopify Markets: A Comprehensive Guide
-              </a>
-            </h2>
-            <time class="pub-item__date" datetime="2025-10-01">Oct 2025</time>
-            <p class="pub-item__desc">
-              A deep-dive into Shopify Markets vs expansion stores — when to use each, how to structure your international setup, and what the migration path looks like for complex multi-market retailers.
-            </p>
-            <a class="pub-item__link" href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener">Read article →</a>
-          </div>
-          <img
-            class="pub-item__image"
-            src="/images/shopify-store-consolidation.png"
-            alt="Shopify Markets: A Comprehensive Guide"
-            loading="lazy"
-          >
-        </article>
-
-        <!-- ── Publication ───────────────────────────────── -->
-        <article class="pub-item">
-          <div class="pub-item__content">
-            <h2 class="pub-item__title">
-              <a href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">
-                Navigating eCommerce Trade Turbulence in 2025
-              </a>
-            </h2>
-            <time class="pub-item__date" datetime="2025-06-27">Jun 2025</time>
-            <p class="pub-item__desc">
-              How brands should respond to rising tariffs, supply chain disruption, and economic uncertainty — with practical strategies for maintaining growth and margin.
-            </p>
-            <a class="pub-item__link" href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">Read article →</a>
-          </div>
-          <img
-            class="pub-item__image"
-            src="/images/navigating-ecommerce-2025.png"
-            alt="Navigating eCommerce Trade Turbulence in 2025"
-            loading="lazy"
-          >
-        </article>
-
-        <!-- ── Publication ───────────────────────────────── -->
-        <article class="pub-item">
-          <div class="pub-item__content">
-            <h2 class="pub-item__title">
-              <a href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">
-                The State of Ecommerce 2025
-              </a>
-            </h2>
-            <time class="pub-item__date" datetime="2026-02-01">Feb 2026</time>
-            <p class="pub-item__desc">
-              An overview of where eCommerce stands heading into 2025 — platform trends, AI adoption, the changing search landscape, and what forward-thinking brands are prioritising.
-            </p>
-            <a class="pub-item__link" href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">Read article →</a>
-          </div>
-          <img
-            class="pub-item__image"
-            src="/images/quickfire-state-of-ecommerce.png"
-            alt="The State of Ecommerce 2025"
-            loading="lazy"
-          >
-        </article>
-
-        <!-- ── Publication ───────────────────────────────── -->
-        <article class="pub-item">
-          <div class="pub-item__content">
-            <h2 class="pub-item__title">
-              <a href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">
-                Future of eCommerce and AI
-              </a>
-            </h2>
-            <time class="pub-item__date" datetime="2025-05-01">May 2025</time>
-            <p class="pub-item__desc">
-              How AI is reshaping eCommerce — from real-time machine learning and generative AI to LLMs, AI Overviews, and the rise of agentic decision-making in retail operations.
-            </p>
-            <a class="pub-item__link" href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">Read article →</a>
-          </div>
-          <img
-            class="pub-item__image"
-            src="/images/ai-2025-novelty-to-necessity.jpeg"
-            alt="Future of eCommerce and AI"
-            loading="lazy"
-          >
-        </article>
-
-        
-        <!-- ── Publication ───────────────────────────────── -->
+        <!-- ── 1. SEO in an AI-First Search Landscape ───── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
@@ -271,18 +156,98 @@
                 SEO in an AI-First Search Landscape: What eCommerce Brands Need to Reassess
               </a>
             </h2>
-            <time class="pub-item__date" datetime="2026-03-01">Mar 2026</time>
+            <time class="pub-item__date" datetime="2026-03-25">Mar 2026</time>
             <p class="pub-item__desc">
-              Over the past 18 months, the platforms where product discovery happens have expanded significantly. Google remains central, but ChatGPT, Perplexity, Gemini, and other AI-powered interfaces now handle a meaningful share of product research and purchase consideration. This article covers what has changed in practical terms, what we are seeing work for brands navigating these shifts, and what warrants reassessment if search, in its evolving forms, is part of how your customers find you.
+              Is your brand ready for the shift from Google to Generative AI? This commentary outlines the essential shift from tracking clicks to managing brand presence across AI surfaces, highlighting why clean, crawlable HTML and off-site citations are the new pillars of search success.
             </p>
             <a class="pub-item__link" href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener">Read article →</a>
           </div>
-          <img
-            class="pub-item__image"
-            src="/images/seo-ai-search-landscape.png"
-            alt="SEO in an AI-First Search Landscape"
-            loading="lazy"
-          >
+          <img class="pub-item__image" src="/images/seo-ai-search-landscape.png" alt="SEO in an AI-First Search Landscape" loading="lazy">
+        </article>
+
+        <!-- ── 2. The State of Ecommerce 2025 ────────────── -->
+        <article class="pub-item">
+          <div class="pub-item__content">
+            <h2 class="pub-item__title">
+              <a href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">
+                The State of Ecommerce 2025
+              </a>
+            </h2>
+            <time class="pub-item__date" datetime="2025-11-06">Nov 2025</time>
+            <p class="pub-item__desc">
+              Responsible AI in Quickfire&#8217;s &#8220;The State of Ecommerce&#8221; report is out now. Find out why ethics is retail&#8217;s oldest, newest frontier and explore how brands can build frameworks around fairness, transparency, and privacy while keeping AI practical and commercially useful.
+            </p>
+            <a class="pub-item__link" href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">Read article →</a>
+          </div>
+          <img class="pub-item__image" src="/images/quickfire-state-of-ecommerce.png" alt="The State of Ecommerce 2025" loading="lazy">
+        </article>
+
+        <!-- ── 3. Shopify Store Consolidation ─────────────── -->
+        <article class="pub-item">
+          <div class="pub-item__content">
+            <h2 class="pub-item__title">
+              <a href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener">
+                Shopify Store Consolidation Guide &amp; When to Use Markets vs. Expansion Stores
+              </a>
+            </h2>
+            <time class="pub-item__date" datetime="2025-10-15">Oct 2025</time>
+            <p class="pub-item__desc">
+              In an era of global expansion and digital consolidation, choosing the right architecture on Shopify Plus is critical for scaling efficiently. This guide outlines exactly when to deploy Shopify Markets vs independent expansion stores.
+            </p>
+            <a class="pub-item__link" href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener">Read article →</a>
+          </div>
+          <img class="pub-item__image" src="/images/shopify-store-consolidation.png" alt="Shopify Store Consolidation Guide" loading="lazy">
+        </article>
+
+        <!-- ── 4. Navigating Trade Turbulence ─────────────── -->
+        <article class="pub-item">
+          <div class="pub-item__content">
+            <h2 class="pub-item__title">
+              <a href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">
+                How eCommerce Brands are Navigating 2025&#8217;s Trade Turbulence
+              </a>
+            </h2>
+            <time class="pub-item__date" datetime="2025-06-27">Jun 2025</time>
+            <p class="pub-item__desc">
+              Barrett Ahern shares strategic insights on navigating US tariff volatility and supply chain disruptions. Actionable advice for brands rethinking their operations and marketing to stay resilient in an uncertain economic landscape.
+            </p>
+            <a class="pub-item__link" href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">Read article →</a>
+          </div>
+          <img class="pub-item__image" src="/images/navigating-ecommerce-2025.png" alt="Navigating eCommerce Trade Turbulence" loading="lazy">
+        </article>
+
+        <!-- ── 5. Future of Commerce and AI ──────────────── -->
+        <article class="pub-item">
+          <div class="pub-item__content">
+            <h2 class="pub-item__title">
+              <a href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">
+                The Future of Commerce and The State of AI
+              </a>
+            </h2>
+            <time class="pub-item__date" datetime="2025-05-15">May 2025</time>
+            <p class="pub-item__desc">
+              How Agentic AI and the Model Context Protocol are moving retail from hype to high-performance architecture. A Pulse eCommerce Summit &#8217;25 recap distilling the essential shifts in LLM visibility and technical strategy that brands must adopt to lead the next era of commerce.
+            </p>
+            <a class="pub-item__link" href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">Read article →</a>
+          </div>
+          <img class="pub-item__image" src="/images/ai-2025-novelty-to-necessity.jpeg" alt="The Future of Commerce and The State of AI" loading="lazy">
+        </article>
+
+        <!-- ── 6. Creating The Perfect E-Commerce Tech Stack ─ -->
+        <article class="pub-item">
+          <div class="pub-item__content">
+            <h2 class="pub-item__title">
+              <a href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">
+                Creating The Perfect E-Commerce Tech Stack
+              </a>
+            </h2>
+            <time class="pub-item__date" datetime="2024-05-15">May 2024</time>
+            <p class="pub-item__desc">
+              With thousands of technology partners available on Shopify, selecting the right ones can be confusing. This article explores the factors to consider when selecting technology partners for your e-commerce store, whether you&#8217;re starting from scratch or updating an existing tech stack.
+            </p>
+            <a class="pub-item__link" href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">Read article →</a>
+          </div>
+          <img class="pub-item__image" src="/images/kldn24-tech-stack.jpeg" alt="Creating The Perfect E-Commerce Tech Stack" loading="lazy">
         </article>
 
         <!--
@@ -291,7 +256,6 @@
           ║  Copy the <article class="pub-item"> block above ║
           ╚══════════════════════════════════════════════════╝
         -->
-
       </div>
     </div>
   </section>
