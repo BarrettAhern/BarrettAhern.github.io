@@ -1304,9 +1304,11 @@ a.logo-wall__item {
     border-color: rgba(255,255,255,0.35);
   }
 
-  /* Logos: invert instead of brightness — dark logos become white on dark bg */
+  /* Logos: brightness(0) collapses all logo pixels to black,
+     invert(1) flips them to white — alpha untouched.
+     Mirrors light-mode brightness(0.4) but in reverse. */
   .logo-wall__logo {
-    filter: grayscale(100%) invert(1);
+    filter: brightness(0) invert(1);
     opacity: 0.65;
   }
 
@@ -1315,28 +1317,28 @@ a.logo-wall__item {
   }
 
   .logos__track img {
-    filter: grayscale(100%) invert(1);
+    filter: brightness(0) invert(1);
     opacity: 0.50;
   }
 
   .logos__track img:hover {
-    filter: grayscale(100%) invert(1);
+    filter: brightness(0) invert(1);
     opacity: 1;
   }
 
   .client-item__logo {
-    filter: grayscale(100%) invert(1);
+    filter: brightness(0) invert(1);
     opacity: 0.70;
   }
 
-  /* clients-wall (clients page grid) — was missing dark mode rule */
+  /* clients-wall (clients page grid) */
   .clients-wall__logo {
-    filter: grayscale(100%) invert(1);
+    filter: brightness(0) invert(1);
     opacity: 0.55;
   }
 
   .clients-wall__item:hover .clients-wall__logo {
-    filter: grayscale(100%) invert(1);
+    filter: brightness(0) invert(1);
     opacity: 1;
   }
 
