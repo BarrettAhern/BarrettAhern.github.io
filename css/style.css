@@ -426,15 +426,25 @@ ul {
   font-weight: 400;
   font-style: italic;
   color: var(--color-ink);
+  text-align: justify;
 }
 
 .testimonial__quote::before {
-  content: '"';
+  content: '\201C';
   font-size: 4rem;
   line-height: 0;
   vertical-align: -1.5rem;
   color: var(--color-rule);
   margin-right: var(--space-2);
+}
+
+.testimonial__quote::after {
+  content: '\201D';
+  font-size: 4rem;
+  line-height: 0;
+  vertical-align: -1.5rem;
+  color: var(--color-rule);
+  margin-left: var(--space-1);
 }
 
 /* About page bio */
@@ -1006,10 +1016,14 @@ a.logo-wall__item {
 }
 
 @media (max-width: 580px) {
-  /* 6-col grid, span 2 each → 3 per row on mobile */
+  /* 6-col grid, span 2 each → 3 per row on mobile; 9 visible = clean 3×3 */
   .logo-wall {
     grid-template-columns: repeat(6, 1fr);
     gap: var(--space-2);
+  }
+
+  .logo-wall__item--hide-mobile {
+    display: none;
   }
 
   .logo-wall__item {
@@ -1340,6 +1354,13 @@ a.logo-wall__item {
   .clients-wall__item:hover .clients-wall__logo {
     filter: brightness(0) invert(1);
     opacity: 1;
+  }
+
+  /* Logos with light backgrounds baked into the file (e.g. Haynes):
+     use invert(1) alone — inverts the bg dark, text becomes white */
+  .logo-wall__logo--light-bg {
+    filter: invert(1);
+    opacity: 0.80;
   }
 
   .skills-list li {
