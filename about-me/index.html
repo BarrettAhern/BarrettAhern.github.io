@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Barrett Ahern</title>
+  <meta name="description" content="Barrett Ahern is an eCommerce consultant with 15+ years of experience, based in London. Specialising in Shopify Plus, replatforming, and international strategy.">
+
+  <!-- Google Fonts: DM Serif Display, DM Sans, DM Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- SCHEMA: ProfilePage + Person (detailed) + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://barrettahern.com" },
+          { "@type": "ListItem", "position": 2, "name": "About Me", "item": "https://barrettahern.com/about.html" }
+        ]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://barrettahern.com/about.html",
+        "name": "About Barrett Ahern",
+        "url": "https://barrettahern.com/about.html",
+        "mainEntity": { "@id": "https://barrettahern.com/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://barrettahern.com/#person",
+        "name": "Barrett Ahern",
+        "givenName": "Barrett",
+        "familyName": "Ahern",
+        "jobTitle": "Technical Ecommerce Consultant",
+        "description": "eCommerce consultant with 15+ years of experience, specialising in enterprise Shopify Plus replatforming, international expansion, and eCommerce strategy for fashion, beauty, and lifestyle brands.",
+        "url": "https://barrettahern.com",
+        "email": "contact@barrettahern.com",
+        "image": "https://barrettahern.com/wp-content/uploads/2025/02/barrett_ahern.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://vervaunt.com",
+          "name": "Vervaunt",
+          "url": "https://vervaunt.com",
+          "description": "Leading eCommerce consultancy and Shopify Plus Platinum Partner."
+        },
+        "alumniOf": [
+          {
+            "@type": "OrganizationRole",
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "BORN",
+              "url": "https://www.borngroup.com"
+            },
+            "roleName": "Senior Product Manager",
+            "startDate": "2024-05",
+            "endDate": "2025-01"
+          },
+          {
+            "@type": "OrganizationRole",
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "We Make Websites",
+              "url": "https://wemakewebsites.com"
+            },
+            "roleName": "Senior Product Owner",
+            "startDate": "2020-12",
+            "endDate": "2024-05"
+          },
+          {
+            "@type": "OrganizationRole",
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "K2 Sports",
+              "url": "https://www.k2sports.com"
+            },
+            "roleName": "eCommerce Delivery Manager",
+            "startDate": "2016-06",
+            "endDate": "2018-09"
+          }
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "Technical Ecommerce Consultant",
+          "occupationalCategory": "eCommerce Consulting",
+          "description": "Enterprise eCommerce consultant specialising in Shopify Plus replatforming, international expansion, and digital strategy for luxury fashion, beauty, and lifestyle brands.",
+          "skills": "Shopify Plus, enterprise eCommerce replatforming, international expansion and localisation, CX and revenue optimisation, tech stack strategy and selection, analytics and data strategy, luxury brand eCommerce, enterprise eCommerce strategy, systems integration and governance"
+        },
+        "knowsAbout": [
+          "eCommerce strategy",
+          "Shopify Plus",
+          "enterprise eCommerce replatforming",
+          "international expansion and localisation",
+          "eCommerce technology stack optimisation",
+          "conversion rate optimisation",
+          "analytics and data strategy",
+          "luxury fashion eCommerce",
+          { "@id": "https://barrettahern.com/#service-ecommerce-strategy" },
+          { "@id": "https://barrettahern.com/#service-replatforming" },
+          { "@id": "https://barrettahern.com/#service-international-expansion" },
+          { "@id": "https://barrettahern.com/#service-cx-revenue" },
+          { "@id": "https://barrettahern.com/#service-tech-stack" },
+          { "@id": "https://barrettahern.com/#service-analytics" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/barrettahern",
+          "https://x.com/barrettahern",
+          "https://www.threads.net/@barrettahern",
+          "https://bsky.app/profile/barrettahern.bsky.social",
+          "https://about.me/barrettahern",
+          "https://www.crunchbase.com/person/barrett-ahern",
+          "https://vervaunt.com/author/barrettahern",
+          "https://www.dash.app/blog/author/barrett-ahern",
+          "https://malakye.com/profile/barrett-ahern-696348",
+          "https://medium.com/@Barrett_Ahern",
+          "https://github.com/BarrettAhern",
+          "https://share.google/n71qHvF4eQh95brOg"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Barrett Ahern</a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/about-me" class="active">About</a></li>
+        <li><a href="/publications">Publications</a></li>
+        <li><a href="/speaking-events">Speaking</a></li>
+        <li><a href="/clients">Clients</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- =====================================================
+       PAGE HEADER
+       ===================================================== -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">Background</p>
+      <h1 class="page-header__title">About Me</h1>
+      <p class="page-header__subtitle">eCommerce consultant. 15+ years. Based in London.</p>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       BIO
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <div class="bio__body">
+        <p>
+          Hi, I'm Barrett 👋
+        </p>
+        <p>
+          I'm an eCommerce consultant with 15+ years in the game, currently based in London
+          and helping brands grow smarter and faster online.
+        </p>
+        <p>
+          I work at <a href="https://vervaunt.com" target="_blank" rel="noopener">Vervaunt</a>,
+          a leading eCommerce consultancy and one of a handful of
+          <a href="https://www.shopify.com/partners/directory/partner/pnrc-limited" target="_blank" rel="noopener">Shopify Plus Platinum Partners</a>
+          worldwide. I focus on enterprise replatforming, international expansion, and eCommerce
+          strategy for some of the most interesting names in fashion, beauty, and lifestyle.
+        </p>
+        <p>
+          Before that, I was a Senior Product Manager at WeMakeWebsites
+          (<a href="https://www.youtube.com/watch?v=1HD4uGlS1SM&list=PLvQF73bM4-5XoGEPnerBbkIef1egtD1x9&t=491s" target="_blank" rel="noopener">recognized by Shopify's Harley Finkelstein as "one of the most successful ecommerce agencies on the planet"</a>)
+          and BORN Group, where I helped high-end brands build beautiful, high-performing online stores.
+        </p>
+        <p>
+          I marry business goals with tech reality. Whether that means leading a complex replatform
+          to Shopify Plus, building a roadmap for international growth, or fine-tuning a tech stack,
+          I'm all about practical strategies that drive real-world results.
+        </p>
+
+        <!-- Skills -->
+        <div class="bio__skills">
+          <h3>A few things I'm good at:</h3>
+          <ul class="skills-list">
+            <li>Replatforming at scale — especially to Shopify Plus</li>
+            <li>Luxury fashion &amp; beauty eCommerce — tailored for brand-led growth</li>
+            <li>Internationalisation &amp; localisation — let's go global</li>
+            <li>Tech stack strategy &amp; optimisation — clean, scalable setups</li>
+            <li>Conversion, performance &amp; SEO — I play nice with both data and devs</li>
+          </ul>
+        </div>
+
+        <p style="margin-top: 2rem;">
+          Originally from Chicago — I've lived in Seattle, Luxembourg, and now London.
+          Yes, I absolutely have food and drink recs for each. Want a
+          <a href="https://www.instagram.com/iswasbrewing/" target="_blank" rel="noopener">Belgian-style Saison in Chicago</a>,
+          <a href="https://g.co/kgs/cSmzeoD" target="_blank" rel="noopener">Seattle's best pizza</a>, or the
+          <a href="https://g.co/kgs/o4AGXNf" target="_blank" rel="noopener">best neighbourhood pub in North London</a>?
+          I've got you.
+        </p>
+
+        <p>
+          I'm also a dad, a lover of slow food, a fan of well-made things (from watches to workwear),
+          and a sucker for a good map.
+        </p>
+
+        <p>
+          If you want to chat about eCommerce or debate the best burger in North London, get in touch.
+        </p>
+
+        <p style="margin-top: 2rem;">
+          📮 <a href="mailto:contact@barrettahern.com">contact@barrettahern.com</a><br>
+          🔗 <a href="https://www.linkedin.com/in/barrettahern/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       CLIENT LOGO MARQUEE (same as homepage)
+       ===================================================== -->
+  <div class="logos">
+    <div class="logos__track-wrapper">
+      <div class="logos__track">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/lvmh-2.svg" alt="LVMH">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/karl-lagerfeld.svg" alt="Karl Lagerfeld">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/80709db4-fe56-4d25-8be7-52a5eedba1a7-1.svg" alt="Toast">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/emmabridgewater.svg" alt="Emma Bridgewater">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/seraphine.svg" alt="Seraphine">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/fa231139-5ef5-41c5-a72e-bae64e77f2dc.svg" alt="Stephen Webster">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/88455075-ea20-44c3-8a6e-e1a122c10c8e.svg" alt="This Works">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/24095419-5ff0-450c-8580-40f99a4cebf4.svg" alt="Pure Electric">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/microscooters.svg" alt="Micro Scooters">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/dbjourney.svg" alt="DB Journey">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/skinnydip-1.svg" alt="Skinnydip">
+        <!-- Duplicate for seamless loop -->
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/lvmh-2.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/karl-lagerfeld.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/80709db4-fe56-4d25-8be7-52a5eedba1a7-1.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/emmabridgewater.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/seraphine.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/fa231139-5ef5-41c5-a72e-bae64e77f2dc.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/88455075-ea20-44c3-8a6e-e1a122c10c8e.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/24095419-5ff0-450c-8580-40f99a4cebf4.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/microscooters.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/dbjourney.svg" alt="" aria-hidden="true">
+        <img src="https://barrettahern.com/wp-content/uploads/2025/04/skinnydip-1.svg" alt="" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div>
+          <h2 class="footer__heading">Get in touch</h2>
+          <a href="mailto:contact@barrettahern.com" class="footer__email">
+            contact@barrettahern.com
+          </a>
+        </div>
+
+        <ul class="footer__links">
+          <li><a href="mailto:contact@barrettahern.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/barrettahern" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.threads.net/@barrettahern" target="_blank" rel="noopener">Threads</a></li>
+          <li><a href="https://bsky.app/profile/barrettahern.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+          <li><a href="https://x.com/barrettahern" target="_blank" rel="noopener">X</a></li>
+        </ul>
+
+      </div>
+
+      <p class="footer__copy">© 2026 Barrett Ahern. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
