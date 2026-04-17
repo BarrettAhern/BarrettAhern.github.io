@@ -294,6 +294,11 @@ ul {
   justify-content: flex-end;
 }
 
+/* Mobile image hidden by default; desktop image always shown */
+.hero__image--mobile {
+  display: none;
+}
+
 .hero__image img {
   width: 340px;
   height: 340px;
@@ -1103,9 +1108,15 @@ a.logo-wall__item {
     grid-template-columns: 1fr;
   }
 
-  .hero__image {
-    order: -1;
+  /* Hide the desktop right-column image; show the inline mobile one */
+  .hero__image--desktop {
+    display: none;
+  }
+
+  .hero__image--mobile {
+    display: flex;
     justify-content: center;
+    margin: var(--space-6) 0;
   }
 
   .hero__image img {
