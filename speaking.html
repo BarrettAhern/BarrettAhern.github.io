@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speaking Events | Barrett Ahern</title>
+  <meta name="description" content="Barrett Ahern speaking events — panels, keynotes, and roundtables on eCommerce strategy, Shopify Plus, AI, and international growth.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--
+    SCHEMA: CollectionPage + ItemList of Events
+    ============================================
+    Event schema is one of the best-supported rich result types in Google.
+    Events can appear in Google's Events search results and are frequently
+    cited by LLMs when surfacing speakers by topic.
+
+    Each Event has:
+    - "performer" referencing Barrett's Person @id
+    - "startDate" in ISO 8601 format (YYYY-MM-DD)
+    - "location" with addressLocality + addressCountry
+    - "organizer" with the event org's name and url
+
+    TO ADD A NEW EVENT:
+    1. Add an Event block to the @graph array below
+    2. Add a matching <article class="event-item"> in the HTML below
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://barrettahern.com" },
+          { "@type": "ListItem", "position": 2, "name": "Speaking","item": "https://barrettahern.com/speaking.html" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://barrettahern.com/speaking.html",
+        "name": "Speaking Events — Barrett Ahern",
+        "description": "Panels, keynotes, and roundtables on eCommerce strategy, Shopify Plus, AI, and international growth.",
+        "url": "https://barrettahern.com/speaking.html",
+        "about": { "@id": "https://barrettahern.com/#person" }
+      },
+      {
+        "@type": "Event",
+        "name": "Pulse Breakfast: Planning & Roadmapping for 2026",
+        "startDate": "2025-10-30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "Vervaunt Pulse", "url": "https://pulse.vervaunt.com" },
+        "url": "https://luma.com/ktj1zx00",
+        "description": "Premium breakfast event covering must-have roadmap items for 2026 — strategies for planning and roadmapping for eCommerce brands."
+      },
+      {
+        "@type": "Event",
+        "name": "Gorgias In Conversation Tour London",
+        "startDate": "2025-09-30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "Gorgias", "url": "https://www.gorgias.com" },
+        "url": "https://events.gorgias.com/inconversationtourlondon/vervaunt",
+        "description": "CX and eCommerce leaders panel on automation, human+AI blending, and ROI strategies ahead of BFCM."
+      },
+      {
+        "@type": "Event",
+        "name": "Pulse eCommerce Summit 2025: The Future of eCommerce & The State of AI",
+        "startDate": "2025-04-10",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "Vervaunt Pulse", "url": "https://pulse.vervaunt.com" },
+        "url": "https://pulse.vervaunt.com/summit/",
+        "description": "Keynote presentation on machine learning, generative AI adoption, LLMs and AI Overviews, and agentic AI in eCommerce."
+      },
+      {
+        "@type": "Event",
+        "name": "Pulse Roundtable: Internationalisation & Localisation",
+        "startDate": "2025-04-09",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "Vervaunt Pulse", "url": "https://pulse.vervaunt.com" },
+        "url": "https://pulse.vervaunt.com/summit/",
+        "description": "Invite-only roundtable on cross-border eCommerce challenges: market nuances, regulatory compliance, Brexit, and global tariffs."
+      },
+      {
+        "@type": "Event",
+        "name": "Pulse Breakfast: Internationalisation & New Markets",
+        "startDate": "2025-03-12",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "Vervaunt Pulse", "url": "https://pulse.vervaunt.com" },
+        "url": "https://pulse.vervaunt.com/pulse-breakfast-internationalisation-new-markets",
+        "description": "Premium breakfast event exploring strategies for internationalisation and expanding into new markets."
+      },
+      {
+        "@type": "Event",
+        "name": "K:LDN 2024 — Building Your eCommerce Tech Stack",
+        "startDate": "2024-04-30",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "Klaviyo", "url": "https://www.klaviyo.com" },
+        "url": "https://events.klaviyo.com/kldn2024/agenda",
+        "description": "Session on choosing the perfect eCommerce tech stack at Klaviyo's London flagship event."
+      },
+      {
+        "@type": "Event",
+        "name": "Ecommerce Expo 2023 — Live UX Audits",
+        "startDate": "2023-09-27",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "London ExCeL",
+          "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" }
+        },
+        "performer": { "@id": "https://barrettahern.com/#person" },
+        "organizer": { "@type": "Organization", "name": "eCommerce Expo", "url": "https://www.ecommerceexpo.co.uk" },
+        "url": "https://www.ecommerceexpo.co.uk/",
+        "description": "Live UX audits at the WeMakeWebsites / Shopify booth at eCommerce Expo 2023."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">Barrett Ahern</a>
+
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="speaking.html" class="active">Speaking</a></li>
+        <li><a href="clients.html">Clients</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- =====================================================
+       PAGE HEADER
+       ===================================================== -->
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">On stage</p>
+      <h1 class="page-header__title">Speaking Events</h1>
+      <p class="page-header__subtitle">Panels, keynotes, and roundtables on eCommerce, AI, and international growth.</p>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       SPEAKING LIST
+
+       HOW TO ADD A NEW EVENT:
+       1. Copy one <article class="event-item"> block below
+       2. Update: date, organizer, title, href, description, image
+       3. Add a matching Event block in the JSON-LD schema above
+       ===================================================== -->
+  <section class="section">
+    <div class="container">
+
+      <div class="speaking-list">
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2025-10-30">Oct 30, 2025</time>
+            <span class="event-item__location">📍 London</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">Vervaunt Pulse</p>
+            <h2 class="event-item__title">
+              <a href="https://luma.com/ktj1zx00" target="_blank" rel="noopener">
+                Pulse Breakfast: Planning &amp; Roadmapping for 2026
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  A premium breakfast event for eCommerce brands. Presented must-have roadmap items for 2026 — covering platform strategy, AI adoption, and international priorities.
+                </p>
+                <a class="event-item__link" href="https://luma.com/ktj1zx00" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <img
+                class="event-item__image"
+                src="https://barrettahern.com/wp-content/uploads/2026/02/pulse_2026_roadmapping.jpg"
+                alt="Pulse Breakfast: Planning & Roadmapping for 2026"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2025-09-30">Sep 30, 2025</time>
+            <span class="event-item__location">📍 London</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">Gorgias</p>
+            <h2 class="event-item__title">
+              <a href="https://events.gorgias.com/inconversationtourlondon/vervaunt" target="_blank" rel="noopener">
+                Gorgias In Conversation Tour London
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  Panel with CX and eCommerce leaders on what to automate, how brands are blending human and AI, and where ROI is being driven — with real brand audits and automation tactics ahead of BFCM.
+                </p>
+                <a class="event-item__link" href="https://events.gorgias.com/inconversationtourlondon/vervaunt" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <img
+                class="event-item__image"
+                src="https://barrettahern.com/wp-content/uploads/2025/10/gorgias_in_coversation_tour_london.jpeg"
+                alt="Gorgias In Conversation Tour London"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2025-04-10">Apr 10, 2025</time>
+            <span class="event-item__location">📍 London</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">Vervaunt Pulse Summit</p>
+            <h2 class="event-item__title">
+              <a href="https://pulse.vervaunt.com/summit/" target="_blank" rel="noopener">
+                "The Future of eCommerce &amp; The State of AI"
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  Keynote at Pulse eCommerce Summit 2025 covering machine learning and real-time data analysis, generative AI adoption in practice, LLMs and AI Overviews, and the future of agentic decision-making in retail.
+                </p>
+                <a class="event-item__link" href="https://pulse.vervaunt.com/summit/" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <img
+                class="event-item__image"
+                src="https://barrettahern.com/wp-content/uploads/2025/04/Barrett_Ahern_Pulse-Summit_eCommerce-State-of-AI-143.jpg"
+                alt="Barrett Ahern at Pulse eCommerce Summit 2025"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2025-04-09">Apr 9, 2025</time>
+            <span class="event-item__location">📍 London</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">Vervaunt Pulse Summit</p>
+            <h2 class="event-item__title">
+              <a href="https://pulse.vervaunt.com/summit/" target="_blank" rel="noopener">
+                Roundtable: Internationalisation &amp; Localisation
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  Invite-only roundtable discussion on the challenges of cross-border eCommerce — market nuances, regulatory and compliance requirements, supply chain complexity, Brexit, and global tariffs.
+                </p>
+                <a class="event-item__link" href="https://pulse.vervaunt.com/summit/" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <img
+                class="event-item__image"
+                src="https://barrettahern.com/wp-content/uploads/2026/02/pulse_roundtable_internationalisation.jpeg"
+                alt="Barrett Ahern Roundtable: Internationalisation & Localisation"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2025-03-12">Mar 12, 2025</time>
+            <span class="event-item__location">📍 London</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">Vervaunt Pulse</p>
+            <h2 class="event-item__title">
+              <a href="https://pulse.vervaunt.com/pulse-breakfast-internationalisation-new-markets" target="_blank" rel="noopener">
+                Pulse Breakfast: Internationalisation &amp; New Markets
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  Premium breakfast event for eCommerce brands exploring strategies for international expansion — market entry frameworks, localisation, and how to scale cross-border Shopify Plus stores.
+                </p>
+                <a class="event-item__link" href="https://pulse.vervaunt.com/pulse-breakfast-internationalisation-new-markets" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <img
+                class="event-item__image"
+                src="https://barrettahern.com/wp-content/uploads/2026/02/pulse_breakfast_new_markets.jpg"
+                alt="Barrett Ahern Pulse Breakfast: Internationalisation and New Markets"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2024-04-30">Apr 30, 2024</time>
+            <span class="event-item__location">📍 London</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">Klaviyo K:LDN</p>
+            <h2 class="event-item__title">
+              <a href="https://events.klaviyo.com/kldn2024/agenda" target="_blank" rel="noopener">
+                K:LDN 2024 — Building Your eCommerce Tech Stack
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  Session on choosing the perfect eCommerce technology stack at Klaviyo's flagship London event — covering platform selection, integration strategy, and how to build for scale.
+                </p>
+                <a class="event-item__link" href="https://events.klaviyo.com/kldn2024/agenda" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <img
+                class="event-item__image"
+                src="https://barrettahern.com/wp-content/uploads/2025/04/KLDN24_Choosing-The-Perfect-Tech-Stack_Barrett_Ahern.jpeg"
+                alt="K:LDN 2024 — Choosing The Perfect Tech Stack with Barrett Ahern"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- ── Event ──────────────────────────────────────── -->
+        <article class="event-item">
+          <div class="event-item__meta">
+            <time class="event-item__date" datetime="2023-09-27">Sep 27–28, 2023</time>
+            <span class="event-item__location">📍 London ExCeL</span>
+          </div>
+          <div class="event-item__content">
+            <p class="event-item__organizer">eCommerce Expo</p>
+            <h2 class="event-item__title">
+              <a href="https://www.ecommerceexpo.co.uk/" target="_blank" rel="noopener">
+                Ecommerce Expo 2023 — Live UX Audits
+              </a>
+            </h2>
+            <div class="event-item__body">
+              <div class="event-item__text">
+                <p class="event-item__desc">
+                  Conducted live UX audits at the WeMakeWebsites / Shopify booth, working directly with brands to identify conversion and experience improvements in real time.
+                </p>
+                <a class="event-item__link" href="https://www.ecommerceexpo.co.uk/" target="_blank" rel="noopener">View event →</a>
+              </div>
+              <!-- No image for this event — text expands to full width automatically -->
+            </div>
+          </div>
+        </article>
+
+        <!--
+          ╔══════════════════════════════════════════════════╗
+          ║  ADD NEW EVENTS ABOVE THIS LINE                  ║
+          ║  Copy an <article class="event-item"> block above║
+          ╚══════════════════════════════════════════════════╝
+        -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <h2 class="footer__heading">Get in touch</h2>
+          <a href="mailto:contact@barrettahern.com" class="footer__email">contact@barrettahern.com</a>
+        </div>
+        <ul class="footer__links">
+          <li><a href="mailto:contact@barrettahern.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/barrettahern" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.threads.net/@barrettahern" target="_blank" rel="noopener">Threads</a></li>
+          <li><a href="https://bsky.app/profile/barrettahern.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
+          <li><a href="https://x.com/barrettahern" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+      <p class="footer__copy">© 2026 Barrett Ahern. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
