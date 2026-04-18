@@ -1228,6 +1228,14 @@ a.logo-wall__item {
     --font-size-4xl: 1.875rem;
   }
 
+  .hero {
+    padding: 2.5rem 0 var(--space-8);
+  }
+
+  .page-header {
+    padding: var(--space-8) 0 var(--space-6);
+  }
+
   .nav__links {
     display: none;
     flex-direction: column;
