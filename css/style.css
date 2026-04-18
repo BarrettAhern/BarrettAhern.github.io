@@ -621,14 +621,34 @@ ul {
   margin-bottom: var(--space-2);
 }
 
-.pub-item__date {
+.pub-item__byline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--space-3);
+}
+
+.pub-item__avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pub-item__author,
+.pub-item__publisher,
+.pub-item__date,
+.pub-item__byline-sep {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-muted);
-  display: block;
-  margin-bottom: var(--space-3);
+}
+
+.pub-item__byline-sep {
+  opacity: 0.4;
 }
 
 .pub-item__title a {
