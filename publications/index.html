@@ -17,16 +17,16 @@
     SCHEMA: CollectionPage + ItemList of Articles
     =============================================
     Each publication gets an Article node in the @graph array below.
-    "author" always references Barrett's Person @id — this is how Google
+    "author" always references Barrett's Person @id, this is how Google
     and LLMs know all these articles are by the same named individual,
     regardless of where they're published.
 
-    EXTERNAL PUBLICATIONS — how to handle them:
+    EXTERNAL PUBLICATIONS, how to handle them:
     - Set "url" to the original article URL on the external site
     - Set "publisher" name + url to the external publication
     - Keep "author" as { "@id": "https://barrettahern.com/#person" }
     This is exactly what Google expects. The schema tells crawlers
-    "Barrett wrote this; it lives on [other site]" — fully supported.
+    "Barrett wrote this; it lives on [other site]", fully supported.
 
     SELF-PUBLISHED ARTICLES (on barrettahern.com):
     - Set "url" to the barrettahern.com article URL
@@ -44,14 +44,14 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://barrettahern.com" },
-          { "@type": "ListItem", "position": 2, "name": "Publications", "item": "https://barrettahern.com/publications/" }
+          { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://barrettahern.com/publications/" }
         ]
       },
       {
         "@type": "CollectionPage",
         "@id": "https://barrettahern.com/publications/",
-        "name": "Publications by Barrett Ahern",
-        "description": "Articles and writing by Barrett Ahern on eCommerce strategy, Shopify Plus, and international growth.",
+        "name": "Writing | Barrett Ahern",
+        "description": "Barrett Ahern on ecommerce strategy, Shopify Plus, and international growth.",
         "url": "https://barrettahern.com/publications/",
         "author": { "@id": "https://barrettahern.com/#person" }
       },
@@ -106,7 +106,7 @@
           "name": "Barrett Ahern",
           "url": "https://barrettahern.com"
         },
-        "description": "How AI is changing eCommerce — from machine learning to generative AI, LLMs, and agentic automation."
+        "description": "How AI is changing eCommerce, from machine learning to generative AI, LLMs, and agentic automation."
       }
     ]
   }
@@ -171,7 +171,7 @@
               </a>
             </h2>
             <div class="pub-item__byline">
-              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern — eCommerce strategist and author">
+              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
               <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Vervaunt</span>
@@ -179,7 +179,7 @@
               <time class="pub-item__date" datetime="2026-03-01">Mar 2026</time>
             </div>
             <p class="pub-item__desc">
-              How AI is reshaping organic search — from AI Overviews and zero-click results to what eCommerce brands need to do differently to stay visible in an AI-first discovery landscape.
+              How AI is reshaping organic search, from AI Overviews and zero-click results to what eCommerce brands need to do differently to stay visible in an AI-first discovery landscape.
             </p>
             <a class="pub-item__link" href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener">Read article →</a>
           </div>
@@ -200,7 +200,7 @@
               </a>
             </h2>
             <div class="pub-item__byline">
-              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern — eCommerce strategist and author">
+              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
               <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Vervaunt</span>
@@ -208,7 +208,7 @@
               <time class="pub-item__date" datetime="2026-02-01">Feb 2026</time>
             </div>
             <p class="pub-item__desc">
-              A deep-dive into Shopify Markets vs expansion stores — when to use each, how to structure your international setup, and what the migration path looks like for complex multi-market retailers.
+              A deep-dive into Shopify Markets vs expansion stores, when to use each, how to structure your international setup, and what the migration path looks like for complex multi-market retailers.
             </p>
             <a class="pub-item__link" href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener">Read article →</a>
           </div>
@@ -229,7 +229,7 @@
               </a>
             </h2>
             <div class="pub-item__byline">
-              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern — eCommerce strategist and author">
+              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
               <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Dash</span>
@@ -237,7 +237,7 @@
               <time class="pub-item__date" datetime="2026-02-01">Feb 2026</time>
             </div>
             <p class="pub-item__desc">
-              How brands should respond to rising tariffs, supply chain disruption, and economic uncertainty — with practical strategies for maintaining growth and margin.
+              How brands should respond to rising tariffs, supply chain disruption, and economic uncertainty, with practical strategies for maintaining growth and margin.
             </p>
             <a class="pub-item__link" href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">Read article →</a>
           </div>
@@ -258,7 +258,7 @@
               </a>
             </h2>
             <div class="pub-item__byline">
-              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern — eCommerce strategist and author">
+              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
               <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Quickfire Digital</span>
@@ -266,7 +266,7 @@
               <time class="pub-item__date" datetime="2026-02-01">Feb 2026</time>
             </div>
             <p class="pub-item__desc">
-              An overview of where eCommerce stands heading into 2025 — platform trends, AI adoption, the changing search landscape, and what forward-thinking brands are prioritising.
+              An overview of where eCommerce stands heading into 2025, platform trends, AI adoption, the changing search landscape, and what forward-thinking brands are prioritising.
             </p>
             <a class="pub-item__link" href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">Read article →</a>
           </div>
@@ -287,7 +287,7 @@
               </a>
             </h2>
             <div class="pub-item__byline">
-              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern — eCommerce strategist and author">
+              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
               <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Vervaunt</span>
@@ -295,7 +295,7 @@
               <time class="pub-item__date" datetime="2025-05-01">May 2025</time>
             </div>
             <p class="pub-item__desc">
-              How AI is reshaping eCommerce — from real-time machine learning and generative AI to LLMs, AI Overviews, and the rise of agentic decision-making in retail operations.
+              How AI is reshaping eCommerce, from real-time machine learning and generative AI to LLMs, AI Overviews, and the rise of agentic decision-making in retail operations.
             </p>
             <a class="pub-item__link" href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">Read article →</a>
           </div>
@@ -316,7 +316,7 @@
               </a>
             </h2>
             <div class="pub-item__byline">
-              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern — eCommerce strategist and author">
+              <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
               <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">WeMakeWebsites</span>
@@ -324,7 +324,7 @@
               <time class="pub-item__date" datetime="2024-05-01">May 2024</time>
             </div>
             <p class="pub-item__desc">
-              How to choose and connect the right technology for your eCommerce stack — covering platform selection, integration strategy, and what to prioritise when building for scale.
+              How to choose and connect the right technology for your eCommerce stack, covering platform selection, integration strategy, and what to prioritise when building for scale.
             </p>
             <a class="pub-item__link" href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">Read article →</a>
           </div>
