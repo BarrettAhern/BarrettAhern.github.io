@@ -214,6 +214,16 @@
       font-weight: 300;
     }
 
+    /* Mobile: tighter section and timeline spacing */
+    @media (max-width: 768px) {
+      .section--tight {
+        padding: var(--space-4) 0;
+      }
+      .timeline {
+        padding-top: var(--space-3);
+      }
+    }
+
     /* Dark mode adjustments */
     @media (prefers-color-scheme: dark) {
       .timeline__entry {
@@ -298,8 +308,9 @@
       <p class="section-label">Career</p>
       <div class="bio__body">
         <p>
-          I've worked agency-side, consultancy-side, and in-house, which means I understand how
-          eCommerce decisions look from both ends of the table.
+          I've worked in-house running the channel, agency-side delivering it for clients, and now
+          advise on how brands should think about it strategically. The combination changes what you
+          notice. That range tends to surface problems — and solutions — that a single track doesn't.
         </p>
         <ul class="timeline">
           <li class="timeline__entry">
