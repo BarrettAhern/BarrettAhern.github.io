@@ -303,7 +303,7 @@ ul {
   width: 340px;
   height: 340px;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 50%;
   border: 1px solid var(--color-rule);
 }
 
