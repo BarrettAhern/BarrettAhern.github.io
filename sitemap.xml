@@ -7,7 +7,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://barrettahern.com/images/barrett_ahern.png</image:loc>
+      <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-homepage.jpg</image:loc>
       <image:title>Barrett Ahern — eCommerce Strategist</image:title>
     </image:image>
   </url>
@@ -17,7 +17,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://barrettahern.com/images/barrett_ahern_headshot_grey.jpg</image:loc>
+      <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-about.jpg</image:loc>
       <image:title>Barrett Ahern — eCommerce Consultant at Vervaunt</image:title>
     </image:image>
   </url>
@@ -27,8 +27,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://barrettahern.com/images/barrett-ahern-headshot_orange.png</image:loc>
-      <image:title>Barrett Ahern — eCommerce Strategist</image:title>
+      <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-publications.jpg</image:loc>
+      <image:title>Barrett Ahern — Articles &amp; Guides on eCommerce Strategy</image:title>
     </image:image>
     <image:image>
       <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-state-of-ecommerce-2025-16x9.png</image:loc>
@@ -61,6 +61,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
+      <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-speaking.jpg</image:loc>
+      <image:title>Barrett Ahern — Speaking on eCommerce Strategy</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://barrettahern.com/images/speaking/Barrett_Ahern_Pulse-Summit_eCommerce-State-of-AI-143.jpg</image:loc>
       <image:title>Barrett Ahern keynoting at Pulse eCommerce Summit 2025 — The Future of eCommerce &amp; The State of AI</image:title>
     </image:image>
@@ -79,8 +83,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://barrettahern.com/images/barrett-ahern-headshot_orange.png</image:loc>
-      <image:title>Barrett Ahern — eCommerce Strategist</image:title>
+      <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-clients.jpg</image:loc>
+      <image:title>Barrett Ahern — eCommerce Client Portfolio</image:title>
     </image:image>
   </url>
 </urlset>
