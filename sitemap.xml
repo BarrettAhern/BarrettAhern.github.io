@@ -1,33 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://barrettahern.com/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern.png</image:loc>
+      <image:title>Barrett Ahern — eCommerce Strategist</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://barrettahern.com/about-me/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://barrettahern.com/clients/</loc>
-    <lastmod>2026-04-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern_headshot_grey.jpg</image:loc>
+      <image:title>Barrett Ahern — eCommerce Consultant at Vervaunt</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://barrettahern.com/publications/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett-ahern-headshot_orange.png</image:loc>
+      <image:title>Barrett Ahern — eCommerce Strategist</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-state-of-ecommerce-2025-16x9.png</image:loc>
+      <image:title>State of eCommerce 2025 — Barrett Ahern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-future-of-commerce-state-of-ai-16x9.png</image:loc>
+      <image:title>The Future of eCommerce &amp; The State of AI — Barrett Ahern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-navigating-ecommerce-trade-turbulence-16x9.png</image:loc>
+      <image:title>Navigating eCommerce in 2025's Trade Turbulence — Barrett Ahern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-16x9.png</image:loc>
+      <image:title>Shopify Markets vs Expansion Stores — Barrett Ahern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-perfect-ecommerce-tech-stack-16x9.png</image:loc>
+      <image:title>The Perfect eCommerce Tech Stack — Barrett Ahern</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-seo-ai-first-search-landscape-16x9.png</image:loc>
+      <image:title>SEO in an AI-First Search Landscape — Barrett Ahern</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://barrettahern.com/speaking-events/</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/speaking/Barrett_Ahern_Pulse-Summit_eCommerce-State-of-AI-143.jpg</image:loc>
+      <image:title>Barrett Ahern keynoting at Pulse eCommerce Summit 2025 — The Future of eCommerce &amp; The State of AI</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/speaking/barrett_ahern-gorgias_panel.jpeg</image:loc>
+      <image:title>Barrett Ahern on panel at the Gorgias In Conversation Tour London</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/speaking/barrett_ahern-pulse-breakfast-roadmap-2026.jpg</image:loc>
+      <image:title>Barrett Ahern speaking at the Vervaunt Pulse Breakfast — Planning &amp; Roadmapping for 2026</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://barrettahern.com/clients/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett-ahern-headshot_orange.png</image:loc>
+      <image:title>Barrett Ahern — eCommerce Strategist</image:title>
+    </image:image>
   </url>
 </urlset>
