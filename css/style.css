@@ -829,7 +829,9 @@ ul {
   font-size: var(--font-size-xl);
   font-weight: 400;
   line-height: 1.25;
-  margin-bottom: var(--space-3);
+  margin-bottom: 0; /* row-gap handles spacing */
+  grid-area: title;
+  align-self: end; /* sits snug above the description */
 }
 
 .event-item__title a {
@@ -864,23 +866,43 @@ ul {
   text-underline-offset: 3px;
 }
 
-/* Body: image left (350x225), text right */
+/*
+  Body: CSS grid
+  Desktop:  [image (spans 2 rows)] | [title]
+                                    | [text: desc + link]
+  No-image: single column — title then text
+*/
 .event-item__body {
-  display: flex;
-  gap: var(--space-8);
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "image title"
+    "image text";
+  column-gap: var(--space-8);
+  row-gap: var(--space-3);
   margin-top: var(--space-2);
+  align-items: start;
+}
+
+/* Events without an image: collapse to single column */
+.event-item__body:not(:has(.event-item__image)) {
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "text";
 }
 
 .event-item__text {
-  flex: 1;
+  grid-area: text;
   min-width: 0;
+  align-self: start;
 }
 
-/* Image: fixed 350x225 on desktop */
+/* Image: fills the 350px grid column, fixed 225px tall */
 .event-item__image {
-  flex: 0 0 350px;
-  width: 350px;
+  grid-area: image;
+  width: 100%;
   height: 225px;
   border-radius: 3px;
   overflow: hidden;
@@ -1267,10 +1289,12 @@ a.logo-wall__item {
     gap: var(--space-3);
   }
 
-  /* On tablet the image shrinks a little but stays side-by-side */
+  /* Narrow the image column; body stays side-by-side */
+  .event-item__body {
+    grid-template-columns: 280px 1fr;
+  }
+
   .event-item__image {
-    flex: 0 0 280px;
-    width: 280px;
     height: 180px;
   }
 }
@@ -1298,13 +1322,26 @@ a.logo-wall__item {
     flex: 0 0 100%; /* forces date to its own row */
   }
 
-  /* Body stacks vertically: image first (DOM order), then text */
+  /*
+    Mobile body: switch to flex column.
+    DOM order: title → image → text(desc+link) — exactly right.
+  */
   .event-item__body {
+    display: flex;
     flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .event-item__body:not(:has(.event-item__image)) {
+    gap: var(--space-3);
+  }
+
+  .event-item__title {
+    align-self: auto;
+    margin-bottom: 0;
   }
 
   .event-item__image {
-    flex: 0 0 auto;
     width: 100%;
     height: auto;
     aspect-ratio: 350 / 225;
