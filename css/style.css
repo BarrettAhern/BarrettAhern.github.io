@@ -781,20 +781,21 @@ ul {
 }
 
 .event-item {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: var(--space-8);
   padding-bottom: var(--space-12);
   border-bottom: 1px solid var(--color-border);
-  align-items: start;
 }
 
 .event-item:last-child {
   border-bottom: none;
 }
 
+/* Meta row: date · organizer · location all on one line (desktop) */
 .event-item__meta {
-  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-4);
 }
 
 .event-item__date {
@@ -803,8 +804,14 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-muted);
-  display: block;
-  margin-bottom: var(--space-2);
+}
+
+.event-item__organizer {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
 }
 
 .event-item__location {
@@ -835,15 +842,6 @@ ul {
   opacity: 0.65;
 }
 
-.event-item__organizer {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: var(--space-3);
-}
-
 .event-item__desc {
   font-size: var(--font-size-sm);
   font-weight: 300;
@@ -866,6 +864,7 @@ ul {
   text-underline-offset: 3px;
 }
 
+/* Body: image left (350x225), text right */
 .event-item__body {
   display: flex;
   gap: var(--space-8);
@@ -878,13 +877,21 @@ ul {
   min-width: 0;
 }
 
+/* Image: fixed 350x225 on desktop */
 .event-item__image {
-  flex: 0 0 25%;
-  max-width: 25%;
+  flex: 0 0 350px;
+  width: 350px;
+  height: 225px;
   border-radius: 3px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  overflow: hidden;
   background: var(--color-off-white);
+}
+
+.event-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 
@@ -1255,23 +1262,16 @@ a.logo-wall__item {
 
 /* Tablet — publications / speaking / clients */
 @media (max-width: 900px) {
-  .event-item,
   .client-item {
     grid-template-columns: 1fr;
     gap: var(--space-3);
   }
 
-  .event-item__meta {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    flex-wrap: wrap;
-  }
-
-  /* On tablet the body stays side-by-side */
+  /* On tablet the image shrinks a little but stays side-by-side */
   .event-item__image {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 280px;
+    width: 280px;
+    height: 180px;
   }
 }
 
@@ -1288,6 +1288,17 @@ a.logo-wall__item {
     height: auto;
   }
 
+  /* Meta: date on its own line, organiser + location share the next line */
+  .event-item__meta {
+    row-gap: var(--space-1);
+    column-gap: var(--space-3);
+  }
+
+  .event-item__date {
+    flex: 0 0 100%; /* forces date to its own row */
+  }
+
+  /* Body stacks vertically: image first (DOM order), then text */
   .event-item__body {
     flex-direction: column;
   }
@@ -1295,8 +1306,8 @@ a.logo-wall__item {
   .event-item__image {
     flex: 0 0 auto;
     width: 100%;
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
+    height: auto;
+    aspect-ratio: 350 / 225;
   }
 }
 
