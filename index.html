@@ -37,6 +37,14 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <!--
+    SCHEMA MARKUP (JSON-LD)
+    ========================
+    WebSite , site name, enables Sitelinks Searchbox.
+    Person  , canonical #person entity; referenced by all other pages.
+    Service , one node per service offering, each with provider → #person.
+               @ids are site-local so they can be referenced from any page.
+  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -68,28 +76,43 @@
         "alumniOf": [
           {
             "@type": "OrganizationRole",
-            "alumniOf": { "@type": "Organization", "name": "BORN Group", "url": "https://www.borngroup.com" },
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "BORN Group",
+              "url": "https://www.borngroup.com"
+            },
             "roleName": "Senior Product Manager",
             "startDate": "2024-05",
             "endDate": "2025-01"
           },
           {
             "@type": "OrganizationRole",
-            "alumniOf": { "@type": "Organization", "name": "WeMakeWebsites", "url": "https://wemakewebsites.com" },
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "WeMakeWebsites",
+              "url": "https://wemakewebsites.com"
+            },
             "roleName": "Senior Product Owner",
             "startDate": "2020-12",
             "endDate": "2024-05"
           },
           {
             "@type": "OrganizationRole",
-            "alumniOf": { "@type": "Organization", "name": "K2 Sports", "url": "https://www.k2sports.com" },
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "K2 Sports",
+              "url": "https://www.k2sports.com"
+            },
             "roleName": "eCommerce Delivery Manager",
             "startDate": "2016-06",
             "endDate": "2018-09"
           },
           {
             "@type": "OrganizationRole",
-            "alumniOf": { "@type": "Organization", "name": "Just Kids Store" },
+            "alumniOf": {
+              "@type": "Organization",
+              "name": "Just Kids Store"
+            },
             "roleName": "Head of eCommerce",
             "startDate": "2011-07",
             "endDate": "2015-11"
@@ -161,14 +184,20 @@
 </head>
 <body>
 
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
   <nav class="nav">
     <div class="container nav__inner">
       <a href="/" class="nav__logo">Barrett Ahern</a>
+
+      <!-- Mobile hamburger button -->
       <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </button>
+
       <ul class="nav__links" id="nav-links">
         <li><a href="/about-me/">About</a></li>
         <li><a href="/publications/">Publications</a></li>
@@ -178,123 +207,198 @@
     </div>
   </nav>
 
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
   <section class="hero">
     <div class="container">
       <div class="hero__grid">
+
         <div class="hero__text">
           <p class="section-label">eCommerce &amp; Digital Product</p>
           <h1 class="hero__heading">
             eCommerce Strategy &amp; <em>Enterprise Shopify Plus</em>
           </h1>
+
+          <!-- Mobile-only image, sits between heading and body on small screens -->
           <div class="hero__image hero__image--mobile">
             <img src="/images/barrett_ahern.png" alt="Barrett Ahern">
           </div>
+
           <p class="hero__body">
             Fifteen years of eCommerce strategy, maximising revenue for the world's leading fashion, beauty, and lifestyle brands. I bridge the gap between high-end brand integrity and technical performance, focusing on three core pillars: Technical Architecture, International Growth, and Conversion Optimisation.
           </p>
           <a href="/about-me/" class="hero__cta">Learn more about me →</a>
         </div>
+
+        <!-- Desktop-only image, right column of the grid -->
         <div class="hero__image hero__image--desktop">
-          <img src="/images/barrett_ahern.png" alt="Barrett Ahern">
+          <img
+            src="/images/barrett_ahern.png"
+            alt="Barrett Ahern"
+          >
         </div>
+
       </div>
     </div>
   </section>
 
+
+  <!-- =====================================================
+       CLIENT LOGO WALL (top 10)
+       ===================================================== -->
   <section class="section--tight">
     <div class="container">
       <p class="section-label">Trusted by</p>
+
       <div class="logo-wall">
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-karl-lagerfeld">
-          <img class="logo-wall__logo" src="/images/clients/karl-lagerfeld.svg" alt="Karl Lagerfeld" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/karl-lagerfeld.svg" alt="Karl Lagerfeld"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">Karl Lagerfeld</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-lvmh">
-          <img class="logo-wall__logo" src="/images/clients/lvmh.svg" alt="LVMH" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/lvmh.svg" alt="LVMH"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">LVMH</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-me-em">
-          <img class="logo-wall__logo" src="/images/clients/me-em.svg" alt="ME + EM" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/me-em.svg" alt="ME + EM"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">ME + EM</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-mulberry">
-          <img class="logo-wall__logo" src="/images/clients/mulberry.svg" alt="Mulberry" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/mulberry.svg" alt="Mulberry"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">Mulberry</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-laura-geller">
-          <img class="logo-wall__logo" src="/images/clients/laura-geller.svg" alt="Laura Geller" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/laura-geller.svg" alt="Laura Geller"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">Laura Geller</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-hmv">
-          <img class="logo-wall__logo" src="/images/clients/hmv.svg" alt="HMV" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/hmv.svg" alt="HMV"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">HMV</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-self-portrait">
-          <img class="logo-wall__logo" src="/images/clients/self-portrait.svg" alt="Self-Portrait" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/self-portrait.svg" alt="Self-Portrait"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">Self-Portrait</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-palace-skateboards">
-          <img class="logo-wall__logo" src="/images/clients/palace-skateboards.svg" alt="Palace Skateboards" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/palace-skateboards.svg" alt="Palace Skateboards"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">Palace Skateboards</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary" href="/clients/#client-currentbody">
-          <img class="logo-wall__logo" src="/images/clients/currentbody.png" alt="CurrentBody" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/currentbody.png" alt="CurrentBody"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">CurrentBody</span>
         </a>
+
         <a class="logo-wall__item logo-wall__item--primary logo-wall__item--hide-mobile" href="/clients/#client-varley">
-          <img class="logo-wall__logo" src="/images/clients/varley.svg" alt="Varley" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
+          <img class="logo-wall__logo" src="/images/clients/varley.svg" alt="Varley"
+               onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')">
           <span class="logo-wall__fallback">Varley</span>
         </a>
+
       </div>
+
       <p style="margin-top: var(--space-6);">
         <a href="/clients/" class="hero__cta">View all clients →</a>
       </p>
+
     </div>
   </section>
 
+
+  <!-- =====================================================
+       BY THE NUMBERS
+       ===================================================== -->
   <section class="section--tight">
     <div class="container">
       <p class="section-label">By the numbers</p>
+
       <div class="stats__grid">
+
         <div class="stat">
           <p class="stat__figure">£1bn+</p>
           <p class="stat__keyword">GMV</p>
-          <p class="stat__label">Overseen across 30+ brands in luxury fashion, beauty, and lifestyle.</p>
+          <p class="stat__label">
+            Overseen across 30+ brands in luxury fashion, beauty, and lifestyle.
+          </p>
         </div>
+
         <div class="stat">
           <p class="stat__figure">2x</p>
-          <p class="stat__keyword">Conversion Rate <span class="stat__trend" aria-label="uplift">↑</span></p>
-          <p class="stat__label">Conversion uplift, Stephen Webster post-migration.</p>
+          <p class="stat__keyword">
+            Conversion Rate
+            <span class="stat__trend" aria-label="uplift">↑</span>
+          </p>
+          <p class="stat__label">
+            Conversion uplift, Stephen Webster post-migration.
+          </p>
         </div>
+
         <div class="stat">
           <p class="stat__figure">25+</p>
           <p class="stat__keyword">Migrations</p>
-          <p class="stat__label">End-to-end, across Shopify Plus, SFCC, Magento, Centra, and BigCommerce.</p>
+          <p class="stat__label">
+            End-to-end, across Shopify Plus, SFCC, Magento, Centra, and BigCommerce.
+          </p>
         </div>
+
         <div class="stat">
           <p class="stat__figure">15+</p>
           <p class="stat__keyword">Reports</p>
-          <p class="stat__label">Cross-functional programmes led across development, design, trading, merchandising, and delivery.</p>
+          <p class="stat__label">
+            Cross-functional programmes led across development, design, trading, merchandising, and delivery.
+          </p>
         </div>
+
       </div>
     </div>
   </section>
 
+
+  <!-- =====================================================
+       TESTIMONIAL
+       ===================================================== -->
   <section class="section--tight">
     <div class="container">
       <div class="testimonial">
         <p class="testimonial__quote">
-          Barrett is a fountain of knowledge when it comes to all things eCommerce and Shopify. He has fantastic oversight of all of his clients' goals and roadmaps, and his perspective is therefore indispensable.
+          Barrett is a fountain of knowledge when it comes to all things eCommerce
+          and Shopify. He has fantastic oversight of all of his clients' goals and
+          roadmaps, and his perspective is therefore indispensable.
         </p>
       </div>
     </div>
   </section>
 
+
+  <!-- =====================================================
+       SERVICES
+       ===================================================== -->
   <section class="section--tight">
     <div class="container">
       <p class="section-label">What I do</p>
       <h2 class="section-title">Services</h2>
+
       <div class="services__grid">
+
         <div class="service-card">
           <svg class="service-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polygon points="12 2 2 7 12 12 22 7 12 2"/>
@@ -302,8 +406,11 @@
             <polyline points="2 12 12 17 22 12"/>
           </svg>
           <h3 class="service-card__title">Technical Architecture &amp; Systems</h3>
-          <p class="service-card__body">High-growth commerce requires a foundation that is both stable and agile. I oversee the structural decisions that define an enterprise stack, from leading complex Shopify Plus replatforming and migrations to auditing legacy infrastructure. By aligning technical architecture with business goals, I ensure your technology accelerates growth rather than creating debt.</p>
+          <p class="service-card__body">
+            High-growth commerce requires a foundation that is both stable and agile. I oversee the structural decisions that define an enterprise stack, from leading complex Shopify Plus replatforming and migrations to auditing legacy infrastructure. By aligning technical architecture with business goals, I ensure your technology accelerates growth rather than creating debt.
+          </p>
         </div>
+
         <div class="service-card">
           <svg class="service-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10"/>
@@ -311,25 +418,41 @@
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
           <h3 class="service-card__title">Internationalisation &amp; Global Growth</h3>
-          <p class="service-card__body">Scaling globally is a strategic operation, not just a technical one. I help brands navigate the complexities of international expansion, from localised checkout experiences and multi-store architecture to regional fulfilment logic. My focus is on removing friction in new markets to unlock sustainable global revenue streams.</p>
+          <p class="service-card__body">
+            Scaling globally is a strategic operation, not just a technical one. I help brands navigate the complexities of international expansion, from localised checkout experiences and multi-store architecture to regional fulfilment logic. My focus is on removing friction in new markets to unlock sustainable global revenue streams.
+          </p>
         </div>
+
         <div class="service-card">
           <svg class="service-card__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
             <polyline points="17 6 23 6 23 12"/>
           </svg>
           <h3 class="service-card__title">Conversion &amp; Customer Journey</h3>
-          <p class="service-card__body">A high-performing store is the result of a seamless end-to-end experience. I focus on the intersection of discoverability and user experience, ensuring brands are visible in an AI-driven search landscape while optimising the onsite journey for conversion. By refining how customers find, navigate, and interact with your brand, I drive top-line revenue through meaningful digital experiences.</p>
+          <p class="service-card__body">
+            A high-performing store is the result of a seamless end-to-end experience. I focus on the intersection of discoverability and user experience, ensuring brands are visible in an AI-driven search landscape while optimising the onsite journey for conversion. By refining how customers find, navigate, and interact with your brand, I drive top-line revenue through meaningful digital experiences.
+          </p>
         </div>
+
       </div>
     </div>
   </section>
 
+
+  <!-- =====================================================
+       RECENT PUBLICATIONS + SPEAKING
+       Keep these in sync with publications.html and speaking.html.
+       Update when a new item is added, swap out the oldest card.
+       ===================================================== -->
   <section class="section--tight">
     <div class="container">
+
+      <!-- Row 1: Recent Publications -->
       <p class="section-label">Writing</p>
       <h2 class="section-title">Recent Publications</h2>
+
       <div class="recent-grid">
+
         <a href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener" class="card">
           <img class="card__image" src="/images/publication-images/barrett-ahern-seo-ai-first-search-landscape-16x9.png" alt="SEO in an AI-First Search Landscape" loading="lazy">
           <h3 class="card__title">SEO in an AI-First Search Landscape</h3>
@@ -339,6 +462,7 @@
             <span class="card__read">Read →</span>
           </div>
         </a>
+
         <a href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener" class="card">
           <img class="card__image" src="/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-16x9.png" alt="Shopify Markets: A Comprehensive Guide" loading="lazy">
           <h3 class="card__title">Shopify Markets: A Comprehensive Guide</h3>
@@ -348,6 +472,7 @@
             <span class="card__read">Read →</span>
           </div>
         </a>
+
         <a href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener" class="card">
           <img class="card__image" src="/images/publication-images/barrett-ahern-navigating-ecommerce-trade-turbulence-16x9.png" alt="Navigating eCommerce Trade Turbulence in 2025" loading="lazy">
           <h3 class="card__title">Navigating eCommerce Trade Turbulence in 2025</h3>
@@ -357,14 +482,19 @@
             <span class="card__read">Read →</span>
           </div>
         </a>
+
       </div>
+
       <p style="margin-top: 1.5rem; margin-bottom: 2.5rem;">
         <a href="/publications/" class="hero__cta">All publications →</a>
       </p>
 
+      <!-- Row 2: Recent Speaking Events -->
       <p class="section-label">On stage</p>
       <h2 class="section-title">Recent Speaking</h2>
+
       <div class="recent-grid">
+
         <a href="https://luma.com/ktj1zx00" target="_blank" rel="noopener" class="card">
           <span class="card__label">Panel</span>
           <h3 class="card__title">Pulse Breakfast: Planning &amp; Roadmapping for 2026</h3>
@@ -374,6 +504,7 @@
             <span class="card__read">View event →</span>
           </div>
         </a>
+
         <a href="https://events.gorgias.com/inconversationtourlondon/vervaunt" target="_blank" rel="noopener" class="card">
           <span class="card__label">Panel</span>
           <h3 class="card__title">Gorgias In Conversation Tour London</h3>
@@ -383,6 +514,7 @@
             <span class="card__read">View event →</span>
           </div>
         </a>
+
         <a href="https://pulse.vervaunt.com/summit/" target="_blank" rel="noopener" class="card">
           <span class="card__label">Keynote</span>
           <h3 class="card__title">Pulse Summit: The Future of eCommerce &amp; The State of AI</h3>
@@ -392,13 +524,20 @@
             <span class="card__read">View event →</span>
           </div>
         </a>
+
       </div>
+
       <p style="margin-top: 1.5rem;">
         <a href="/speaking-events/" class="hero__cta">All speaking events →</a>
       </p>
+
     </div>
   </section>
 
+
+  <!-- =====================================================
+       CLIENT LOGO MARQUEE (pre-footer)
+       ===================================================== -->
   <div class="logos">
     <div class="logos__track-wrapper">
       <div class="logos__track">
@@ -414,6 +553,7 @@
         <img src="/images/clients/hmv.svg" alt="HMV logo">
         <img src="/images/clients/whittard.svg" alt="Whittard of Chelsea logo">
         <img src="/images/clients/varley.svg" alt="Varley logo">
+        <!-- Duplicate for seamless loop -->
         <img src="/images/clients/lvmh.svg" alt="" aria-hidden="true">
         <img src="/images/clients/mulberry.svg" alt="" aria-hidden="true">
         <img src="/images/clients/stephen-webster.png" alt="" aria-hidden="true">
@@ -430,13 +570,20 @@
     </div>
   </div>
 
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
+
         <div>
           <h2 class="footer__heading">Get in touch</h2>
-          <a href="mailto:contact@barrettahern.com" class="footer__email">contact@barrettahern.com</a>
+          <a href="mailto:contact@barrettahern.com" class="footer__email">
+            contact@barrettahern.com
+          </a>
         </div>
+
         <ul class="footer__links">
           <li><a href="mailto:contact@barrettahern.com">Email</a></li>
           <li><a href="https://www.linkedin.com/in/barrettahern" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -444,11 +591,18 @@
           <li><a href="https://bsky.app/profile/barrettahern.bsky.social" target="_blank" rel="noopener">Bluesky</a></li>
           <li><a href="https://x.com/barrettahern" target="_blank" rel="noopener">X</a></li>
         </ul>
+
       </div>
+
       <p class="footer__copy">© 2026 Barrett Ahern. All rights reserved.</p>
     </div>
   </footer>
 
+
+  <!-- =====================================================
+       JAVASCRIPT
+       Only a tiny bit, just for the mobile menu toggle.
+       ===================================================== -->
   <script>
     function toggleMenu() {
       const links = document.getElementById('nav-links');
