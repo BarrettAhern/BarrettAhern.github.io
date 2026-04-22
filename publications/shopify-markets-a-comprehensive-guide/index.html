@@ -385,9 +385,17 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://barrettahern.com/#website",
+        "name": "Barrett Ahern",
+        "url": "https://barrettahern.com/",
+        "publisher": { "@id": "https://barrettahern.com/#person" }
+      },
+      {
         "@type": "BreadcrumbList",
+        "@id": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://barrettahern.com" },
+          { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://barrettahern.com/" },
           { "@type": "ListItem", "position": 2, "name": "Publications", "item": "https://barrettahern.com/publications/" },
           { "@type": "ListItem", "position": 3, "name": "Shopify Markets: A Comprehensive Guide", "item": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/" }
         ]
@@ -396,7 +404,7 @@
         "@type": "Person",
         "@id": "https://barrettahern.com/#person",
         "name": "Barrett Ahern",
-        "url": "https://barrettahern.com",
+        "url": "https://barrettahern.com/",
         "sameAs": [
           "https://www.linkedin.com/in/barrettahern/",
           "https://vervaunt.com/author/barrettahern"
@@ -408,11 +416,12 @@
         "name": "Shopify Markets: A Comprehensive Guide | Barrett Ahern",
         "url": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/",
         "description": "A summary of and commentary on Barrett Ahern's Vervaunt guide to Shopify Markets vs expansion stores — decision framework, cost reality, migration checklist, and industry reactions.",
+        "datePublished": "2025-10-01",
+        "inLanguage": "en-GB",
+        "isPartOf": { "@id": "https://barrettahern.com/#website" },
+        "breadcrumb": { "@id": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/#breadcrumb" },
         "author": { "@id": "https://barrettahern.com/#person" },
-        "mentions": {
-          "@type": "Article",
-          "@id": "https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores"
-        }
+        "mentions": { "@id": "https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" }
       },
       {
         "@type": "Article",
@@ -429,9 +438,7 @@
         "description": "A comprehensive guide comparing Shopify Markets vs expansion stores for international growth — when to consolidate, how to migrate, and the full cost reality.",
         "keywords": ["Shopify Markets", "Shopify expansion stores", "Shopify internationalisation", "Shopify Plus", "store consolidation"],
         "image": "https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-square.png",
-        "mainEntityOfPage": {
-          "@id": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/"
-        }
+        "mainEntityOfPage": { "@id": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/" }
       },
       {
         "@type": "Review",
@@ -443,10 +450,7 @@
           "name": "Hannah Evelyn Rowlands",
           "jobTitle": "Senior Customer Success Manager",
           "worksFor": { "@type": "Organization", "name": "Shopify Plus" },
-          "sameAs": [
-            "https://www.linkedin.com/in/raisinheart/",
-            "https://www.linkedin.com/posts/raisinheart_ecommerce-shopifyplus-internationalcommerce-activity-7428025357599080448-TcNT"
-          ]
+          "sameAs": "https://www.linkedin.com/in/raisinheart/"
         }
       },
       {
@@ -459,10 +463,7 @@
           "name": "Matthias Kleven",
           "jobTitle": "Head of SMB Sales, EMEA",
           "worksFor": { "@type": "Organization", "name": "Shopify" },
-          "sameAs": [
-            "https://www.linkedin.com/in/matthiaskleven/",
-            "https://www.linkedin.com/posts/matthiaskleven_every-couple-of-weeks-our-partners-at-activity-7386393817098321920-caHr"
-          ]
+          "sameAs": "https://www.linkedin.com/in/matthiaskleven/"
         }
       },
       {
@@ -478,10 +479,7 @@
             { "@type": "Organization", "name": "Swap" },
             { "@type": "Organization", "name": "Dema" }
           ],
-          "sameAs": [
-            "https://www.linkedin.com/in/rossallsop/",
-            "https://www.linkedin.com/feed/update/urn:li:activity:7391434332269346816?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7391434332269346816%2C7391513649493725184%29"
-          ]
+          "sameAs": "https://www.linkedin.com/in/rossallsop/"
         }
       },
       {
@@ -497,10 +495,7 @@
             { "@type": "Organization", "name": "HighCohesion" },
             { "@type": "Organization", "name": "Commerce Thinking" }
           ],
-          "sameAs": [
-            "https://www.linkedin.com/in/hodgsonluke/",
-            "https://www.linkedin.com/posts/hodgsonluke_recently-barrett-ahern-fromvervauntshared-activity-7414586180358336512-qboM"
-          ]
+          "sameAs": "https://www.linkedin.com/in/hodgsonluke/"
         }
       },
       {
@@ -513,10 +508,7 @@
           "name": "Paul Rogers",
           "jobTitle": "Co-founder and MD",
           "worksFor": { "@type": "Organization", "name": "Vervaunt" },
-          "sameAs": [
-            "https://www.linkedin.com/in/paulnrogers/",
-            "https://www.linkedin.com/posts/paulnrogers_shopify-store-consolidation-is-a-huge-topic-activity-7391434332269346816-WGY9"
-          ]
+          "sameAs": "https://www.linkedin.com/in/paulnrogers/"
         }
       },
       {
@@ -528,10 +520,7 @@
           "@type": "Person",
           "name": "Tom Blanchard",
           "jobTitle": "Freelance Shopify Developer",
-          "sameAs": [
-            "https://www.linkedin.com/in/tom-blanchard-7b906a163/",
-            "https://www.linkedin.com/posts/tom-blanchard-7b906a163_shopify-store-consolidation-guide-when-to-activity-7407745143862280192-jGlZ"
-          ]
+          "sameAs": "https://www.linkedin.com/in/tom-blanchard-7b906a163/"
         }
       }
     ]
