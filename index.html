@@ -48,6 +48,7 @@
     ========================
     WebSite , site name, enables Sitelinks Searchbox.
     Person  , canonical #person entity; referenced by all other pages.
+    Review  , homepage testimonial from Rachel Wyatt.
     Service , one node per service offering, each with provider → #person.
                @ids are site-local so they can be referenced from any page.
   -->
@@ -335,6 +336,19 @@
         "https://github.com/BarrettAhern",
         "https://share.google/n71qHvF4eQh95brOg"
       ]
+    },
+    {
+      "@type": "Review",
+      "@id": "https://barrettahern.com/#review-rachel-wyatt",
+      "itemReviewed": {
+        "@id": "https://barrettahern.com/#person"
+      },
+      "reviewBody": "Barrett is a fountain of knowledge when it comes to all things eCommerce and Shopify. He has fantastic oversight of all of his clients' goals and roadmaps, and his perspective is therefore indispensable.",
+      "author": {
+        "@type": "Person",
+        "name": "Rachel Wyatt",
+        "sameAs": "https://www.linkedin.com/in/rachel-wyatt-988833135/"
+      }
     },
     {
       "@type": "Organization",
