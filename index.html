@@ -53,132 +53,58 @@
   -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://barrettahern.com/#website",
-        "url": "https://barrettahern.com/",
-        "name": "Barrett Ahern",
-        "alternateName": "Barrett Ahern — eCommerce Consultant",
-        "description": "eCommerce strategy and platform architecture for enterprise fashion and luxury brands, led by Barrett Ahern.",
-        "author": {
-          "@id": "https://barrettahern.com/#person"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://barrettahern.com/#website",
+      "url": "https://barrettahern.com/",
+      "name": "Barrett Ahern",
+      "alternateName": "Barrett Ahern — eCommerce Consultant",
+      "description": "eCommerce strategy and platform architecture for enterprise fashion and luxury brands, led by Barrett Ahern.",
+      "author": {
+        "@id": "https://barrettahern.com/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://barrettahern.com/#person",
+      "name": "Barrett Ahern",
+      "givenName": "Barrett",
+      "familyName": "Ahern",
+      "jobTitle": "Technical eCommerce Consultant",
+      "description": "Fifteen years of eCommerce strategy, specialising in enterprise replatforming, international growth, and conversion optimisation for fashion, beauty, and lifestyle brands.",
+      "url": "https://barrettahern.com",
+      "email": "contact@barrettahern.com",
+      "image": "https://barrettahern.com/images/barrett_ahern.png",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Vervaunt",
+        "url": "https://vervaunt.com",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Shopify Platinum Partner",
+          "credentialCategory": "badge",
+          "url": "https://www.shopify.com/partners/directory/partner/pnrc-limited",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-shopify"
+          }
         }
       },
-      {
-        "@type": "Person",
-        "@id": "https://barrettahern.com/#person",
-        "name": "Barrett Ahern",
-        "givenName": "Barrett",
-        "familyName": "Ahern",
-        "jobTitle": "Technical eCommerce Consultant",
-        "description": "Fifteen years of eCommerce strategy, specialising in enterprise replatforming, international growth, and conversion optimisation for fashion, beauty, and lifestyle brands.",
-        "url": "https://barrettahern.com",
-        "email": "contact@barrettahern.com",
-        "image": "https://barrettahern.com/images/barrett_ahern.png",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Vervaunt",
-          "url": "https://vervaunt.com",
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Shopify Platinum Partner",
-            "credentialCategory": "badge",
-            "url": "https://www.shopify.com/partners/directory/partner/pnrc-limited",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Shopify",
-              "url": "https://www.shopify.com",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Shopify",
-                "https://www.wikidata.org/wiki/Q7501150"
-              ]
-            }
-          }
-        },
-        "alumniOf": [
-          {
-            "@type": "OrganizationRole",
-            "alumniOf": {
-              "@type": "Organization",
-              "name": "BORN Group",
-              "url": "https://www.borngroup.com"
-            },
-            "roleName": "Senior Product Manager",
-            "startDate": "2024-05",
-            "endDate": "2025-01"
+      "alumniOf": [
+        {
+          "@type": "OrganizationRole",
+          "alumniOf": {
+            "@id": "https://barrettahern.com/#org-lfc"
           },
-          {
-            "@type": "OrganizationRole",
-            "alumniOf": {
-              "@type": "Organization",
-              "name": "WeMakeWebsites",
-              "url": "https://wemakewebsites.com"
-            },
-            "roleName": "Senior Product Owner",
-            "startDate": "2020-12",
-            "endDate": "2024-05"
-          },
-          {
-            "@type": "OrganizationRole",
-            "alumniOf": {
-              "@type": "Organization",
-              "name": "K2 Sports",
-              "url": "https://www.k2sports.com"
-            },
-            "roleName": "eCommerce Delivery Manager",
-            "startDate": "2016-06",
-            "endDate": "2018-09"
-          },
-          {
-            "@type": "OrganizationRole",
-            "alumniOf": {
-              "@type": "Organization",
-              "name": "Just Kids Store"
-            },
-            "roleName": "Head of eCommerce",
-            "startDate": "2011-07",
-            "endDate": "2015-11"
-          },
-          {
-            "@type": "OrganizationRole",
-            "alumniOf": {
-              "@type": "CollegeOrUniversity",
-              "name": "Lake Forest College",
-              "url": "https://www.lakeforest.edu",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Lake_Forest_College",
-                "https://www.wikidata.org/wiki/Q6475861"
-              ]
-            },
-            "startDate": "2004",
-            "endDate": "2008"
-          }
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "eCommerce Consulting Services",
-          "itemListElement": [
-            {
-              "@id": "https://barrettahern.com/#service-technical-architecture"
-            },
-            {
-              "@id": "https://barrettahern.com/#service-international-growth"
-            },
-            {
-              "@id": "https://barrettahern.com/#service-conversion-cx"
-            }
-          ]
-        },
-        "knowsAbout": [
-          "eCommerce strategy",
-          "technical architecture and systems integration",
-          "enterprise eCommerce replatforming",
-          "internationalisation and global growth",
-          "conversion optimisation and customer journey",
-          "luxury fashion eCommerce",
-          "Shopify Plus",
+          "startDate": "2004",
+          "endDate": "2008"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "eCommerce Consulting Services",
+        "itemListElement": [
           {
             "@id": "https://barrettahern.com/#service-technical-architecture"
           },
@@ -188,244 +114,260 @@
           {
             "@id": "https://barrettahern.com/#service-conversion-cx"
           }
-        ],
-        "memberOf": [
-          {
-            "@type": "Organization",
-            "name": "The Stentor",
-            "description": "Student newspaper, Lake Forest College"
-          },
-          {
-            "@type": "Organization",
-            "name": "89.3 WMXM",
-            "description": "Student radio station, Lake Forest College"
-          }
-        ],
-        "award": "Forrester Scholarship of Creative Writing, Lake Forest College",
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Bachelor of Arts in Creative Writing",
-            "credentialCategory": "degree",
-            "recognizedBy": {
-              "@type": "CollegeOrUniversity",
-              "name": "Lake Forest College",
-              "url": "https://www.lakeforest.edu",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Lake_Forest_College",
-                "https://www.wikidata.org/wiki/Q6475861"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Bachelor of Arts in Business",
-            "credentialCategory": "degree",
-            "recognizedBy": {
-              "@type": "CollegeOrUniversity",
-              "name": "Lake Forest College",
-              "url": "https://www.lakeforest.edu",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Lake_Forest_College",
-                "https://www.wikidata.org/wiki/Q6475861"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Notion Academy: Advanced",
-            "credentialCategory": "certificate",
-            "url": "https://verify.skilljar.com/c/rarkx9aefdyj",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Notion",
-              "url": "https://www.notion.so"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Notion Academy: Essentials",
-            "credentialCategory": "certificate",
-            "url": "https://verify.skilljar.com/c/rar3pijpmmz7",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Notion",
-              "url": "https://www.notion.so"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Solution Planning Fundamentals: Verified Skill Badge",
-            "credentialCategory": "badge",
-            "url": "https://www.credly.com/badges/0593b0f6-5d36-4747-8533-7c54cd91e4e7",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Shopify",
-              "url": "https://www.shopify.com",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Shopify",
-                "https://www.wikidata.org/wiki/Q7501150"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Selling Shopify Fundamentals: Verified Skill Badge",
-            "credentialCategory": "badge",
-            "url": "https://www.credly.com/badges/7467a5e5-6756-420c-98a2-5c69e69d72d7",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Shopify",
-              "url": "https://www.shopify.com",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Shopify",
-                "https://www.wikidata.org/wiki/Q7501150"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Marketing Fundamentals: Verified Skills Badge",
-            "credentialCategory": "badge",
-            "url": "https://www.credly.com/badges/c3239f7f-2536-4a78-a16c-5d315820c633",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Shopify",
-              "url": "https://www.shopify.com",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Shopify",
-                "https://www.wikidata.org/wiki/Q7501150"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Positioning the Value of Shopify Checkout",
-            "credentialCategory": "badge",
-            "url": "https://www.credly.com/badges/cd25ea82-22b3-415b-a52e-90739381bfab",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Shopify",
-              "url": "https://www.shopify.com",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Shopify",
-                "https://www.wikidata.org/wiki/Q7501150"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Expanding Your Shopify Business Internationally",
-            "credentialCategory": "badge",
-            "url": "https://www.credly.com/badges/3a7f3ce5-e194-403c-860f-041c6f2e4290",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "Shopify",
-              "url": "https://www.shopify.com",
-              "sameAs": [
-                "https://en.wikipedia.org/wiki/Shopify",
-                "https://www.wikidata.org/wiki/Q7501150"
-              ]
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Google Ads",
-            "credentialCategory": "assessment",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "LinkedIn",
-              "url": "https://www.linkedin.com"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Google Analytics",
-            "credentialCategory": "assessment",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "LinkedIn",
-              "url": "https://www.linkedin.com"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "HTML",
-            "credentialCategory": "assessment",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "LinkedIn",
-              "url": "https://www.linkedin.com"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Microsoft Excel",
-            "credentialCategory": "assessment",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "LinkedIn",
-              "url": "https://www.linkedin.com"
-            }
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "SEO",
-            "credentialCategory": "assessment",
-            "recognizedBy": {
-              "@type": "Organization",
-              "name": "LinkedIn",
-              "url": "https://www.linkedin.com"
-            }
-          }
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/in/barrettahern",
-          "https://x.com/barrettahern",
-          "https://www.threads.net/@barrettahern",
-          "https://bsky.app/profile/barrettahern.bsky.social",
-          "https://about.me/barrettahern",
-          "https://www.crunchbase.com/person/barrett-ahern",
-          "https://vervaunt.com/author/barrettahern",
-          "https://www.dash.app/blog/author/barrett-ahern",
-          "https://malakye.com/profile/barrett-ahern-696348",
-          "https://medium.com/@Barrett_Ahern",
-          "https://github.com/BarrettAhern",
-          "https://share.google/n71qHvF4eQh95brOg"
         ]
       },
-      {
-        "@type": "Service",
-        "@id": "https://barrettahern.com/#service-technical-architecture",
-        "name": "Technical Architecture & Systems",
-        "provider": {
-          "@id": "https://barrettahern.com/#person"
+      "knowsAbout": [
+        "eCommerce strategy",
+        "technical architecture and systems integration",
+        "enterprise eCommerce replatforming",
+        "internationalisation and global growth",
+        "conversion optimisation and customer journey",
+        "luxury fashion eCommerce",
+        "Shopify Plus"
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "The Stentor",
+          "description": "Student newspaper, Lake Forest College"
         },
-        "serviceType": "eCommerce Consulting",
-        "description": "Enterprise platform architecture, replatforming, and systems integration for fashion and luxury brands. Covers platform selection, headless commerce, Shopify Plus, and long-term technical governance."
+        {
+          "@type": "Organization",
+          "name": "89.3 WMXM",
+          "description": "Student radio station, Lake Forest College"
+        }
+      ],
+      "award": "Forrester Scholarship of Creative Writing, Lake Forest College",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Arts in Creative Writing",
+          "credentialCategory": "degree",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-lfc"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Arts in Business",
+          "credentialCategory": "degree",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-lfc"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Notion Academy: Advanced",
+          "credentialCategory": "certificate",
+          "url": "https://verify.skilljar.com/c/rarkx9aefdyj",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Notion",
+            "url": "https://www.notion.so",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/Notion_(software)",
+              "https://www.wikidata.org/wiki/Q60747998"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Notion Academy: Essentials",
+          "credentialCategory": "certificate",
+          "url": "https://verify.skilljar.com/c/rar3pijpmmz7",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Notion",
+            "url": "https://www.notion.so",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/Notion_(software)",
+              "https://www.wikidata.org/wiki/Q60747998"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Solution Planning Fundamentals: Verified Skill Badge",
+          "credentialCategory": "badge",
+          "url": "https://www.credly.com/badges/0593b0f6-5d36-4747-8533-7c54cd91e4e7",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-shopify"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Selling Shopify Fundamentals: Verified Skill Badge",
+          "credentialCategory": "badge",
+          "url": "https://www.credly.com/badges/7467a5e5-6756-420c-98a2-5c69e69d72d7",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-shopify"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Marketing Fundamentals: Verified Skills Badge",
+          "credentialCategory": "badge",
+          "url": "https://www.credly.com/badges/c3239f7f-2536-4a78-a16c-5d315820c633",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-shopify"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Positioning the Value of Shopify Checkout",
+          "credentialCategory": "badge",
+          "url": "https://www.credly.com/badges/cd25ea82-22b3-415b-a52e-90739381bfab",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-shopify"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Expanding Your Shopify Business Internationally",
+          "credentialCategory": "badge",
+          "url": "https://www.credly.com/badges/3a7f3ce5-e194-403c-860f-041c6f2e4290",
+          "recognizedBy": {
+            "@id": "https://barrettahern.com/#org-shopify"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Google Ads",
+          "credentialCategory": "assessment",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/LinkedIn",
+              "https://www.wikidata.org/wiki/Q213660"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Google Analytics",
+          "credentialCategory": "assessment",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/LinkedIn",
+              "https://www.wikidata.org/wiki/Q213660"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "HTML",
+          "credentialCategory": "assessment",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/LinkedIn",
+              "https://www.wikidata.org/wiki/Q213660"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Microsoft Excel",
+          "credentialCategory": "assessment",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/LinkedIn",
+              "https://www.wikidata.org/wiki/Q213660"
+            ]
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "SEO",
+          "credentialCategory": "assessment",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/LinkedIn",
+              "https://www.wikidata.org/wiki/Q213660"
+            ]
+          }
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/barrettahern",
+        "https://x.com/barrettahern",
+        "https://www.threads.net/@barrettahern",
+        "https://bsky.app/profile/barrettahern.bsky.social",
+        "https://about.me/barrettahern",
+        "https://www.crunchbase.com/person/barrett-ahern",
+        "https://vervaunt.com/author/barrettahern",
+        "https://www.dash.app/blog/author/barrett-ahern",
+        "https://malakye.com/profile/barrett-ahern-696348",
+        "https://medium.com/@Barrett_Ahern",
+        "https://github.com/BarrettAhern",
+        "https://share.google/n71qHvF4eQh95brOg"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://barrettahern.com/#org-shopify",
+      "name": "Shopify",
+      "url": "https://www.shopify.com",
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Shopify",
+        "https://www.wikidata.org/wiki/Q7501150"
+      ]
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "@id": "https://barrettahern.com/#org-lfc",
+      "name": "Lake Forest College",
+      "url": "https://www.lakeforest.edu",
+      "sameAs": [
+        "https://en.wikipedia.org/wiki/Lake_Forest_College",
+        "https://www.wikidata.org/wiki/Q6475861"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://barrettahern.com/#service-technical-architecture",
+      "name": "Technical Architecture & Systems",
+      "provider": {
+        "@id": "https://barrettahern.com/#person"
       },
-      {
-        "@type": "Service",
-        "@id": "https://barrettahern.com/#service-international-growth",
-        "name": "Internationalisation & Global Growth",
-        "provider": {
-          "@id": "https://barrettahern.com/#person"
-        },
-        "serviceType": "eCommerce Consulting",
-        "description": "Cross-border eCommerce strategy and execution for brands scaling globally. Covers Shopify Markets, multi-currency, localisation, market entry strategy, and international domain architecture."
+      "serviceType": "eCommerce Consulting",
+      "description": "Enterprise platform architecture, replatforming, and systems integration for fashion and luxury brands. Covers platform selection, headless commerce, Shopify Plus, and long-term technical governance."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://barrettahern.com/#service-international-growth",
+      "name": "Internationalisation & Global Growth",
+      "provider": {
+        "@id": "https://barrettahern.com/#person"
       },
-      {
-        "@type": "Service",
-        "@id": "https://barrettahern.com/#service-conversion-cx",
-        "name": "Conversion & Customer Journey",
-        "provider": {
-          "@id": "https://barrettahern.com/#person"
-        },
-        "serviceType": "eCommerce Consulting",
-        "description": "Full-funnel customer experience strategy, conversion optimisation, and merchandising for premium and luxury brands. Covers UX, on-site journey design, AOV growth, and commercial performance frameworks."
-      }
-    ]
-  }
+      "serviceType": "eCommerce Consulting",
+      "description": "Cross-border eCommerce strategy and execution for brands scaling globally. Covers Shopify Markets, multi-currency, localisation, market entry strategy, and international domain architecture."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://barrettahern.com/#service-conversion-cx",
+      "name": "Conversion & Customer Journey",
+      "provider": {
+        "@id": "https://barrettahern.com/#person"
+      },
+      "serviceType": "eCommerce Consulting",
+      "description": "Full-funnel customer experience strategy, conversion optimisation, and merchandising for premium and luxury brands. Covers UX, on-site journey design, AOV growth, and commercial performance frameworks."
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -469,7 +411,7 @@
 
           <!-- Mobile-only image, sits between heading and body on small screens -->
           <div class="hero__image hero__image--mobile">
-            <img src="/images/barrett_ahern.png" alt="Barrett Ahern">
+            <img src="/images/barrett_ahern.png" alt="Barrett Ahern, eCommerce Strategy">
           </div>
 
           <p class="hero__body">
@@ -482,7 +424,7 @@
         <div class="hero__image hero__image--desktop">
           <img
             src="/images/barrett_ahern.png"
-            alt="Barrett Ahern"
+            alt="Barrett Ahern, eCommerce Strategy"
           >
         </div>
 
