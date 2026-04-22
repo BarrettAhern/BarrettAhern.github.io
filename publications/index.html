@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eCommerce Strategy Research &amp; Insights | Barrett Ahern</title>
+  <title>eCommerce Strategy Research & Insights | Barrett Ahern</title>
   <meta name="robots" content="max-image-preview:large">
   <meta name="description" content="Industry research and strategic insights by Barrett Ahern, eCommerce Strategist at Vervaunt. Analysis of AI-first SEO, Shopify Markets architecture, and enterprise commerce trends for 2025–2026.">
 
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://barrettahern.com/publications/">
-  <meta property="og:title" content="eCommerce Strategy Research &amp; Insights | Barrett Ahern">
+  <meta property="og:title" content="eCommerce Strategy Research & Insights | Barrett Ahern">
   <meta property="og:description" content="Industry research and strategic insights by Barrett Ahern, eCommerce Strategist at Vervaunt. Analysis of AI-first SEO, Shopify Markets architecture, and enterprise commerce trends for 2025–2026.">
   <meta property="og:image" content="https://barrettahern.com/images/og/barrett-ahern-og-publications.jpg">
   <meta property="og:image:alt" content="Barrett Ahern — eCommerce Strategist">
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@barrettahern">
   <meta name="twitter:creator" content="@barrettahern">
-  <meta name="twitter:title" content="eCommerce Strategy Research &amp; Insights | Barrett Ahern">
+  <meta name="twitter:title" content="eCommerce Strategy Research & Insights | Barrett Ahern">
   <meta name="twitter:description" content="Industry research and strategic insights by Barrett Ahern, eCommerce Strategist at Vervaunt. Analysis of AI-first SEO, Shopify Markets architecture, and enterprise commerce trends for 2025–2026.">
   <meta name="twitter:image" content="https://barrettahern.com/images/og/barrett-ahern-og-publications.jpg">
   <meta name="twitter:image:alt" content="Barrett Ahern — eCommerce Strategist">
@@ -43,6 +43,29 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
+  <!--
+    SCHEMA: CollectionPage + ItemList of Articles
+    =============================================
+    Each publication gets an Article node in the @graph array below.
+    "author" always references Barrett's Person @id, this is how Google
+    and LLMs know all these articles are by the same named individual,
+    regardless of where they're published.
+
+    EXTERNAL PUBLICATIONS, how to handle them:
+    - Set "url" to the original article URL on the external site
+    - Set "publisher" name + url to the external publication
+    - Keep "author" as { "@id": "https://barrettahern.com/#person" }
+    This is exactly what Google expects. The schema tells crawlers
+    "Barrett wrote this; it lives on [other site]", fully supported.
+
+    SELF-PUBLISHED ARTICLES (on barrettahern.com):
+    - Set "url" to the barrettahern.com article URL
+    - Set "publisher" name: "Barrett Ahern", url: "https://barrettahern.com"
+
+    TO ADD A NEW PUBLICATION:
+    1. Add an Article block to the @graph array below
+    2. Add a matching <article class="pub-item"> in the HTML below
+  -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,8 +73,8 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",     "item": "https://barrettahern.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Writing",  "item": "https://barrettahern.com/publications/" }
+          { "@type": "ListItem", "position": 1, "name": "Home",         "item": "https://barrettahern.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://barrettahern.com/publications/" }
         ]
       },
       {
@@ -69,7 +92,11 @@
         "url": "https://vervaunt.com/seo-in-an-ai-first-search-landscape",
         "datePublished": "2026-03-01",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": { "@type": "Organization", "name": "Vervaunt", "url": "https://vervaunt.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vervaunt",
+          "url": "https://vervaunt.com"
+        },
         "description": "How AI is reshaping organic search, from AI Overviews and zero-click results to what eCommerce brands need to do differently to stay visible in an AI-first discovery landscape.",
         "keywords": ["SEO", "AI search", "AI Overviews", "eCommerce SEO", "zero-click search"]
       },
@@ -79,7 +106,11 @@
         "url": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/",
         "datePublished": "2025-10-01",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": { "@type": "Organization", "name": "Vervaunt", "url": "https://vervaunt.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vervaunt",
+          "url": "https://vervaunt.com"
+        },
         "description": "A comprehensive guide comparing Shopify Markets vs expansion stores for international growth — when to consolidate, how to migrate, and the full cost reality.",
         "keywords": ["Shopify Markets", "eCommerce internationalisation", "Shopify Plus", "expansion stores", "store consolidation"]
       },
@@ -89,7 +120,11 @@
         "url": "https://www.dash.app/blog/ecommerce-tarrifs",
         "datePublished": "2026-02-01",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": { "@type": "Organization", "name": "Dash", "url": "https://www.dash.app" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Dash",
+          "url": "https://www.dash.app"
+        },
         "description": "How eCommerce brands can navigate global trade disruption, tariffs, and supply chain uncertainty."
       },
       {
@@ -98,7 +133,11 @@
         "url": "https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/",
         "datePublished": "2026-02-01",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": { "@type": "Organization", "name": "Quickfire Digital", "url": "https://www.quickfiredigital.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Quickfire Digital",
+          "url": "https://www.quickfiredigital.com"
+        },
         "description": "An overview of the current state of eCommerce, key trends, and what brands need to prioritise."
       },
       {
@@ -107,7 +146,11 @@
         "url": "https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai",
         "datePublished": "2025-05-01",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": { "@type": "Organization", "name": "Barrett Ahern", "url": "https://barrettahern.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Barrett Ahern",
+          "url": "https://barrettahern.com"
+        },
         "description": "How AI is changing eCommerce, from machine learning to generative AI, LLMs, and agentic automation."
       },
       {
@@ -116,7 +159,11 @@
         "url": "https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack",
         "datePublished": "2024-05-01",
         "author": { "@id": "https://barrettahern.com/#person" },
-        "publisher": { "@type": "Organization", "name": "WeMakeWebsites", "url": "https://www.wemakewebsites.com" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "WeMakeWebsites",
+          "url": "https://www.wemakewebsites.com"
+        },
         "description": "How to choose and connect the right technology for your eCommerce stack, covering platform selection, integration strategy, and what to prioritise when building for scale.",
         "keywords": ["eCommerce tech stack", "platform selection", "Shopify Plus", "integration strategy"]
       }
@@ -126,12 +173,17 @@
 </head>
 <body>
 
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
   <nav class="nav">
     <div class="container nav__inner">
       <a href="/" class="nav__logo">Barrett Ahern</a>
+
       <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
+
       <ul class="nav__links" id="nav-links">
         <li><a href="/about-me/">About</a></li>
         <li><a href="/publications/" class="active">Publications</a></li>
@@ -141,12 +193,16 @@
     </div>
   </nav>
 
+
+  <!-- =====================================================
+       PAGE HEADER
+       ===================================================== -->
   <div class="page-header">
     <div class="container">
       <div class="page-header__content">
         <div>
           <p class="section-label">Writing</p>
-          <h1 class="page-header__title">eCommerce Strategy Research &amp; Insights</h1>
+          <h1 class="page-header__title">eCommerce Strategy Research & Insights</h1>
           <p class="page-header__subtitle">Analysis of AI-first search, Shopify Plus architecture, and enterprise commerce trends — published on Vervaunt and across industry platforms.</p>
         </div>
         <div class="page-header__image">
@@ -156,128 +212,181 @@
     </div>
   </div>
 
+
+  <!-- =====================================================
+       PUBLICATIONS LIST
+
+       HOW TO ADD A NEW PUBLICATION:
+       1. Copy one <article class="pub-item"> block below
+       2. Update: title, href (use the original article URL), description, image
+       3. Add a matching Article block in the JSON-LD schema above
+          External article → set "url" + "publisher" to the external site
+          Self-published  → set "url" + "publisher" to barrettahern.com
+       ===================================================== -->
   <section class="section">
     <div class="container">
+
       <div class="publications-list">
 
+        <!-- ── Publication ───────────────────────────────── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
-              <a href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener">SEO in an AI-First Search Landscape</a>
+              <a href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener">
+                SEO in an AI-First Search Landscape
+              </a>
             </h2>
             <div class="pub-item__byline">
               <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Vervaunt</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <time class="pub-item__date" datetime="2026-03-01">Mar 2026</time>
             </div>
-            <p class="pub-item__desc">How AI is reshaping organic search, from AI Overviews and zero-click results to what eCommerce brands need to do differently to stay visible in an AI-first discovery landscape.</p>
-            <a class="pub-item__link" href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener">Read article &rarr;</a>
+            <p class="pub-item__desc">
+              How AI is reshaping organic search, from AI Overviews and zero-click results to what eCommerce brands need to do differently to stay visible in an AI-first discovery landscape.
+            </p>
+            <a class="pub-item__link" href="https://vervaunt.com/seo-in-an-ai-first-search-landscape" target="_blank" rel="noopener">Read article →</a>
           </div>
           <img class="pub-item__image" src="/images/publication-images/barrett-ahern-seo-ai-first-search-landscape-16x9.png" alt="SEO in an AI-First Search Landscape" loading="lazy">
         </article>
 
+        <!-- ── Publication ───────────────────────────────── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
-              <a href="/publications/shopify-markets-a-comprehensive-guide/">Shopify Markets: A Comprehensive Guide</a>
+              <a href="/publications/shopify-markets-a-comprehensive-guide/">
+                Shopify Markets: A Comprehensive Guide
+              </a>
             </h2>
             <div class="pub-item__byline">
               <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Vervaunt</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <time class="pub-item__date" datetime="2025-10-01">Oct 2025</time>
             </div>
-            <p class="pub-item__desc">A deep-dive into Shopify Markets vs expansion stores, when to use each, how to structure your international setup, and what the migration path looks like for complex multi-market retailers.</p>
-            <a class="pub-item__link" href="/publications/shopify-markets-a-comprehensive-guide/">Read article &rarr;</a>
+            <p class="pub-item__desc">
+              A deep-dive into Shopify Markets vs expansion stores, when to use each, how to structure your international setup, and what the migration path looks like for complex multi-market retailers.
+            </p>
+            <a class="pub-item__link" href="/publications/shopify-markets-a-comprehensive-guide/">Read article →</a>
           </div>
           <img class="pub-item__image" src="/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-16x9.png" alt="Shopify Markets: A Comprehensive Guide" loading="lazy">
         </article>
 
+        <!-- ── Publication ───────────────────────────────── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
-              <a href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">Navigating eCommerce Trade Turbulence in 2025</a>
+              <a href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">
+                Navigating eCommerce Trade Turbulence in 2025
+              </a>
             </h2>
             <div class="pub-item__byline">
               <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Dash</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <time class="pub-item__date" datetime="2026-02-01">Feb 2026</time>
             </div>
-            <p class="pub-item__desc">How brands should respond to rising tariffs, supply chain disruption, and economic uncertainty, with practical strategies for maintaining growth and margin.</p>
-            <a class="pub-item__link" href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">Read article &rarr;</a>
+            <p class="pub-item__desc">
+              How brands should respond to rising tariffs, supply chain disruption, and economic uncertainty, with practical strategies for maintaining growth and margin.
+            </p>
+            <a class="pub-item__link" href="https://www.dash.app/blog/ecommerce-tarrifs" target="_blank" rel="noopener">Read article →</a>
           </div>
           <img class="pub-item__image" src="/images/publication-images/barrett-ahern-navigating-ecommerce-trade-turbulence-16x9.png" alt="Navigating eCommerce Trade Turbulence in 2025" loading="lazy">
         </article>
 
+        <!-- ── Publication ───────────────────────────────── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
-              <a href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">The State of Ecommerce 2025</a>
+              <a href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">
+                The State of Ecommerce 2025
+              </a>
             </h2>
             <div class="pub-item__byline">
               <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Quickfire Digital</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <time class="pub-item__date" datetime="2026-02-01">Feb 2026</time>
             </div>
-            <p class="pub-item__desc">An overview of where eCommerce stands heading into 2025, platform trends, AI adoption, the changing search landscape, and what forward-thinking brands are prioritising.</p>
-            <a class="pub-item__link" href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">Read article &rarr;</a>
+            <p class="pub-item__desc">
+              An overview of where eCommerce stands heading into 2025, platform trends, AI adoption, the changing search landscape, and what forward-thinking brands are prioritising.
+            </p>
+            <a class="pub-item__link" href="https://www.quickfiredigital.com/white-papers/the-state-of-ecommerce-report/" target="_blank" rel="noopener">Read article →</a>
           </div>
           <img class="pub-item__image" src="/images/publication-images/barrett-ahern-state-of-ecommerce-2025-16x9.png" alt="The State of Ecommerce 2025" loading="lazy">
         </article>
 
+        <!-- ── Publication ───────────────────────────────── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
-              <a href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">Future of eCommerce and AI</a>
+              <a href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">
+                Future of eCommerce and AI
+              </a>
             </h2>
             <div class="pub-item__byline">
               <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">Vervaunt</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <time class="pub-item__date" datetime="2025-05-01">May 2025</time>
             </div>
-            <p class="pub-item__desc">How AI is reshaping eCommerce, from real-time machine learning and generative AI to LLMs, AI Overviews, and the rise of agentic decision-making in retail operations.</p>
-            <a class="pub-item__link" href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">Read article &rarr;</a>
+            <p class="pub-item__desc">
+              How AI is reshaping eCommerce, from real-time machine learning and generative AI to LLMs, AI Overviews, and the rise of agentic decision-making in retail operations.
+            </p>
+            <a class="pub-item__link" href="https://vervaunt.com/the-future-of-commerce-emerging-trends-technologies-and-the-state-of-ai" target="_blank" rel="noopener">Read article →</a>
           </div>
           <img class="pub-item__image" src="/images/publication-images/barrett-ahern-future-of-commerce-state-of-ai-16x9.png" alt="Future of eCommerce and AI" loading="lazy">
         </article>
 
+        <!-- ── Publication ───────────────────────────────── -->
         <article class="pub-item">
           <div class="pub-item__content">
             <h2 class="pub-item__title">
-              <a href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">Creating the Perfect eCommerce Tech Stack</a>
+              <a href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">
+                Creating the Perfect eCommerce Tech Stack
+              </a>
             </h2>
             <div class="pub-item__byline">
               <img class="pub-item__avatar" src="/images/barrett-ahern-headshot.png" alt="Barrett Ahern, eCommerce strategist and author">
               <span class="pub-item__author">Barrett Ahern</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <span class="pub-item__publisher">WeMakeWebsites</span>
-              <span class="pub-item__byline-sep">&middot;</span>
+              <span class="pub-item__byline-sep">·</span>
               <time class="pub-item__date" datetime="2024-05-01">May 2024</time>
             </div>
-            <p class="pub-item__desc">How to choose and connect the right technology for your eCommerce stack, covering platform selection, integration strategy, and what to prioritise when building for scale.</p>
-            <a class="pub-item__link" href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">Read article &rarr;</a>
+            <p class="pub-item__desc">
+              How to choose and connect the right technology for your eCommerce stack, covering platform selection, integration strategy, and what to prioritise when building for scale.
+            </p>
+            <a class="pub-item__link" href="https://www.wemakewebsites.com/blog/creating-the-perfect-e-commerce-tech-stack" target="_blank" rel="noopener">Read article →</a>
           </div>
           <img class="pub-item__image" src="/images/publication-images/barrett-ahern-perfect-ecommerce-tech-stack-16x9.png" alt="Creating the Perfect eCommerce Tech Stack" loading="lazy">
         </article>
+
+        <!--
+          ╔══════════════════════════════════════════════════╗
+          ║  ADD NEW PUBLICATIONS ABOVE THIS LINE            ║
+          ║  Copy the <article class="pub-item"> block above ║
+          ╚══════════════════════════════════════════════════╝
+        -->
 
       </div>
     </div>
   </section>
 
+
+  <!-- =====================================================
+       CLIENT LOGO MARQUEE (pre-footer)
+       ===================================================== -->
   <div class="logos">
     <div class="logos__track-wrapper">
       <div class="logos__track">
@@ -293,6 +402,7 @@
         <img src="/images/clients/hmv.svg" alt="HMV logo">
         <img src="/images/clients/whittard.svg" alt="Whittard of Chelsea logo">
         <img src="/images/clients/varley.svg" alt="Varley logo">
+        <!-- Duplicate for seamless loop -->
         <img src="/images/clients/lvmh.svg" alt="" aria-hidden="true">
         <img src="/images/clients/mulberry.svg" alt="" aria-hidden="true">
         <img src="/images/clients/stephen-webster.png" alt="" aria-hidden="true">
@@ -309,6 +419,9 @@
     </div>
   </div>
 
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -324,7 +437,7 @@
           <li><a href="https://x.com/barrettahern" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
-      <p class="footer__copy">&copy; 2026 Barrett Ahern. All rights reserved.</p>
+      <p class="footer__copy">© 2026 Barrett Ahern. All rights reserved.</p>
     </div>
   </footer>
 
