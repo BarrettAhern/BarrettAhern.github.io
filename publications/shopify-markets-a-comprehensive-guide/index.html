@@ -417,18 +417,6 @@
       margin-top: var(--space-1);
     }
 
-    .update-item__source {
-      margin-top: var(--space-3);
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.07em;
-      color: var(--color-muted);
-    }
-
-    .update-item__source span {
-      color: var(--color-mid);
-    }
-
     .update-item__body code {
       font-family: var(--font-mono);
       font-size: 0.88em;
@@ -822,7 +810,6 @@
               <h3 class="update-item__title">Order Routing Doesn't Account for Cost or Duty Exposure</h3>
             </div>
             <p class="update-item__body">Shopify's routing logic optimises for geography and inventory availability — not shipping cost differentials between warehouses, cross-border duty liability when splitting orders, or 3PL pick-and-pack costs across multiple locations. Brands with complex fulfilment networks will still need an ERP or dedicated OMS to manage margin protection alongside customer experience. Shopify Markets is not an OMS.</p>
-            <p class="update-item__source">Surfaced by: <span>HighCohesion</span></p>
           </div>
 
           <div class="update-item">
@@ -830,7 +817,6 @@
               <h3 class="update-item__title">ERP One-to-One Mapping Breaks at Consolidation</h3>
             </div>
             <p class="update-item__body">Most ERPs are built around a one-to-one relationship with a Shopify store. Consolidation breaks that structure. Every downstream data flow — orders, refunds, fulfilment, financial postings — needs to retain market-level identifiers or the ERP loses the ability to produce market-level P&amp;Ls, VAT submissions, and reconciliations. This should be tested before go-live, not after.</p>
-            <p class="update-item__source">Surfaced by: <span>HighCohesion</span></p>
           </div>
 
           <div class="update-item">
@@ -838,7 +824,6 @@
               <h3 class="update-item__title">Tax Compliance Has a Practical Ceiling</h3>
             </div>
             <p class="update-item__body">Shopify Markets doesn't make you automatically compliant — it gives you the infrastructure to manage it. A finance team can reasonably govern native tax configuration across around 5–10 markets. Beyond that, third-party tooling becomes necessary rather than optional. Worth setting this expectation explicitly for brands treating Markets as a path to selling into 50+ countries.</p>
-            <p class="update-item__source">Surfaced by: <span>HighCohesion</span></p>
           </div>
 
           <div class="update-item">
@@ -846,7 +831,6 @@
               <h3 class="update-item__title">Subdomain and ccTLD URLs Cannot Redirect to Subfolders Natively</h3>
             </div>
             <p class="update-item__body">Shopify's redirect system cannot handle a move from <code>de.brand.com</code> or <code>brand.de</code> to <code>brand.com/de/</code>. If you're changing domain architecture as part of consolidation, you need a routing layer at DNS or CDN level — not just Shopify redirects. Consistently cited as a surprise in live migrations.</p>
-            <p class="update-item__source">Surfaced by: <span>Orbe</span></p>
           </div>
 
           <div class="update-item">
@@ -854,7 +838,6 @@
               <h3 class="update-item__title">Fragmented Portfolios Compete Against Themselves in AI Search</h3>
             </div>
             <p class="update-item__body">LLMs and AI Overviews tend to cite a single authoritative source per query. Co-owned brands on separate domains targeting overlapping keywords reduce the likelihood that any one of them surfaces as the cited answer. A consolidated domain concentrates topical authority for AI retrieval — an argument for consolidation that has become meaningfully more relevant since AI Overviews became commercially significant in 2025–26.</p>
-            <p class="update-item__source">Surfaced by: <span>Shero Commerce</span></p>
           </div>
 
         </div>
