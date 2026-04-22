@@ -16,10 +16,10 @@
   <meta property="og:url" content="https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/">
   <meta property="og:title" content="Shopify Markets: A Comprehensive Guide | Barrett Ahern">
   <meta property="og:description" content="A summary of and commentary on Barrett Ahern's Vervaunt guide to Shopify Markets vs expansion stores — decision framework, cost reality, migration checklist, and industry reactions.">
-  <meta property="og:image" content="https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-16x9.png">
+  <meta property="og:image" content="https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-square.png">
   <meta property="og:image:alt" content="Shopify Markets: A Comprehensive Guide — Barrett Ahern for Vervaunt">
-  <meta property="og:image:width" content="1600">
-  <meta property="og:image:height" content="900">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
   <meta property="og:image:type" content="image/png">
   <meta property="article:author" content="https://www.linkedin.com/in/barrettahern/">
   <meta property="article:published_time" content="2025-10-01">
@@ -30,7 +30,7 @@
   <meta name="twitter:creator" content="@barrettahern">
   <meta name="twitter:title" content="Shopify Markets: A Comprehensive Guide | Barrett Ahern">
   <meta name="twitter:description" content="A summary of and commentary on Barrett Ahern's Vervaunt guide to Shopify Markets vs expansion stores — decision framework, cost reality, migration checklist, and industry reactions.">
-  <meta name="twitter:image" content="https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-16x9.png">
+  <meta name="twitter:image" content="https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-square.png">
   <meta name="twitter:image:alt" content="Shopify Markets: A Comprehensive Guide — Barrett Ahern for Vervaunt">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -313,6 +313,36 @@
       text-decoration: none;
     }
 
+    /* Closing CTA with image */
+    .closing-cta__inner {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-12);
+    }
+
+    .closing-cta__image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .closing-cta__content {
+      flex: 1;
+    }
+
+    @media (max-width: 640px) {
+      .closing-cta__inner {
+        flex-direction: column;
+        gap: var(--space-8);
+      }
+      .closing-cta__image {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
     /* Spacing utility */
     .space-top-20 { padding-top: var(--space-20); }
 
@@ -378,7 +408,11 @@
         "name": "Shopify Markets: A Comprehensive Guide | Barrett Ahern",
         "url": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/",
         "description": "A summary of and commentary on Barrett Ahern's Vervaunt guide to Shopify Markets vs expansion stores — decision framework, cost reality, migration checklist, and industry reactions.",
-        "author": { "@id": "https://barrettahern.com/#person" }
+        "author": { "@id": "https://barrettahern.com/#person" },
+        "mentions": {
+          "@type": "Article",
+          "@id": "https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores"
+        }
       },
       {
         "@type": "Article",
@@ -393,7 +427,11 @@
           "url": "https://vervaunt.com"
         },
         "description": "A comprehensive guide comparing Shopify Markets vs expansion stores for international growth — when to consolidate, how to migrate, and the full cost reality.",
-        "keywords": ["Shopify Markets", "Shopify expansion stores", "Shopify internationalisation", "Shopify Plus", "store consolidation"]
+        "keywords": ["Shopify Markets", "Shopify expansion stores", "Shopify internationalisation", "Shopify Plus", "store consolidation"],
+        "image": "https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-square.png",
+        "mainEntityOfPage": {
+          "@id": "https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/"
+        }
       },
       {
         "@type": "Review",
@@ -542,23 +580,14 @@
   <section class="section">
     <div class="container">
 
-      <img
-        class="article-hero-image"
-        src="/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-16x9.png"
-        alt="Shopify Markets: A Comprehensive Guide — Barrett Ahern for Vervaunt"
-        loading="eager"
-        width="1600"
-        height="900"
-      >
-
       <div class="article-body">
-        <p>Shopify’s approach to international selling has shifted. For most of the past decade, brands operating across multiple regions ran separate expansion stores — one per market, one per entity. It was operationally expensive, but it gave teams the autonomy and legal separation they needed. That trade-off has changed significantly.</p>
+        <p>Shopify's approach to international selling has shifted. For most of the past decade, brands operating across multiple regions ran separate expansion stores — one per market, one per entity. It was operationally expensive, but it gave teams the autonomy and legal separation they needed. That trade-off has changed significantly.</p>
 
-        <p>This guide, written for Vervaunt in October 2025, lays out the full decision framework: when Shopify Markets is now the right default, when expansion stores still make sense, and what a consolidation project actually involves end to end. It draws on Vervaunt’s direct experience across a client base where the average Shopify Plus brand runs two to five expansion stores — most of whom are now consolidating or planning to.</p>
+        <p>This guide, written for Vervaunt in October 2025, lays out the full decision framework: when Shopify Markets is now the right default, when expansion stores still make sense, and what a consolidation project actually involves end to end. It draws on Vervaunt's direct experience across a client base where the average Shopify Plus brand runs two to five expansion stores — most of whom are now consolidating or planning to.</p>
 
         <p>The central shift is multi-entity support. Shopify now allows a single storefront to map multiple legal entities to Shopify Payments, unlocking local payouts and domestic alternative payment methods per region. That alone removes the most common reason brands maintained separate stores.</p>
 
-        <p>The guide covers what consolidation leaves on the table — subscription systems that can’t isolate by entity, third-party gateways that still attach to the primary entity, and the edge cases where expansion stores remain the right tool: regulated markets, genuinely divergent catalogues, independent B2B setups. It also includes illustrative cost figures for multi-store duplication, a migration readiness checklist, and a side-by-side comparison across every major decision vector: licensing, domains and SEO, payments, assortment, apps, integrations, and total cost of ownership.</p>
+        <p>The guide covers what consolidation leaves on the table — subscription systems that can't isolate by entity, third-party gateways that still attach to the primary entity, and the edge cases where expansion stores remain the right tool: regulated markets, genuinely divergent catalogues, independent B2B setups. It also includes illustrative cost figures for multi-store duplication, a migration readiness checklist, and a side-by-side comparison across every major decision vector: licensing, domains and SEO, payments, assortment, apps, integrations, and total cost of ownership.</p>
       </div>
 
       <a class="article-read-cta" href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener">
@@ -591,7 +620,7 @@
       <p class="section-label">Author's note</p>
       <h2 class="section-title">Writing this article</h2>
       <div class="section-placeholder">
-        <p>Barrett’s reflections on researching and writing this guide will be added here.</p>
+        <p>Barrett's reflections on researching and writing this guide will be added here.</p>
       </div>
     </div>
   </section>
@@ -645,7 +674,7 @@
 
         <!-- ── Ross Allsop — Swap / Dema ──────────────────── -->
         <div class="pullquote">
-          <p class="pullquote__text">Really solid overview — this is exactly the kind of context that’s often missing from the ‘just move to Markets’ conversations.</p>
+          <p class="pullquote__text">Really solid overview — this is exactly the kind of context that's often missing from the 'just move to Markets' conversations.</p>
           <div class="pullquote__attr">
             <div>
               <p class="pullquote__name">Ross Allsop</p>
@@ -677,15 +706,27 @@
        ===================================================== -->
   <div class="closing-cta">
     <div class="container">
-      <h2 class="closing-cta__heading">Read the full article</h2>
-      <p class="closing-cta__sub">The complete guide — including decision matrices, cost illustrations, and migration checklists — is published on the Vervaunt blog.</p>
-      <div class="closing-cta__links">
-        <a class="article-read-cta" href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener" style="margin-top: 0;">
-          Read on Vervaunt →
-        </a>
-        <a class="closing-cta__secondary" href="https://www.linkedin.com/in/barrettahern/" target="_blank" rel="noopener">
-          Follow on LinkedIn
-        </a>
+      <div class="closing-cta__inner">
+        <img
+          class="closing-cta__image"
+          src="/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-square.png"
+          alt="Shopify Markets: A Comprehensive Guide — Barrett Ahern for Vervaunt"
+          width="800"
+          height="800"
+          loading="lazy"
+        >
+        <div class="closing-cta__content">
+          <h2 class="closing-cta__heading">Read the full article</h2>
+          <p class="closing-cta__sub">The complete guide — including decision matrices, cost illustrations, and migration checklists — is published on the Vervaunt blog.</p>
+          <div class="closing-cta__links">
+            <a class="article-read-cta" href="https://vervaunt.com/shopify-store-consolidation-guide-when-to-use-markets-vs-expansion-stores" target="_blank" rel="noopener" style="margin-top: 0;">
+              Read on Vervaunt →
+            </a>
+            <a class="closing-cta__secondary" href="https://www.linkedin.com/in/barrettahern/" target="_blank" rel="noopener">
+              Follow on LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
