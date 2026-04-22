@@ -343,6 +343,109 @@
       }
     }
 
+    /* ── Updates feed ───────────────────────────────────── */
+    .updates-feed {
+      max-width: 720px;
+      margin-top: var(--space-8);
+    }
+
+    .updates-subsection {
+      margin-bottom: var(--space-12);
+    }
+
+    .updates-subsection + .updates-subsection {
+      padding-top: var(--space-10);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .updates-subsection__label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: var(--space-8);
+    }
+
+    .update-item {
+      padding: var(--space-6) 0;
+      border-bottom: 1px solid var(--color-rule);
+    }
+
+    .update-item:first-of-type {
+      padding-top: 0;
+    }
+
+    .update-item__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-4);
+      margin-bottom: var(--space-2);
+      flex-wrap: wrap;
+    }
+
+    .update-item__title {
+      font-family: var(--font-sans);
+      font-size: var(--font-size-base);
+      font-weight: 500;
+      color: var(--color-ink);
+      line-height: 1.4;
+    }
+
+    .update-item__date {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 3px;
+    }
+
+    .update-item__date--urgent {
+      color: var(--color-mid);
+      font-weight: 500;
+    }
+
+    .update-item__body {
+      font-size: var(--font-size-base);
+      font-weight: 300;
+      color: var(--color-text);
+      line-height: 1.75;
+      margin-top: var(--space-1);
+    }
+
+    .update-item__source {
+      margin-top: var(--space-3);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.07em;
+      color: var(--color-muted);
+    }
+
+    .update-item__source span {
+      color: var(--color-mid);
+    }
+
+    .update-item__body code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--color-off-white);
+      border: 1px solid var(--color-rule);
+      border-radius: 2px;
+      padding: 1px 5px;
+      color: var(--color-ink);
+    }
+
+    @media (max-width: 580px) {
+      .update-item__header {
+        flex-direction: column;
+        gap: var(--space-1);
+      }
+    }
+
     /* Spacing utility */
     .space-top-20 { padding-top: var(--space-20); }
 
@@ -630,8 +733,132 @@
     <div class="container">
       <p class="section-label">Updates</p>
       <h2 class="section-title">Since publication</h2>
-      <div class="section-placeholder">
-        <p>Updates, corrections, and further thinking will be added here as the topic develops.</p>
+      <div class="updates-feed">
+
+        <!-- ── Ecosystem Updates ─────────────────────────── -->
+        <div class="updates-subsection">
+          <p class="updates-subsection__label">Ecosystem Updates</p>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Shopify Scripts Deprecated</h3>
+              <span class="update-item__date update-item__date--urgent">Apr 15, 2026 (edit/publish locked) · Jun 30, 2026 (execution ends)</span>
+            </div>
+            <p class="update-item__body">Scripts stop executing entirely on June 30, 2026. Any store using Scripts for market-specific checkout logic — pricing rules, regional discounts, custom shipping — must migrate to Shopify Functions before consolidating, or before that deadline hits on an existing consolidated store. This is an urgent, time-sensitive dependency to audit.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Per-Market Theme Settings and App Embeds</h3>
+              <span class="update-item__date">Mar 13, 2026</span>
+            </div>
+            <p class="update-item__body">Theme settings and app-driven content can now be customised per market rather than applying globally. Previously a genuine gap that pushed some brands toward separate stores — now closed.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Per-Market Checkout and Customer Account Customisation</h3>
+              <span class="update-item__date">Mar 16, 2026</span>
+            </div>
+            <p class="update-item__body">Checkout and customer account pages can be customised by market directly in the editor. Another capability that was previously only achievable by running separate stores.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Managed Markets: Adaptive All-In Pricing</h3>
+              <span class="update-item__date">Mar 3, 2026</span>
+            </div>
+            <p class="update-item__body">Duties, taxes, and cross-border fees are now automatically built into storefront prices. Customers see no surprise charges at checkout, and merchants retain their domestic payout amount. Removes one of the stronger arguments for maintaining separate regional stores to control landed-price presentation.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Legacy Customer Accounts Deprecated</h3>
+              <span class="update-item__date">Feb 26, 2026</span>
+            </div>
+            <p class="update-item__body">Legacy (password-based) customer accounts no longer receive feature updates or support. Relevant for consolidations because passwords never transfer across stores — merchants now need to actively choose between migrating customers to the new email/passcode system or accepting a password-reset moment for all users.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">B2B No Longer Plus-Only</h3>
+              <span class="update-item__date">Apr 2, 2026</span>
+            </div>
+            <p class="update-item__body">Company profiles, custom catalogs, and payment terms are now available on Basic, Grow, and Advanced plans. Removes the case for a separate wholesale store, and reduces one of the historic justifications for Plus in a multi-store architecture.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Market-Specific Inventory: Positive Local Stock Unlocks Checkout</h3>
+              <span class="update-item__date">Jan 20, 2026</span>
+            </div>
+            <p class="update-item__body">Buyers can now complete checkout for products with positive inventory in their specific market, even when total inventory across all locations is zero or negative. Improves availability logic for brands with regionally distributed stock.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">VAT Number Validation at Checkout</h3>
+              <span class="update-item__date">Feb 25, 2026</span>
+            </div>
+            <p class="update-item__body">EU and UK merchants using Shopify Tax can now enable VAT number validation at checkout, automatically applying the reverse charge exemption for eligible B2B orders. Reduces manual tax handling for cross-border wholesale.</p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Schedule and Test Storefront Changes with Rollouts</h3>
+              <span class="update-item__date">Mar 31, 2026</span>
+            </div>
+            <p class="update-item__body">Theme changes can now be scheduled, tested with real shoppers via experiment, or run for a limited window with automatic rollback. Useful for brands managing multi-market launches or time-sensitive regional promotions from a single store.</p>
+          </div>
+
+        </div>
+
+        <!-- ── Additional Insights ────────────────────────── -->
+        <div class="updates-subsection">
+          <p class="updates-subsection__label">Additional Insights</p>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Order Routing Doesn't Account for Cost or Duty Exposure</h3>
+            </div>
+            <p class="update-item__body">Shopify's routing logic optimises for geography and inventory availability — not shipping cost differentials between warehouses, cross-border duty liability when splitting orders, or 3PL pick-and-pack costs across multiple locations. Brands with complex fulfilment networks will still need an ERP or dedicated OMS to manage margin protection alongside customer experience. Shopify Markets is not an OMS.</p>
+            <p class="update-item__source">Surfaced by: <span>HighCohesion</span></p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">ERP One-to-One Mapping Breaks at Consolidation</h3>
+            </div>
+            <p class="update-item__body">Most ERPs are built around a one-to-one relationship with a Shopify store. Consolidation breaks that structure. Every downstream data flow — orders, refunds, fulfilment, financial postings — needs to retain market-level identifiers or the ERP loses the ability to produce market-level P&amp;Ls, VAT submissions, and reconciliations. This should be tested before go-live, not after.</p>
+            <p class="update-item__source">Surfaced by: <span>HighCohesion</span></p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Tax Compliance Has a Practical Ceiling</h3>
+            </div>
+            <p class="update-item__body">Shopify Markets doesn't make you automatically compliant — it gives you the infrastructure to manage it. A finance team can reasonably govern native tax configuration across around 5–10 markets. Beyond that, third-party tooling becomes necessary rather than optional. Worth setting this expectation explicitly for brands treating Markets as a path to selling into 50+ countries.</p>
+            <p class="update-item__source">Surfaced by: <span>HighCohesion</span></p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Subdomain and ccTLD URLs Cannot Redirect to Subfolders Natively</h3>
+            </div>
+            <p class="update-item__body">Shopify's redirect system cannot handle a move from <code>de.brand.com</code> or <code>brand.de</code> to <code>brand.com/de/</code>. If you're changing domain architecture as part of consolidation, you need a routing layer at DNS or CDN level — not just Shopify redirects. Consistently cited as a surprise in live migrations.</p>
+            <p class="update-item__source">Surfaced by: <span>Orbe</span></p>
+          </div>
+
+          <div class="update-item">
+            <div class="update-item__header">
+              <h3 class="update-item__title">Fragmented Portfolios Compete Against Themselves in AI Search</h3>
+            </div>
+            <p class="update-item__body">LLMs and AI Overviews tend to cite a single authoritative source per query. Co-owned brands on separate domains targeting overlapping keywords reduce the likelihood that any one of them surfaces as the cited answer. A consolidated domain concentrates topical authority for AI retrieval — an argument for consolidation that has become meaningfully more relevant since AI Overviews became commercially significant in 2025–26.</p>
+            <p class="update-item__source">Surfaced by: <span>Shero Commerce</span></p>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </section>
