@@ -87,4 +87,14 @@
       <image:title>Barrett Ahern — eCommerce Client Portfolio</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-shopify-markets-comprehensive-guide-square.png</image:loc>
+      <image:title>Shopify Markets: A Comprehensive Guide — Barrett Ahern</image:title>
+    </image:image>
+  </url>
 </urlset>
