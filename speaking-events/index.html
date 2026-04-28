@@ -46,19 +46,6 @@
   <!--
     SCHEMA: CollectionPage + ItemList of Events
     ============================================
-    Event schema is one of the best-supported rich result types in Google.
-    Events can appear in Google's Events search results and are frequently
-    cited by LLMs when surfacing speakers by topic.
-
-    Each Event has:
-    - "performer" referencing Barrett's Person @id
-    - "startDate" in ISO 8601 format (YYYY-MM-DD)
-    - "location" with addressLocality + addressCountry
-    - "organizer" with the event org's name and url
-
-    TO ADD A NEW EVENT:
-    1. Add an Event block to the @graph array below
-    2. Add a matching <article class="event-item"> in the HTML below
   -->
   <script type="application/ld+json">
   {
@@ -100,7 +87,7 @@
           "availability": "https://schema.org/LimitedAvailability"
         },
         "performer": { "@id": "https://barrettahern.com/#person" },
-        "organizer": { "@type": "Organization", "name": "Vervaunt Pulse", "url": "https://pulse.vervaunt.com" },
+        "organizer": { "@type": "Organization", "name": "Vervaunt", "url": "https://vervaunt.com" },
         "url": "https://pulse.vervaunt.com/",
         "description": "The UK's largest eCommerce conference for brands. Barrett Ahern speaks on the strategies shaping high-growth retail in 2026."
       },
