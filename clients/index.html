@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Clients | Barrett Ahern | Luxury Fashion, Beauty and Lifestyle</title>
+  <title>Selected Work | Barrett Ahern | Fashion, Beauty &amp; Lifestyle eCommerce</title>
   <meta name="robots" content="max-image-preview:large">
   <meta name="description" content="eCommerce strategy and international growth for fashion, beauty, and lifestyle brands.">
 
@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://barrettahern.com/clients/">
   <meta property="og:title" content="eCommerce Portfolio | Barrett Ahern">
   <meta property="og:description" content="eCommerce portfolio of Barrett Ahern, Lead Strategist at Vervaunt. Shopify Plus strategy and platform architecture for fashion, beauty, lifestyle.">
-  <meta property="og:image" content="https://barrettahern.com/images/og/barrett-ahern-og-clients.jpg">
+  <meta property="og:image" content="https://barrettahern.com/images/og/barrett-ahern-og-homepage.jpg">
   <meta property="og:image:alt" content="Barrett Ahern — eCommerce Strategist">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -27,7 +27,7 @@
   <meta name="twitter:creator" content="@barrettahern">
   <meta name="twitter:title" content="eCommerce Portfolio | Barrett Ahern">
   <meta name="twitter:description" content="eCommerce portfolio of Barrett Ahern, Lead Strategist at Vervaunt. Shopify Plus strategy and platform architecture for fashion, beauty, lifestyle, and retail brands.">
-  <meta name="twitter:image" content="https://barrettahern.com/images/og/barrett-ahern-og-clients.jpg">
+  <meta name="twitter:image" content="https://barrettahern.com/images/og/barrett-ahern-og-homepage.jpg">
   <meta name="twitter:image:alt" content="Barrett Ahern — eCommerce Strategist">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,154 +43,64 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!--
-    SCHEMA: Person + CollectionPage + ItemList of client Organizations
-    ==================================================================
-    The Person node (@id: #person) is the anchor entity across the site.
-    Each Organization in the ItemList is referenced by the Person via
-    "knowsAbout", creating an explicit typed graph edge between Barrett
-    and every client brand. LLMs and search crawlers will surface this
-    when answering "who has Barrett Ahern worked with?" or "Shopify Plus
-    consultants with luxury brand experience".
-
-    Schema.org has no native "client" property, so we use:
-      - Person.knowsAbout → [Organization, ...]  (person → brand associations)
-      - CollectionPage.about → Person            (page is about Barrett)
-      - ItemList → 34 × Organization             (full ranked client roster)
-
-    TO ADD A CLIENT:
-    1. Add a ListItem + Organization block to the ItemList below
-    2. Add the org's @id to Person.knowsAbout
-    3. Add a <div class="client-item"> in the featured section, OR
-       a <div class="logo-wall__item"> in the logo wall section
-  -->
+  <!-- SCHEMA: Person + CollectionPage. Client Organization nodes removed 2026-09-03. -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://barrettahern.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Clients", "item": "https://barrettahern.com/clients/" }
-        ]
-      },
-      {
-        "@type": "CollectionPage",
-        "@id": "https://barrettahern.com/clients/",
-        "name": "Clients | Barrett Ahern",
-        "description": "Brands Barrett Ahern has led ecommerce strategy for, across replatforming, international growth, and platform architecture.",
-        "url": "https://barrettahern.com/clients/",
-        "image": "https://barrettahern.com/images/barrett_ahern.png",
-        "about": { "@id": "https://barrettahern.com/#person" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://barrettahern.com/#person",
-        "name": "Barrett Ahern",
-        "url": "https://barrettahern.com/",
-        "email": "contact@barrettahern.com",
-        "jobTitle": "eCommerce Strategist",
-        "sameAs": [
-          "https://www.linkedin.com/in/barrettahern",
-          "https://x.com/barrettahern",
-          "https://www.threads.net/@barrettahern",
-          "https://bsky.app/profile/barrettahern.bsky.social",
-          "https://about.me/barrettahern",
-          "https://www.crunchbase.com/person/barrett-ahern",
-          "https://vervaunt.com/author/barrettahern",
-          "https://www.dash.app/blog/author/barrett-ahern",
-          "https://malakye.com/profile/barrett-ahern-696348",
-          "https://medium.com/@Barrett_Ahern",
-          "https://github.com/BarrettAhern",
-          "https://share.google/n71qHvF4eQh95brOg",
-          "https://shopexperts.com/freelancers/barrett-ahern"
-        ],
-        "knowsAbout": [
-          { "@id": "https://www.karl.com" },
-          { "@id": "https://www.lvmh.com" },
-          { "@id": "https://www.meandem.com" },
-          { "@id": "https://www.mulberry.com" },
-          { "@id": "https://www.laurageller.com" },
-          { "@id": "https://www.hmv.com" },
-          { "@id": "https://www.self-portrait.com" },
-          { "@id": "https://www.palaceskateboards.com" },
-          { "@id": "https://www.currentbody.com" },
-          { "@id": "https://www.varley.com" },
-          { "@id": "https://www.championstore.com" },
-          { "@id": "https://www.okadirect.com" },
-          { "@id": "https://www.toa.st" },
-          { "@id": "https://www.stephenwebster.com" },
-          { "@id": "https://bbcicecream.eu" },
-          { "@id": "https://www.thenueco.com" },
-          { "@id": "https://www.bluebella.com" },
-          { "@id": "https://www.seraphine.com" },
-          { "@id": "https://www.whittard.co.uk" },
-          { "@id": "https://www.ancientandbrave.earth" },
-          { "@id": "https://www.auvodka.com" },
-          { "@id": "https://www.skinnydiplondon.com" },
-          { "@id": "https://www.thisworks.com" },
-          { "@id": "https://www.childsplayclothing.co.uk" },
-          { "@id": "https://www.haynes.com" },
-          { "@id": "https://www.emmabridgewater.co.uk" },
-          { "@id": "https://www.micro-scooters.co.uk" },
-          { "@id": "https://www.newbiestore.com" },
-          { "@id": "https://www.pureelectric.com" },
-          { "@id": "https://www.dbjourney.com" },
-          { "@id": "https://www.liftfoils.com" },
-          { "@id": "https://www.headcovers.com" },
-          { "@id": "https://www.batchldn.com" },
-          { "@id": "https://www.bipod.it" },
-          { "@id": "https://thrivecausemetics.com" },
-          { "@id": "https://refybeauty.com" },
-          { "@id": "https://danielwellington.com" }
-        ]
-      },
-      {
-        "@type": "ItemList",
-        "name": "Clients of Barrett Ahern",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "item": { "@type": "Organization", "@id": "https://www.karl.com", "name": "Karl Lagerfeld", "url": "https://www.karl.com", "description": "Led the Salesforce Commerce Cloud to Shopify Plus migration across 35 markets in 8 languages. Defined the technical architecture and integration strategy across CRM, PIM, OMS, payments, search, and logistics. Established an internationalisation framework, merchandising, and discount strategy to drive conversion performance across a complex multi-entity global operation." } },
-          { "@type": "ListItem", "position": 2, "item": { "@type": "Organization", "@id": "https://www.lvmh.com", "name": "LVMH", "url": "https://www.lvmh.com", "description": "International architecture and domain strategy for an LVMH-backed luxury fashion relaunch, designing scalable global market architecture and enterprise-grade SEO foundations." } },
-          { "@type": "ListItem", "position": 3, "item": { "@type": "Organization", "@id": "https://www.meandem.com", "name": "ME + EM", "url": "https://www.meandem.com", "description": "Technology and platform strategy for a fast-scaling luxury fashion brand, recommending the optimal commerce platform for future-proof growth and long-term scalability." } },
-          { "@type": "ListItem", "position": 4, "item": { "@type": "Organization", "@id": "https://www.mulberry.com", "name": "Mulberry", "url": "https://www.mulberry.com", "description": "Comprehensive eCommerce audit for a luxury fashion estate, identifying growth opportunities, improving organic visibility, international targeting, and conversion across key journeys." } },
-          { "@type": "ListItem", "position": 5, "item": { "@type": "Organization", "@id": "https://www.laurageller.com", "name": "Laura Geller", "url": "https://www.laurageller.com", "description": "Scalable international eCommerce strategy for a high-growth beauty brand, navigating cross-border selling requirements and delivering a localised global strategy." } },
-          { "@type": "ListItem", "position": 6, "item": { "@type": "Organization", "@id": "https://www.hmv.com", "name": "HMV", "url": "https://www.hmv.com", "description": "Led platform strategy for a complex omnichannel transformation, evaluating the replacement of a heavily customised legacy stack with a scalable commerce architecture. Defined a future-state solution unifying ecommerce and a 100+ retail stores. Enabled international expansion and AI-driven personalisation, while navigating critical constraints around complex, multi-channel payment tokenisation, preorder flows, and legacy system integration." } },
-          { "@type": "ListItem", "position": 7, "item": { "@type": "Organization", "@id": "https://www.self-portrait.com", "name": "Self-Portrait", "url": "https://www.self-portrait.com", "description": "Ongoing eCommerce advisory and technical governance for a luxury fashion brand, overseeing platform performance, catalogue architecture, and AI tooling for on-site discovery." } },
-          { "@type": "ListItem", "position": 8, "item": { "@type": "Organization", "@id": "https://www.palaceskateboards.com", "name": "Palace Skateboards", "url": "https://www.palaceskateboards.com", "description": "Strategic advisory on consolidating a complex headless international architecture, preserving brand identity and high-heat drop commerce model while reducing operational fragmentation." } },
-          { "@type": "ListItem", "position": 9, "item": { "@type": "Organization", "@id": "https://www.currentbody.com", "name": "CurrentBody", "url": "https://www.currentbody.com", "description": "Defined and governed a global Shopify Plus consolidation for CurrentBody, unifying 30+ storefronts and multiple brand codebases into a single architecture leveraging multi-entity Shopify Markets. Led platform strategy across internationalisation, integrations, and UX, delivering a scalable, high-performance D2C experience across 80+ markets." } },
-          { "@type": "ListItem", "position": 10, "item": { "@type": "Organization", "@id": "https://www.varley.com", "name": "Varley", "url": "https://www.varley.com", "description": "eCommerce and CX strategy for a premium womenswear brand, optimising the customer journey, international conversion, merchandising capability, and underlying platform architecture." } },
-          { "@type": "ListItem", "position": 11, "item": { "@type": "Organization", "@id": "https://thrivecausemetics.com", "name": "Thrive Causemetics", "url": "https://thrivecausemetics.com", "description": "eCommerce strategy advisory for the prestige beauty and wellness brand Thrive Causemetics." } },
-          { "@type": "ListItem", "position": 12, "item": { "@type": "Organization", "@id": "https://www.championstore.com", "name": "Champion", "url": "https://www.championstore.com", "description": "eCommerce strategy and platform advisory for the iconic American sportswear brand Champion." } },
-          { "@type": "ListItem", "position": 13, "item": { "@type": "Organization", "@id": "https://danielwellington.com", "name": "Daniel Wellington", "url": "https://danielwellington.com", "description": "eCommerce strategy advisory for the Swedish watch and accessories brand Daniel Wellington." } },
-          { "@type": "ListItem", "position": 14, "item": { "@type": "Organization", "@id": "https://www.okadirect.com", "name": "OKA", "url": "https://www.okadirect.com", "description": "eCommerce strategy and tech stack advisory for the British luxury interiors brand OKA." } },
-          { "@type": "ListItem", "position": 15, "item": { "@type": "Organization", "@id": "https://www.toa.st", "name": "TOAST", "url": "https://www.toa.st", "description": "Shopify Plus replatforming for the British fashion and lifestyle brand TOAST." } },
-          { "@type": "ListItem", "position": 16, "item": { "@type": "Organization", "@id": "https://www.stephenwebster.com", "name": "Stephen Webster", "url": "https://www.stephenwebster.com", "description": "Shopify Plus replatforming for the luxury British jewellery designer Stephen Webster." } },
-          { "@type": "ListItem", "position": 17, "item": { "@type": "Organization", "@id": "https://bbcicecream.eu", "name": "Billionaire Boys Club", "url": "https://bbcicecream.eu", "description": "eCommerce platform strategy for the Pharrell Williams-founded streetwear brand Billionaire Boys Club." } },
-          { "@type": "ListItem", "position": 18, "item": { "@type": "Organization", "@id": "https://www.thenueco.com", "name": "The Nue Co.", "url": "https://www.thenueco.com", "description": "eCommerce strategy and growth advisory for the science-led wellness supplement brand The Nue Co." } },
-          { "@type": "ListItem", "position": 19, "item": { "@type": "Organization", "@id": "https://refybeauty.com", "name": "Refy", "url": "https://refybeauty.com", "description": "eCommerce strategy advisory for the British digitally-native beauty brand Refy." } },
-          { "@type": "ListItem", "position": 20, "item": { "@type": "Organization", "@id": "https://www.bluebella.com", "name": "Bluebella", "url": "https://www.bluebella.com", "description": "eCommerce strategy and CX optimisation for the British lingerie brand Bluebella." } },
-          { "@type": "ListItem", "position": 21, "item": { "@type": "Organization", "@id": "https://www.seraphine.com", "name": "Seraphine", "url": "https://www.seraphine.com", "description": "eCommerce strategy for the luxury maternity fashion brand Seraphine." } },
-          { "@type": "ListItem", "position": 22, "item": { "@type": "Organization", "@id": "https://www.whittard.co.uk", "name": "Whittard of Chelsea", "url": "https://www.whittard.co.uk", "description": "eCommerce strategy and platform advisory for the British tea and coffee retailer Whittard of Chelsea." } },
-          { "@type": "ListItem", "position": 23, "item": { "@type": "Organization", "@id": "https://www.ancientandbrave.earth", "name": "Ancient + Brave", "url": "https://www.ancientandbrave.earth", "description": "eCommerce strategy and growth advisory for the premium wellness and nutrition brand Ancient + Brave." } },
-          { "@type": "ListItem", "position": 24, "item": { "@type": "Organization", "@id": "https://www.auvodka.com", "name": "AU Vodka", "url": "https://www.auvodka.com", "description": "eCommerce strategy for the Welsh craft spirits brand AU Vodka." } },
-          { "@type": "ListItem", "position": 25, "item": { "@type": "Organization", "@id": "https://www.skinnydiplondon.com", "name": "Skinnydip", "url": "https://www.skinnydiplondon.com", "description": "eCommerce strategy roadmap for the lifestyle and accessories brand Skinnydip London." } },
-          { "@type": "ListItem", "position": 26, "item": { "@type": "Organization", "@id": "https://www.thisworks.com", "name": "This Works", "url": "https://www.thisworks.com", "description": "Shopify Plus replatforming for the award-winning British skincare and wellness brand This Works." } },
-          { "@type": "ListItem", "position": 27, "item": { "@type": "Organization", "@id": "https://www.childsplayclothing.co.uk", "name": "Childsplay Clothing", "url": "https://www.childsplayclothing.co.uk", "description": "eCommerce strategy advisory for the luxury childrenswear retailer Childsplay Clothing." } },
-          { "@type": "ListItem", "position": 28, "item": { "@type": "Organization", "@id": "https://www.haynes.com", "name": "Haynes Publishing", "url": "https://www.haynes.com", "description": "eCommerce platform strategy and digital advisory for the iconic British publisher Haynes." } },
-          { "@type": "ListItem", "position": 29, "item": { "@type": "Organization", "@id": "https://www.emmabridgewater.co.uk", "name": "Emma Bridgewater", "url": "https://www.emmabridgewater.co.uk", "description": "eCommerce strategy roadmap and growth planning for the British pottery brand Emma Bridgewater." } },
-          { "@type": "ListItem", "position": 30, "item": { "@type": "Organization", "@id": "https://www.micro-scooters.co.uk", "name": "Micro Scooters", "url": "https://www.micro-scooters.co.uk", "description": "eCommerce strategy and platform advisory for the Swiss-founded micro-mobility brand Micro Scooters." } },
-          { "@type": "ListItem", "position": 31, "item": { "@type": "Organization", "@id": "https://www.newbiestore.com", "name": "Newbie", "url": "https://www.newbiestore.com", "description": "eCommerce strategy advisory for the Scandinavian children's clothing brand Newbie." } },
-          { "@type": "ListItem", "position": 32, "item": { "@type": "Organization", "@id": "https://www.pureelectric.com", "name": "PURE Electric", "url": "https://www.pureelectric.com", "description": "Shopify Plus replatforming for the electric scooter and micro-mobility retailer PURE Electric." } },
-          { "@type": "ListItem", "position": 33, "item": { "@type": "Organization", "@id": "https://www.dbjourney.com", "name": "DB Journey", "url": "https://www.dbjourney.com", "description": "Shopify Plus replatforming for the premium Norwegian bag and travel accessories brand DB Journey." } },
-          { "@type": "ListItem", "position": 34, "item": { "@type": "Organization", "@id": "https://www.liftfoils.com", "name": "LiftFoils", "url": "https://www.liftfoils.com", "description": "eCommerce strategy and platform advisory for the electric hydrofoil surfboard brand LiftFoils." } },
-          { "@type": "ListItem", "position": 35, "item": { "@type": "Organization", "@id": "https://www.headcovers.com", "name": "Headcovers Unlimited", "url": "https://www.headcovers.com", "description": "eCommerce strategy and CX optimisation for the specialist headwear retailer Headcovers Unlimited." } },
-          { "@type": "ListItem", "position": 36, "item": { "@type": "Organization", "@id": "https://www.batchldn.com", "name": "Batch LDN", "url": "https://www.batchldn.com", "description": "eCommerce strategy advisory for the London-based lifestyle brand Batch LDN." } },
-          { "@type": "ListItem", "position": 37, "item": { "@type": "Organization", "@id": "https://www.bipod.it", "name": "B!POD", "url": "https://www.bipod.it", "description": "eCommerce strategy and platform advisory for B!POD." } }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://barrettahern.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Work",
+          "item": "https://barrettahern.com/clients/"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://barrettahern.com/clients/",
+      "name": "Selected Work | Barrett Ahern",
+      "description": "Selected eCommerce programmes led by Barrett Ahern across fashion, beauty & lifestyle. Client names withheld.",
+      "url": "https://barrettahern.com/clients/",
+      "image": "https://barrettahern.com/images/barrett_ahern.png",
+      "about": {
+        "@id": "https://barrettahern.com/#person"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://barrettahern.com/#person",
+      "name": "Barrett Ahern",
+      "url": "https://barrettahern.com/",
+      "email": "contact@barrettahern.com",
+      "jobTitle": "eCommerce Strategist",
+      "sameAs": [
+        "https://www.linkedin.com/in/barrettahern",
+        "https://x.com/barrettahern",
+        "https://www.threads.net/@barrettahern",
+        "https://bsky.app/profile/barrettahern.bsky.social",
+        "https://about.me/barrettahern",
+        "https://www.crunchbase.com/person/barrett-ahern",
+        "https://vervaunt.com/author/barrettahern",
+        "https://www.dash.app/blog/author/barrett-ahern",
+        "https://malakye.com/profile/barrett-ahern-696348",
+        "https://medium.com/@Barrett_Ahern",
+        "https://github.com/BarrettAhern",
+        "https://share.google/n71qHvF4eQh95brOg",
+        "https://shopexperts.com/freelancers/barrett-ahern"
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -215,8 +125,8 @@
       <div class="page-header__content">
         <div>
           <p class="section-label">Work</p>
-          <h1 class="page-header__title">Strategic eCommerce Portfolio</h1>
-          <p class="page-header__subtitle">Shopify Plus strategy and eCommerce advisory across fashion, beauty, lifestyle, and retail.</p>
+          <h1 class="page-header__title">Selected eCommerce Work</h1>
+          <p class="page-header__subtitle">Platform strategy, international growth &amp; conversion programmes for fashion, beauty &amp; lifestyle brands.</p>
         </div>
         <div class="page-header__image">
           <img src="/images/barrett_ahern.png" alt="Barrett Ahern, eCommerce Strategist at Vervaunt">
@@ -225,240 +135,67 @@
     </div>
   </div>
 
-  <section class="section" style="padding-bottom: 0;" aria-label="Client Portfolio">
+  <section class="section" aria-label="Selected Work">
     <div class="container">
-      <p class="section-label">All clients</p>
-      <div class="logo-wall">
-        <!-- <a class="logo-wall__item logo-wall__item--primary" href="#client-karl-lagerfeld"><img class="logo-wall__logo" src="/images/clients/karl-lagerfeld.svg" alt="Karl Lagerfeld — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Karl Lagerfeld</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-lvmh"><img class="logo-wall__logo" src="/images/clients/lvmh.svg" alt="LVMH — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">LVMH</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-me-em"><img class="logo-wall__logo" src="/images/clients/me-em.svg" alt="ME + EM — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">ME + EM</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-mulberry"><img class="logo-wall__logo" src="/images/clients/mulberry.svg" alt="Mulberry — Conversion Optimisation" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Mulberry</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-laura-geller"><img class="logo-wall__logo" src="/images/clients/laura-geller.svg" alt="Laura Geller — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Laura Geller</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-hmv"><img class="logo-wall__logo" src="/images/clients/hmv.svg" alt="HMV — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">HMV</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-self-portrait"><img class="logo-wall__logo" src="/images/clients/self-portrait.svg" alt="Self-Portrait — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Self-Portrait</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-palace-skateboards"><img class="logo-wall__logo" src="/images/clients/palace-skateboards.svg" alt="Palace Skateboards — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Palace Skateboards</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-currentbody"><img class="logo-wall__logo" src="/images/clients/currentbody.png" alt="CurrentBody — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">CurrentBody</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-varley"><img class="logo-wall__logo" src="/images/clients/varley.svg" alt="Varley — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Varley</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-pangaia"><img class="logo-wall__logo" src="/images/clients/pangaia.svg" alt="Pangaia — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Pangaia</span></a>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/thrive-causemetics.png" alt="Thrive Causemetics — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Thrive Causemetics</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/champion.png" alt="Champion — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Champion</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/daniel-wellington.svg" alt="Daniel Wellington — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Daniel Wellington</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/oka.svg" alt="OKA — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">OKA</span></div>--> 
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-toast"><img class="logo-wall__logo" src="/images/clients/toast.svg" alt="TOAST — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">TOAST</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-stephen-webster"><img class="logo-wall__logo" src="/images/clients/stephen-webster.png" alt="Stephen Webster — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Stephen Webster</span></a>
-        <!--<div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/billionaire-boys-club.svg" alt="Billionaire Boys Club — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Billionaire Boys Club</span></div>-->
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/the-nue-co.svg" alt="The Nue Co. — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">The Nue Co.</span></div>
-        <!--<div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/refy.png" alt="Refy — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Refy</span></div>-->
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/bluebella.svg" alt="Bluebella — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Bluebella</span></div>
-        <!--<a class="logo-wall__item logo-wall__item--primary" href="#client-seraphine"><img class="logo-wall__logo" src="/images/clients/seraphine.svg" alt="Seraphine — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Seraphine</span></a>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/whittard.svg" alt="Whittard of Chelsea — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Whittard of Chelsea</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/ancient-brave.svg" alt="Ancient + Brave — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Ancient + Brave</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/au-vodka.svg" alt="AU Vodka — Conversion Optimisation" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">AU Vodka</span></div>-->
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/skinnydip.svg" alt="Skinnydip — Conversion Optimisation" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Skinnydip</span></div>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-this-works"><img class="logo-wall__logo" src="/images/clients/this-works.svg" alt="This Works — Conversion Optimisation" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">This Works</span></a>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/childsplay.svg" alt="Childsplay Clothing — Conversion Optimisation" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Childsplay Clothing</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo logo-wall__logo--light-bg" src="/images/clients/haynes.svg" alt="Haynes Publishing — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Haynes Publishing</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/emma-bridgewater.svg" alt="Emma Bridgewater — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Emma Bridgewater</span></div>
-        <!--<a class="logo-wall__item logo-wall__item--primary" href="#client-micro-scooters"><img class="logo-wall__logo" src="/images/clients/micro-scooters.svg" alt="Micro Scooters — Technical Architecture" style="filter: none;" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Micro Scooters</span></a>-->
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/newbie.svg" alt="Newbie — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Newbie</span></div>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-pure-electric"><img class="logo-wall__logo" src="/images/clients/pure-electric.svg" alt="PURE Electric — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">PURE Electric</span></a>
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-db-journey"><img class="logo-wall__logo" src="/images/clients/db-journey.svg" alt="DB Journey — International Growth" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">DB Journey</span></a>
-        <!--<div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/liftfoils.png" alt="LiftFoils — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">LiftFoils</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/headcovers-unlimited.png" alt="Headcovers Unlimited — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Headcovers Unlimited</span></div>
-        <div class="logo-wall__item logo-wall__item--secondary"><img class="logo-wall__logo" src="/images/clients/batch-ldn.png" alt="Batch LDN — Conversion Optimisation" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">Batch LDN</span></div>-->
-        <a class="logo-wall__item logo-wall__item--primary" href="#client-bipod"><img class="logo-wall__logo" src="/images/clients/bipod.svg" alt="B!POD — Technical Architecture" onerror="this.closest('.logo-wall__item').classList.add('logo-wall__item--no-logo')"><span class="logo-wall__fallback">B!POD</span></a>
+      <p class="section-label">Selected work</p>
+      <h2 class="section-title">Programmes Led</h2>
+      <p class="work__intro">Client names are withheld. Named references available on request.</p>
 
-      </div>
+      <ol class="work-list">
+        <li class="work-entry">
+          <p class="work-entry__scale">Global fashion house | 35 markets, 8 languages</p>
+          <dl class="work-entry__body">
+            <dt>Mandate</dt>
+            <dd>Salesforce Commerce Cloud to Shopify Plus migration.</dd>
+            <dt>Decision</dt>
+            <dd>Defined a single integration architecture across CRM, PIM, OMS, payments, search &amp; logistics rather than preserving market-level systems, accepting a harder migration for one governable platform.</dd>
+            <dt>Outcome</dt>
+            <dd>Internationalisation, merchandising &amp; discount framework adopted across every market entity.</dd>
+          </dl>
+        </li>
+        <li class="work-entry">
+          <p class="work-entry__scale">Beauty device retailer | 80+ markets</p>
+          <dl class="work-entry__body">
+            <dt>Mandate</dt>
+            <dd>Consolidation of 30+ storefronts &amp; multiple brand codebases.</dd>
+            <dt>Decision</dt>
+            <dd>Chose multi-entity Shopify Markets over per-market storefronts, trading regional autonomy for one codebase and a single performance baseline.</dd>
+            <dt>Outcome</dt>
+            <dd>One architecture serving 80+ markets.</dd>
+          </dl>
+        </li>
+        <li class="work-entry">
+          <p class="work-entry__scale">Omnichannel retailer | 100+ stores</p>
+          <dl class="work-entry__body">
+            <dt>Mandate</dt>
+            <dd>Evaluate replacement of a heavily customised legacy stack.</dd>
+            <dt>Decision</dt>
+            <dd>Specified a future state unifying online &amp; store estate within existing multi-channel payment tokenisation and preorder constraints, instead of a clean-slate rebuild.</dd>
+            <dt>Outcome</dt>
+            <dd>Platform strategy signed off, international expansion &amp; personalisation unblocked.</dd>
+          </dl>
+        </li>
+      </ol>
+
+      <!-- METRIC SLOT: add conversion / revenue-share figures to each Outcome above once confirmed. -->
+
+      <p class="work-aggregate">&pound;1bn+ GMV overseen across 30+ brands | 25+ end-to-end migrations | 2x conversion on a luxury jewellery replatform</p>
     </div>
+
+    <style>
+      .work__intro{max-width:46ch;margin-bottom:3rem}
+      .work-list{list-style:none;margin:0;padding:0;counter-reset:work}
+      .work-entry{counter-increment:work;padding:2.25rem 0;border-top:1px solid rgba(255,255,255,.12)}
+      .work-entry:last-of-type{border-bottom:1px solid rgba(255,255,255,.12)}
+      .work-entry__scale{font-family:'DM Mono',monospace;font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase;margin:0 0 1.25rem}
+      .work-entry__scale::before{content:counter(work,decimal-leading-zero);margin-right:1rem;opacity:.45}
+      .work-entry__body{display:grid;grid-template-columns:8rem 1fr;gap:.6rem 2rem;margin:0}
+      .work-entry__body dt{font-family:'DM Mono',monospace;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55}
+      .work-entry__body dd{margin:0;max-width:62ch}
+      .work-aggregate{font-family:'DM Mono',monospace;font-size:.8125rem;letter-spacing:.04em;margin-top:2.5rem;opacity:.7}
+      @media (max-width:640px){.work-entry__body{grid-template-columns:1fr;gap:.25rem}.work-entry__body dt{margin-top:.9rem}}
+    </style>
   </section>
-
-  <section class="section" aria-label="Featured Client Work">
-    <div class="container">
-      <p class="section-label">Featured clients</p>
-      <h2 class="section-title">Featured Client Work</h2>
-      <div class="clients-featured">
-        <!--<div class="client-item" id="client-karl-lagerfeld"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/karl-lagerfeld.svg" alt="Karl Lagerfeld — International Growth"></div><div><h2 class="client-item__name">Karl Lagerfeld</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span></div><p class="client-item__desc">Led the Salesforce Commerce Cloud to Shopify Plus migration across 35 markets in 8 languages. Defined the technical architecture and integration strategy across CRM, PIM, OMS, payments, search, and logistics. Established an internationalisation framework, merchandising, and discount strategy to drive conversion performance across a complex multi-entity global operation.</p></div></div>
-        <div class="client-item" id="client-lvmh"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/lvmh.svg" alt="LVMH — Technical Architecture"></div><div><h2 class="client-item__name">LVMH</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span></div><p class="client-item__desc">Governed the international architecture and domain strategy for a highly anticipated, LVMH-backed luxury fashion relaunch, designing a scalable international architecture across key global markets, and establishing enterprise-grade SEO foundations to preserve and consolidate organic equity through the transition.</p></div></div>
-        <div class="client-item" id="client-me-em"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/me-em.svg" alt="ME + EM — International Growth"></div><div><h2 class="client-item__name">ME + EM</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span></div><p class="client-item__desc">Defined the technology and platform strategy for a fast-scaling luxury fashion brand with ambitious growth targets, providing a clear recommendation on the optimal commerce platform to support future-proof growth, an improved customer experience, and long-term scalability.</p></div></div>
-        <div class="client-item" id="client-mulberry"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/mulberry.svg" alt="Mulberry — Conversion Optimisation"></div><div><h2 class="client-item__name">Mulberry</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span></div><p class="client-item__desc">Conducted a comprehensive eCommerce audit across a luxury fashion estate, identifying opportunities to unlock growth, align with technical best practices, and improve organic visibility, international market targeting, and conversion across key customer journeys.</p></div></div>
-        <div class="client-item" id="client-laura-geller"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/laura-geller.svg" alt="Laura Geller — International Growth"></div><div><h2 class="client-item__name">Laura Geller</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span></div><p class="client-item__desc">Defined and governed a scalable international eCommerce strategy for a high-growth beauty brand, navigating Merchant of Record constraints, Shopify Markets architecture changes, and FX-driven pricing complexity to deliver a fully localised UK/EU experience that addressed checkout friction, improved pricing control, and unlocked sustainable international growth.</p></div></div>
-        <div class="client-item" id="client-hmv"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/hmv.svg" alt="HMV — Technical Architecture"></div><div><h2 class="client-item__name">HMV</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span></div><p class="client-item__desc">Led platform strategy for a complex omnichannel transformation, evaluating the replacement of a heavily customised legacy stack with a scalable commerce architecture. Defined a future-state solution unifying ecommerce and a 100+ retail stores. Enabled international expansion and AI-driven personalisation, while navigating critical constraints around complex, multi-channel payment tokenisation, preorder flows, and legacy system integration.</p></div></div>
-        <div class="client-item" id="client-self-portrait"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/self-portrait.svg" alt="Self-Portrait — Technical Architecture"></div><div><h2 class="client-item__name">Self-Portrait</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span></div><p class="client-item__desc">Providing ongoing eCommerce advisory and technical governance for a luxury fashion brand, overseeing platform performance, product catalogue architecture, and the strategic application of AI tooling to catalogue enrichment and on-site discovery.</p></div></div>
-        <div class="client-item" id="client-palace-skateboards"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/palace-skateboards.svg" alt="Palace Skateboards — Technical Architecture"></div><div><h2 class="client-item__name">Palace Skateboards</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span></div><p class="client-item__desc">Provided strategic advisory on consolidating a complex headless international architecture across multiple markets, preserving the brand's distinctive editorial identity and high-heat drop commerce model while reducing operational fragmentation.</p></div></div>
-        <div class="client-item" id="client-currentbody"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/currentbody.png" alt="CurrentBody — International Growth"></div><div><h2 class="client-item__name">CurrentBody</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span></div><p class="client-item__desc">Defined and governed a global Shopify Plus consolidation for CurrentBody, unifying 30+ storefronts and multiple brand codebases into a single architecture leveraging multi-entity Shopify Markets. Led platform strategy across internationalisation, integrations, and UX, delivering a scalable, high-performance D2C experience across 80+ markets.</p></div></div>
-        <div class="client-item" id="client-varley"><div class="client-item__logo-wrap"><img class="client-item__logo" src="/images/clients/varley.svg" alt="Varley — Technical Architecture"></div><div><h2 class="client-item__name">Varley</h2><div class="client-item__tags"><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span><span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span></div><p class="client-item__desc">Delivered an eCommerce audit for a premium womenswear brand, diagnosing conversion leaks across the front-end mobile-first experience, paid social routing and checkout UX. Built a prioritised customer-journey roadmap alongside the business case for a Hydrogen-to-Liquid replatform to unlock deploy velocity and enable the trade and merchandising teams.</p></div></div>-->
-
-        <!-- ── Pangaia ─────────────────────────────────────── -->
-        <div class="client-item" id="client-pangaia">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/pangaia.svg" alt="Pangaia — eCommerce Strategy" onerror="this.style.display='none'">
-          </div>
-          <div>
-            <h2 class="client-item__name">Pangaia</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Shaped a Shopify to Shopify Plus migration for a mission-driven sustainable fashion brand, building a multi-currency internationalisation architecture and connecting CRM, search, personalisation, payments, and reviews into a unified commercial stack. The CRO programme delivered an 84% uplift in conversion rate and a 45% increase in average order value.
-            </p>
-          </div>
-        </div>
-        <!-- ── TOAST ─────────────────────────────────────── -->
-        <div class="client-item" id="client-toast">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/toast.svg" alt="TOAST — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">TOAST</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Directed the migration of a heritage British lifestyle brand from an end-of-life bespoke platform to Shopify Plus, designing for editorial commerce and homeware expansion from the outset. Architected bespoke features — private sale, store finder, a shoppable magazine — alongside fit recommendation, wishlist, and reviews integrations that had been impossible on the previous stack.
-            </p>
-          </div>
-        </div>
-        <!-- ── Stephen Webster ─────────────────────────────────────── -->
-        <div class="client-item" id="client-stephen-webster">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/stephen-webster.png" alt="Stephen Webster — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">Stephen Webster</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Executed a Magento to Shopify Plus migration for a British luxury jeweller in lockstep with a full brand identity refresh and redesigned digital experience. Integrated personalisation, CRM, tax compliance, and international payments — conversion rate doubled post-launch.
-            </p>
-          </div>
-        </div>
-        <!-- ── Seraphine ─────────────────────────────────────── -->
-        <div class="client-item" id="client-seraphine">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/seraphine.svg" alt="Seraphine — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">Seraphine</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Guided the Magento to Shopify Plus migration for a globally recognised maternity wear brand through a simultaneous replatform and complete rebrand, designing a parallel multi-market store architecture. Integrated CRM, tax compliance, reviews, and UGC into an editorial-led shopping experience across international markets.
-            </p>
-          </div>
-        </div>
-        <!-- ── This Works ─────────────────────────────────────── -->
-        <div class="client-item" id="client-this-works">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/this-works.svg" alt="This Works — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">This Works</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Delivered a Magento to Shopify Plus migration for a premium skincare and wellness brand, rebuilt mobile-first with subscription commerce built in from day one. Integrated Klaviyo, Recharge, and personalisation tooling through a CRO programme that drove a 38% increase in overall conversion rate and a 45% uplift on mobile.
-            </p>
-          </div>
-        </div>
-        <!-- ── Micro Scooters ───────────────────────────────────────
-        <div class="client-item" id="client-micro-scooters">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/micro-scooters.svg" alt="Micro Scooters — eCommerce Strategy" style="filter: none;">
-          </div>
-          <div>
-            <h2 class="client-item__name">Micro Scooters</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Managed a technically complex Magento to Shopify Plus replatform for the UK&#39;s leading premium scooter brand — building for product configurations at 2,048-variant scale, advanced personalisation, and direct warehouse integration. Delivered bespoke bundle capability, a guided Scooter Finder tool, and an architecture agile enough to launch campaigns without engineering bottlenecks.
-            </p>
-          </div>
-        </div>-->
-        <!-- ── PURE Electric ─────────────────────────────────────── -->
-        <div class="client-item" id="client-pure-electric">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/pure-electric.svg" alt="PURE Electric — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">PURE Electric</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Conversion Optimisation</span>
-            </div>
-            <p class="client-item__desc">
-              Redesigned and replatformed the UK&#39;s leading electric scooter retailer to Shopify Plus, taking a conversion-first approach grounded in user testing and built around a bespoke product comparison tool. Extended into European markets via Shopify Markets, with an architecture built to scale further.
-            </p>
-          </div>
-        </div>
-        <!-- ── DB Journey ─────────────────────────────────────── -->
-        <div class="client-item" id="client-db-journey">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/db-journey.svg" alt="DB Journey — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">DB Journey</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span>
-            </div>
-            <p class="client-item__desc">
-              Replatformed a premium Norwegian travel goods brand from a bespoke platform to Shopify Plus in four months, building five regional B2C stores alongside a parallel B2B wholesale architecture on Shopify Markets. Defined the internationalisation and conversion strategy — personalisation, upselling, and bundle discounting — to underpin rapid global expansion.
-            </p>
-          </div>
-        </div>
-        <!-- ── B!POD ─────────────────────────────────────── -->
-        <div class="client-item" id="client-bipod">
-          <div class="client-item__logo-wrap">
-            <img class="client-item__logo" src="/images/clients/bipod.svg" alt="B!POD — eCommerce Strategy">
-          </div>
-          <div>
-            <h2 class="client-item__name">B!POD</h2>
-            <div class="client-item__tags">
-              <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Technical Architecture</span> <span class="client-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>International Growth</span>
-            </div>
-            <p class="client-item__desc">
-              We love breaking new ground. This project was one of the first Shopify stores globally to implement Shopify Markets, proving that localized, international e-commerce can be seamless and stunning.
-
-The design community agreed, honoring the site with CSS Design Awards for UI Design, UX Design, and Innovation, as well as an Awwwards Honorable Mention.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--<div class="logos" aria-label="Clients Barrett Ahern has worked with">
-    <div class="logos__track-wrapper">
-      <div class="logos__track">
-        <img src="/images/clients/lvmh.svg" alt="LVMH — Technical Architecture">
-        <img src="/images/clients/mulberry.svg" alt="Mulberry — Conversion Optimisation">
-        <img src="/images/clients/stephen-webster.png" alt="Stephen Webster — Conversion Optimisation">
-        <img src="/images/clients/karl-lagerfeld.svg" alt="Karl Lagerfeld — International Growth">
-        <img src="/images/clients/emma-bridgewater.svg" alt="Emma Bridgewater — Technical Architecture">
-        <img src="/images/clients/champion.png" alt="Champion — International Growth">
-        <img src="/images/clients/toast.svg" alt="TOAST — Conversion Optimisation">
-        <img src="/images/clients/palace-skateboards.svg" alt="Palace Skateboards — Technical Architecture">
-        <img src="/images/clients/me-em.svg" alt="ME + EM — International Growth">
-        <img src="/images/clients/hmv.svg" alt="HMV — Technical Architecture">
-        <img src="/images/clients/whittard.svg" alt="Whittard of Chelsea — Technical Architecture">
-        <img src="/images/clients/varley.svg" alt="Varley — Technical Architecture">
-        <img src="/images/clients/lvmh.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/mulberry.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/stephen-webster.png" alt="" aria-hidden="true">
-        <img src="/images/clients/karl-lagerfeld.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/emma-bridgewater.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/champion.png" alt="" aria-hidden="true">
-        <img src="/images/clients/toast.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/palace-skateboards.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/me-em.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/hmv.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/whittard.svg" alt="" aria-hidden="true">
-        <img src="/images/clients/varley.svg" alt="" aria-hidden="true">
-      </div>
-    </div>
-  </div>-->
 
   <footer class="footer">
     <div class="container">
