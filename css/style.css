@@ -452,6 +452,15 @@ ul {
   text-align: justify;
 }
 
+.testimonial__author {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-mid);
+  margin-top: var(--space-6);
+}
+
 .testimonial__quote::before {
   content: '\201C';
   font-size: 4rem;
