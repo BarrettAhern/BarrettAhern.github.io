@@ -32,7 +32,7 @@
 .ds-inline--between { justify-content: space-between; }
 .ds-grid { display: grid; gap: var(--space-300); grid-template-columns: repeat(auto-fit, minmax(var(--min, 260px), 1fr)); }
 .ds-g2 { --min: 320px; } .ds-g3 { --min: 260px; } .ds-g4 { --min: 210px; }
-/* Polaris-style two-column page layout: main + secondary */
+/* Two-column page layout: main + secondary */
 .ds-layout { display: grid; gap: var(--space-400); grid-template-columns: 1fr; }
 @media (min-width: 900px) { .ds-layout { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } }
 /* Annotated section: description left, card right */
@@ -205,7 +205,7 @@
 .ds-disclosure > div { padding: 0 0 var(--space-400); color: var(--text-secondary); max-width: 68ch; }
 
 /* 9. Data display ---------------------------------------------------------- */
-/* Table: Polaris IndexTable pattern. Sticky header, sticky first column, hairline rows, tabular numbers.
+/* Table: index table pattern. Sticky header, sticky first column, hairline rows, tabular numbers.
    Add .ds-table-wrap--scroll for a fixed-height body. Add .has-select when the first column is a checkbox:
    then the checkbox and the name column are both sticky. */
 .ds-table-wrap { --sel-w: 44px; overflow: auto; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--bg-raised); scroll-timeline: --ds-tw inline; position: relative; }
@@ -252,7 +252,7 @@
 .ds-tags { display: flex; flex-wrap: wrap; gap: var(--space-200); }
 .ds-tag { font-size: var(--text-sm); padding: var(--space-100) var(--space-300); background: var(--bg-sunken); border-left: 2px solid var(--border-subtle); color: var(--text-secondary); }
 
-/* 10. Audit / report components (from the Vervaunt Audit Specimen) ----------- */
+/* 10. Audit / report components (from the audit specimen) ----------- */
 .ds-verdict { background: var(--bg-invert); color: var(--text-on-invert); border-radius: var(--radius-lg); padding: var(--space-600); display: grid; gap: var(--space-400); }
 @media (min-width: 768px) { .ds-verdict { grid-template-columns: 1fr auto; align-items: end; padding: var(--space-800); } }
 .ds-verdict__claim { font-family: var(--font-display); font-size: clamp(20px, 2.6vw, 28px); line-height: 1.25; letter-spacing: -.02em; font-weight: 600; max-width: 28ch; }

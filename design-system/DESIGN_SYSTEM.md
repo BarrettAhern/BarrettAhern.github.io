@@ -1,6 +1,6 @@
 # Barrett Ahern Design System v1.1
 
-One system. Paper neutrals and editorial type from barrettahern.com, Shopify Polaris structure and patterns, British racing green as the single accent, and the Vervaunt audit components for data and reports. It replaces the earlier three-palette version: there is no palette switch any more.
+One system. Paper neutrals and editorial type from barrettahern.com, a clean app-UI structure and patterns, British racing green as the single accent, and audit components for data and reports. It replaces the earlier three-palette version: there is no palette switch any more.
 
 **Files**
 - `tokens.css`: generated. One palette, light and dark. Never hand-edit; change `build_tokens.py` and regenerate.
@@ -46,7 +46,7 @@ Typography is DM Serif Display for display, DM Sans for text and numerals (tabul
 - **Chart:** `--chart-ink`, `--chart-quiet`, `--chart-accent`. Quiet grey for everything, accent for the one bar that matters.
 - **Status:** `--status-{success|warning|danger|attention|info}` plus `-tint`, `-ink`, `-text` (text flips light in dark mode).
 - **Type:** `--font-display`, `--font-sans`, `--font-num`, `--font-mono`. Sizes `--text-2xs` 11 to `--text-4xl` 44.
-- **Space (4px grid, Polaris names):** `--space-100` 4px, 200 8, 300 12, 400 16, 600 24, 800 32, 1200 48, 1600 64.
+- **Space (4px grid):** `--space-100` 4px, 200 8, 300 12, 400 16, 600 24, 800 32, 1200 48, 1600 64.
 - **Shape:** `--radius-sm` 4, `--radius-md` 8, `--radius-lg` 12. Cards are flat with hairlines; only overlays use `--shadow-pop`.
 - **Controls:** `--control-sm` 28, `--control-md` 36, `--control-lg` 44.
 - **Motion:** `--ease` cubic-bezier(.16,1,.3,1), 120 / 200 / 360ms.
@@ -71,7 +71,7 @@ Compatibility aliases (`--color-bg`, `--color-ink`, `--color-rule` and so on) ar
 - Content width 1160px (`.ds-wrap`), 720px for reading (`.ds-wrap--narrow`). Gutters 16px, 32px from 768px.
 - Section band 48px vertical, 64px from 768px, hairline bottom rule (`.ds-band`).
 - Grids: gap 12px, auto-fit (`.ds-g2` 320, `.ds-g3` 260, `.ds-g4` 210).
-- App pages (Polaris): breadcrumb, `.ds-page-header` with one primary action, then `.ds-layout` (main two thirds, secondary one third). Settings pages use `.ds-annotated`.
+- App pages: breadcrumb, `.ds-page-header` with one primary action, then `.ds-layout` (main two thirds, secondary one third). Settings pages use `.ds-annotated`.
 - Breakpoints: 600 (nav wraps), 768 (gutters, bands), 900 (two-column layouts).
 
 ## 6. Report spine (client audits)
