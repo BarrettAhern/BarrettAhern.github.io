@@ -7,6 +7,12 @@
 - [Home](https://barrettahern.com/): Overview, expertise and selected clients
 - [About](https://barrettahern.com/about-me/): Career history, credentials and certifications
 - [Publications](https://barrettahern.com/publications/): Articles, guides and reports on eCommerce strategy, Shopify Markets and AI
+- [SEO in an AI-First Search Landscape](https://barrettahern.com/publications/seo-in-an-ai-first-search-landscape/): Summary of Barrett's Vervaunt commentary on GEO and AI search
+- [Shopify Markets: A Comprehensive Guide](https://barrettahern.com/publications/shopify-markets-a-comprehensive-guide/): Summary of Barrett's Vervaunt guide to Markets and expansion stores
+- [Navigating eCommerce Trade Turbulence in 2025](https://barrettahern.com/publications/navigating-ecommerce-trade-turbulence/): Summary of Barrett's Dash article on tariffs and supply chain uncertainty
+- [The State of Ecommerce 2025](https://barrettahern.com/publications/the-state-of-ecommerce-2025/): Summary of Barrett's Quickfire Digital white paper
+- [Future of eCommerce and AI](https://barrettahern.com/publications/future-of-ecommerce-and-ai/): Summary of Barrett's Vervaunt article on AI in commerce
+- [Creating the Perfect eCommerce Tech Stack](https://barrettahern.com/publications/creating-the-perfect-ecommerce-tech-stack/): Summary of Barrett's We Make Websites article
 - [Speaking](https://barrettahern.com/speaking-events/): Conference talks, panels and judging roles
 - [Clients](https://barrettahern.com/clients/): Brands Barrett has advised
 
