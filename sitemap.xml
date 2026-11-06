@@ -9,6 +9,9 @@
     <image:image>
       <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-homepage.jpg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern_serp.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://barrettahern.com/about-me/</loc>
@@ -17,6 +20,9 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-about.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern_serp.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -45,6 +51,9 @@
     <image:image>
       <image:loc>https://barrettahern.com/images/publication-images/barrett-ahern-seo-ai-first-search-landscape-16x9.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern_serp.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://barrettahern.com/speaking-events/</loc>
@@ -63,6 +72,9 @@
     <image:image>
       <image:loc>https://barrettahern.com/images/speaking/barrett_ahern-pulse-breakfast-roadmap-2026.jpg</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern_serp.jpg</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://barrettahern.com/clients/</loc>
@@ -71,6 +83,9 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://barrettahern.com/images/og/barrett-ahern-og-clients.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://barrettahern.com/images/barrett_ahern_serp.jpg</image:loc>
     </image:image>
   </url>
   <url>
