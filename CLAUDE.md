@@ -6,3 +6,9 @@ Follow the Barrett Ahern Design System v1.1 (tokens.css, components.css, gallery
 - Tables use .ds-table-wrap + .ds-table (sticky header and first column). Never ship an unstyled <table>.
 - One accent per view, AA contrast, visible focus, 390px with no horizontal scroll, light and dark.
 - British spelling. No em dashes. Plain HTML and CSS, no build step, GitHub Pages.
+
+# Sitemap
+Whenever an image is added, replaced or renamed, or a page is added, update sitemap.xml in the same change.
+- Add or update the page's <url> entry, with lastmod set to the date of the change.
+- List each image as an <image:image> entry under every indexable page where it appears. Check the file loads at that URL first.
+- Leave out redirect stubs and noindex pages.
