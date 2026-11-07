@@ -22,6 +22,7 @@ P = {'paper': {
    border_subtle='rgba(28,27,25,.14)',border_faint='rgba(28,27,25,.07)',border_strong='#1C1B19',
    selected='rgba(15,76,58,.09)',hover='rgba(28,27,25,.04)',focus='#0F4C3A',
    accent='#0F4C3A',accent_ink='#FAFAF8',accent_text='#0F4C3A',accent_2='#736046',
+   person_barrett='#1D6A8A',person_jen='#3B7A3E',
    accent_on_invert='#94C3B4',accent_on_invert_ink='#041F16',
    action_bg='#1C1B19',action_ink='#FAFAF8',chart_quiet='#CFCBC3',
    shadow_card='none',shadow_hover='0 1px 2px rgba(28,27,25,.06)',shadow_pop='0 8px 24px -6px rgba(28,27,25,.18)'),
@@ -30,6 +31,7 @@ P = {'paper': {
    border_subtle='rgba(255,255,255,.14)',border_faint='rgba(255,255,255,.07)',border_strong='#F4F3EF',
    selected='rgba(98,163,144,.18)',hover='rgba(255,255,255,.05)',focus='#94C3B4',
    accent='#62A390',accent_ink='#1C1B19',accent_text='#7FB8A4',accent_2='#C4B091',
+   person_barrett='#6FB6D2',person_jen='#8CC48F',
    accent_on_invert='#0F4C3A',accent_on_invert_ink='#F4F3EF',
    action_bg='#F4F3EF',action_ink='#1C1B19',chart_quiet='#4A4843',
    shadow_card='none',shadow_hover='none',shadow_pop='0 8px 24px -6px rgba(0,0,0,.6)')}}
@@ -38,6 +40,7 @@ def block(d, mode, pal):
     for k,v in d.items(): o.append(f"  --{k.replace('_','-')}: {v};")
     o.append(f"  --chart-ink: {d['text_primary']};")
     o.append(f"  --chart-accent: {d['accent']};")
+    o.append("  --person-fisher: var(--accent-2);")
     for n,(base,tint,ink) in STATUS.items():
         o.append(f"  --status-{n}: {base};"); o.append(f"  --status-{n}-tint: {tint};"); o.append(f"  --status-{n}-ink: {ink};")
         o.append(f"  --status-{n}-text: {ink if mode=='light' else tint};")
@@ -53,6 +56,8 @@ for p,modes in P.items():
             if r<need: bad.append(f"{p}/{m}: {label} {fg} on {bg} = {r:.2f} < {need}")
         for bgk in ('bg_base','bg_raised','bg_sunken'):
             for fk in ('text_primary','text_secondary','text_muted','accent_text'): chk(f"{fk} on {bgk}",d[fk],d[bgk])
+        for pk in ('person_barrett','person_jen','accent_2'):
+            chk(f"initial on {pk}",d['bg_base'],d[pk]); chk(f"{pk} marker vs raised (3:1)",d[pk],d['bg_raised'],3); chk(f"{pk} marker vs base (3:1)",d[pk],d['bg_base'],3)
         chk('accent_ink on accent',d['accent_ink'],d['accent']); chk('action_ink on action_bg',d['action_ink'],d['action_bg'])
         chk('accent_on_invert_ink on accent_on_invert',d['accent_on_invert_ink'],d['accent_on_invert']); chk('chart accent vs raised (3:1)',d['accent'],d['bg_raised'],3); chk('accent_2 on base',d['accent_2'],d['bg_base']); chk('text_on_invert on bg_invert',d['text_on_invert'],d['bg_invert']); chk('focus on base (3:1)',d['focus'],d['bg_base'],3)
         for n,(base,tint,ink) in STATUS.items():
@@ -72,6 +77,8 @@ out.append(""":root {
   /* Type scale (app-sized body, editorial display) */
   --text-2xs: 11px;  --text-xs: 12px;  --text-sm: 13px;  --text-md: 14px;
   --text-lg: 16px;   --text-xl: 20px;  --text-2xl: 24px; --text-3xl: 32px; --text-4xl: 44px;
+  /* Wall scale (10-foot screens, wall mode only) */
+  --text-wall-md: 28px; --text-wall-lg: 40px; --text-wall-xl: 64px; --text-wall-2xl: 96px;
   --lh-tight: 1.15;  --lh-snug: 1.3;   --lh-body: 1.55;
 
   /* Spacing: 4px grid (space-100 = 4px) */

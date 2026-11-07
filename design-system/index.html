@@ -25,6 +25,8 @@
   /* Type scale (app-sized body, editorial display) */
   --text-2xs: 11px;  --text-xs: 12px;  --text-sm: 13px;  --text-md: 14px;
   --text-lg: 16px;   --text-xl: 20px;  --text-2xl: 24px; --text-3xl: 32px; --text-4xl: 44px;
+  /* Wall scale (10-foot screens, wall mode only) */
+  --text-wall-md: 28px; --text-wall-lg: 40px; --text-wall-xl: 64px; --text-wall-2xl: 96px;
   --lh-tight: 1.15;  --lh-snug: 1.3;   --lh-body: 1.55;
 
   /* Spacing: 4px grid (space-100 = 4px) */
@@ -72,6 +74,8 @@
   --accent-ink: #FAFAF8;
   --accent-text: #0F4C3A;
   --accent-2: #736046;
+  --person-barrett: #1D6A8A;
+  --person-jen: #3B7A3E;
   --accent-on-invert: #94C3B4;
   --accent-on-invert-ink: #041F16;
   --action-bg: #1C1B19;
@@ -82,6 +86,7 @@
   --shadow-pop: 0 8px 24px -6px rgba(28,27,25,.18);
   --chart-ink: #1C1B19;
   --chart-accent: #0F4C3A;
+  --person-fisher: var(--accent-2);
   --status-success: #1F7A4C;
   --status-success-tint: #CBEBD3;
   --status-success-ink: #14513A;
@@ -127,6 +132,8 @@
   --accent-ink: #1C1B19;
   --accent-text: #7FB8A4;
   --accent-2: #C4B091;
+  --person-barrett: #6FB6D2;
+  --person-jen: #8CC48F;
   --accent-on-invert: #0F4C3A;
   --accent-on-invert-ink: #F4F3EF;
   --action-bg: #F4F3EF;
@@ -137,6 +144,7 @@
   --shadow-pop: 0 8px 24px -6px rgba(0,0,0,.6);
   --chart-ink: #F4F3EF;
   --chart-accent: #62A390;
+  --person-fisher: var(--accent-2);
   --status-success: #1F7A4C;
   --status-success-tint: #CBEBD3;
   --status-success-ink: #14513A;
@@ -182,6 +190,8 @@
   --accent-ink: #1C1B19;
   --accent-text: #7FB8A4;
   --accent-2: #C4B091;
+  --person-barrett: #6FB6D2;
+  --person-jen: #8CC48F;
   --accent-on-invert: #0F4C3A;
   --accent-on-invert-ink: #F4F3EF;
   --action-bg: #F4F3EF;
@@ -192,6 +202,7 @@
   --shadow-pop: 0 8px 24px -6px rgba(0,0,0,.6);
   --chart-ink: #F4F3EF;
   --chart-accent: #62A390;
+  --person-fisher: var(--accent-2);
   --status-success: #1F7A4C;
   --status-success-tint: #CBEBD3;
   --status-success-ink: #14513A;
@@ -229,7 +240,7 @@
    Requires tokens.css. All values come from tokens. No hex codes in this file.
    Naming: .ds-<component>, .ds-<component>--<variant>, .ds-<component>__<part>
    Sections: 1 Base · 2 Layout · 3 Type · 4 Actions · 5 Forms · 6 Feedback · 7 Containers
-             8 Navigation · 9 Data display · 10 Audit/report · 11 Editorial · 12 Overlays
+             8 Navigation · 9 Data display · 10 Audit/report · 11 Editorial · 12 Overlays · 13 App and wall screens
    ========================================================================== */
 
 /* 1. Base ------------------------------------------------------------------ */
@@ -562,6 +573,78 @@
 .ds-tooltip { position: relative; }
 .ds-tooltip[data-tip]:hover::after, .ds-tooltip[data-tip]:focus-visible::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--bg-invert); color: var(--text-on-invert); font-size: var(--text-xs); padding: var(--space-100) var(--space-200); border-radius: var(--radius-sm); white-space: nowrap; z-index: var(--z-popover); }
 
+/* 13. App and wall screens (v1.2) ------------------------------------------ */
+/* Person marker: initial plus name. Colour identifies the owner, never the state. */
+.ds-person { --p: var(--text-secondary); display: inline-flex; align-items: center; gap: var(--space-150); font-size: var(--text-sm); font-weight: 500; }
+.ds-person::before { content: attr(data-initial); display: grid; place-items: center; width: 20px; height: 20px; border-radius: var(--radius-sm); background: var(--p); color: var(--bg-base); font: 700 var(--text-2xs)/1 var(--font-sans); }
+.ds-person[data-person="barrett"] { --p: var(--person-barrett); }
+.ds-person[data-person="jen"] { --p: var(--person-jen); }
+.ds-person[data-person="fisher"] { --p: var(--person-fisher); }
+
+/* Agenda row: time, title, owner bar, state badge */
+.ds-agenda > li { --p: var(--border-strong); display: grid; grid-template-columns: 56px 1fr auto; gap: var(--space-300); align-items: center; padding: var(--space-300); border-bottom: 1px solid var(--border-faint); border-left: 3px solid var(--p); min-height: var(--control-lg); }
+.ds-agenda > li[data-person="barrett"] { --p: var(--person-barrett); }
+.ds-agenda > li[data-person="jen"] { --p: var(--person-jen); }
+.ds-agenda > li[data-person="fisher"] { --p: var(--person-fisher); }
+.ds-agenda > li[data-state="now"] { background: var(--bg-sunken); }
+.ds-agenda > li[data-state="past"] .ds-agenda__title { color: var(--text-secondary); }
+.ds-agenda__time { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.ds-agenda__title { font-weight: 600; font-size: var(--text-md); }
+.ds-agenda__meta { font-size: var(--text-xs); color: var(--text-secondary); }
+@media (max-width: 600px) { .ds-agenda > li { grid-template-columns: 48px 1fr; } .ds-agenda > li > :last-child { grid-column: 2; justify-self: start; } }
+
+/* Task row: 44px tick target, title, area, state badge */
+.ds-task { display: grid; grid-template-columns: var(--control-lg) 1fr auto; align-items: center; border-bottom: 1px solid var(--border-faint); min-height: var(--control-lg); }
+.ds-task > label { display: grid; place-items: center; height: var(--control-lg); cursor: pointer; }
+.ds-task input { width: 20px; height: 20px; accent-color: var(--action-bg); margin: 0; cursor: pointer; }
+.ds-task__title { font-weight: 600; font-size: var(--text-md); }
+.ds-task__meta { font-size: var(--text-xs); color: var(--text-secondary); }
+.ds-task[data-state="done"] .ds-task__title { color: var(--text-secondary); text-decoration: line-through; font-weight: 400; }
+.ds-task > :last-child { padding-right: var(--space-200); }
+
+/* Domain marker: area emoji with a text name */
+.ds-domain { display: inline-flex; align-items: center; gap: var(--space-100); font-size: var(--text-xs); color: var(--text-secondary); }
+
+/* Source and freshness: always a word, never colour alone */
+.ds-source { display: inline-flex; align-items: center; gap: var(--space-200); font-size: var(--text-xs); color: var(--text-secondary); }
+.ds-source::before { content: ""; width: 7px; height: 7px; border-radius: 1px; background: var(--status-success); flex: none; }
+.ds-source[data-state="stale"]::before { background: var(--status-warning); }
+.ds-source[data-state="failed"]::before { background: var(--status-danger); }
+.ds-source[data-state="loading"]::before { background: var(--text-muted); }
+.ds-source[data-state="stale"] { color: var(--status-warning-text); }
+.ds-source[data-state="failed"] { color: var(--status-danger-text); }
+
+/* Scope chip: filled square is private, outlined square is shared */
+.ds-scope { display: inline-flex; align-items: center; gap: var(--space-200); padding: var(--space-100) var(--space-300); border: 1px solid var(--border-strong); border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; background: var(--bg-raised); }
+.ds-scope::before { content: ""; width: 8px; height: 8px; background: var(--text-primary); border-radius: 1px; }
+.ds-scope[data-scope="shared"]::before { background: none; border: 2px solid var(--text-primary); }
+
+/* Next action: one recommendation, one action, with its source */
+.ds-next { display: grid; gap: var(--space-300); padding: var(--space-400); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); background: var(--bg-raised); }
+.ds-next__claim { font-family: var(--font-display); font-size: var(--text-2xl); line-height: var(--lh-snug); letter-spacing: -.015em; }
+
+/* Wall mode: read-only, 10-foot type, inverted surface */
+.ds-wall { background: var(--bg-invert); color: var(--text-on-invert); border-radius: var(--radius-lg); padding: var(--space-800); display: grid; gap: var(--space-600); }
+.ds-wall__title { font-family: var(--font-display); font-size: var(--text-wall-xl); line-height: 1.05; letter-spacing: -.02em; }
+.ds-wall__row { display: grid; grid-template-columns: auto 1fr; gap: var(--space-600); align-items: baseline; font-size: var(--text-wall-md); border-top: 1px solid color-mix(in srgb, var(--text-on-invert) 25%, transparent); padding-top: var(--space-300); }
+.ds-wall__time { font-family: var(--font-mono); opacity: .8; }
+@media (max-width: 600px) { .ds-wall { padding: var(--space-400); } .ds-wall__title { font-size: var(--text-3xl); } .ds-wall__row { font-size: var(--text-xl); gap: var(--space-300); } }
+
+/* Compact density: set data-density="compact" on any container */
+[data-density="compact"] .ds-agenda > li { padding-block: var(--space-150); min-height: var(--control-md); }
+[data-density="compact"] .ds-task, [data-density="compact"] .ds-task > label { min-height: var(--control-md); height: auto; }
+
+/* Three-panel layout */
+.ds-layout--3 { display: grid; gap: var(--space-400); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .ds-layout--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Touch sizing: any coarse pointer gets 44px targets, at any width */
+@media (pointer: coarse) {
+  .ds-check { min-height: var(--control-lg); align-items: center; }
+  .ds-check input { width: 22px; height: 22px; }
+  .ds-btn--sm { min-height: var(--control-lg); }
+}
+
 /* Gallery-only chrome (not part of the system) */
 body { margin: 0; }
 .g-bar { position: sticky; top: 0; z-index: 150; background: var(--bg-base); border-bottom: 1px solid var(--border-subtle); }
@@ -589,7 +672,7 @@ body { margin: 0; }
 
 <div class="g-bar">
   <div class="ds-wrap">
-    <strong class="ds-h4">Barrett Ahern Design System <span class="ds-mono ds-muted" style="font-weight:400">v1.1</span></strong>
+    <strong class="ds-h4">Barrett Ahern Design System <span class="ds-mono ds-muted" style="font-weight:400">v1.2</span></strong>
     <div class="ds-inline">
       <div class="ds-btn-group" role="group" aria-label="Theme">
         <button class="ds-btn ds-btn--sm" data-theme-set="auto" aria-pressed="true">Auto</button>
@@ -599,14 +682,14 @@ body { margin: 0; }
     </div>
   </div>
   <div class="ds-wrap"><nav class="g-toc" aria-label="Sections">
-    <a href="#principles">Principles</a><a href="#tokens">Tokens</a><a href="#type">Type</a><a href="#actions">Actions</a><a href="#forms">Forms</a><a href="#feedback">Feedback</a><a href="#containers">Containers</a><a href="#nav">Navigation</a><a href="#data">Data</a><a href="#audit">Audit</a><a href="#editorial">Editorial</a><a href="#overlays">Overlays</a>
+    <a href="#principles">Principles</a><a href="#tokens">Tokens</a><a href="#type">Type</a><a href="#actions">Actions</a><a href="#forms">Forms</a><a href="#feedback">Feedback</a><a href="#containers">Containers</a><a href="#nav">Navigation</a><a href="#data">Data</a><a href="#audit">Audit</a><a href="#editorial">Editorial</a><a href="#overlays">Overlays</a><a href="#app">App</a>
   </nav></div>
 </div>
 
 <main class="ds-wrap" style="padding-block:48px">
 
 <header class="ds-stack" style="margin-bottom:32px">
-  <span class="ds-eyebrow">One system · v1.1 · October 2026</span>
+  <span class="ds-eyebrow">One system · v1.2 · November 2026</span>
   <h1 class="ds-h1">Editorial restraint, app-grade structure, audit-grade data.</h1>
   <p class="ds-standfirst">Warm paper and ink from barrettahern.com, structured with clear app patterns (4px grid, 28/36/44 controls, five status tones, page and layout primitives), accented in British racing green and extended with audit components. One palette, light and dark.</p>
 </header>
@@ -819,7 +902,51 @@ body { margin: 0; }
 </section>
 
 </main>
-<footer class="ds-footer"><div class="ds-wrap">Barrett Ahern Design System v1.1. Tokens in tokens.css, components in components.css. Add new patterns here first.</div></footer>
+<footer class="ds-footer"><div class="ds-wrap">Barrett Ahern Design System v1.2. Tokens in tokens.css, components in components.css. Add new patterns here first.</div></footer>
+<section id="app">
+  <div class="g-spec"><div><h3 class="ds-h3">Person marker</h3><div class="g-meta"><span><b>Use for.</b> Who an item belongs to: Barrett, Jen, Fisher. Initial plus name, colour from <code>--person-*</code>.</span><span><b>Avoid.</b> Using person colours for state. Status keeps the five status tones.</span></div></div>
+  <div class="g-demo"><div class="ds-inline" style="gap:24px"><span class="ds-person" data-person="barrett" data-initial="B">Barrett</span><span class="ds-person" data-person="jen" data-initial="J">Jen</span><span class="ds-person" data-person="fisher" data-initial="F">Fisher</span></div></div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Agenda row</h3><div class="g-meta"><span><b>Use for.</b> Any timed list: calendar, rota, schedule. The left bar names the owner, the badge carries the state (now, done, clash).</span><span><b>Avoid.</b> State by colour alone.</span></div></div>
+  <div class="g-demo"><ul class="ds-agenda">
+    <li data-person="fisher" data-state="past"><span class="ds-agenda__time">08:30</span><div><div class="ds-agenda__title">Nursery drop-off</div><div class="ds-agenda__meta">Fisher day</div></div><span class="ds-badge ds-badge--plain">Done</span></li>
+    <li data-person="barrett" data-state="now"><span class="ds-agenda__time">11:00</span><div><div class="ds-agenda__title">Client call</div><div class="ds-agenda__meta">Barrett, 45 minutes</div></div><span class="ds-badge ds-badge--info">Now</span></li>
+    <li data-person="jen"><span class="ds-agenda__time">11:30</span><div><div class="ds-agenda__title">Appointment</div><div class="ds-agenda__meta">Jen</div></div><span class="ds-badge ds-badge--critical">Clash with 11:00</span></li>
+  </ul></div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Task row and domain marker</h3><div class="g-meta"><span><b>Use for.</b> A task from the Tasks database. 44px tick target, priority and state as words, area as emoji with a text name.</span><span><b>Avoid.</b> Setting a task Done from the row alone when the evidence is an email or calendar entry. Ask first.</span></div></div>
+  <div class="g-demo">
+    <div class="ds-task"><label><input type="checkbox" aria-label="Mark Send reply as done"></label><div><div class="ds-task__title">Send reply</div><div class="ds-task__meta"><span class="ds-domain"><span role="img" aria-label="Career">💼</span> Career</span> · due today</div></div><span class="ds-badge ds-badge--attention">P1 Due today</span></div>
+    <div class="ds-task"><label><input type="checkbox" aria-label="Mark Renew cover as done"></label><div><div class="ds-task__title">Renew cover</div><div class="ds-task__meta"><span class="ds-domain"><span role="img" aria-label="Household">🏠</span> Household</span> · due 2 days ago</div></div><span class="ds-badge ds-badge--critical">P2 Overdue</span></div>
+    <div class="ds-task" data-state="done"><label><input type="checkbox" checked aria-label="Mark Book review as not done"></label><div><div class="ds-task__title">Book review</div><div class="ds-task__meta"><span class="ds-domain"><span role="img" aria-label="Family">👨‍👩‍👦</span> Family</span> · done</div></div><span class="ds-badge ds-badge--success">Done</span></div>
+    <div class="ds-inline" style="gap:24px"><span class="ds-domain"><span role="img" aria-label="Finance">💲</span> Finance</span><span class="ds-domain"><span role="img" aria-label="Health">⚕️</span> Health</span><span class="ds-domain"><span role="img" aria-label="Household">🏠</span> Household</span><span class="ds-domain"><span role="img" aria-label="Family">👨‍👩‍👦</span> Family</span><span class="ds-domain"><span role="img" aria-label="Career">💼</span> Career</span></div>
+  </div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Source and freshness</h3><div class="g-meta"><span><b>Use for.</b> Every panel header. States: fresh, stale, failed, loading. A failed panel keeps its last copy and says so.</span><span><b>Avoid.</b> Hiding a failure.</span></div></div>
+  <div class="g-demo">
+    <p class="ds-source" data-state="fresh">Gmail, updated 22:31</p>
+    <p class="ds-source" data-state="stale">Calendar, stale: last updated 3 hours ago</p>
+    <div class="ds-inline"><p class="ds-source" data-state="failed">Notion, failed: showing the 18:02 copy</p><button class="ds-btn ds-btn--sm" type="button">Retry</button></div>
+    <p class="ds-source" data-state="loading">Home Hub, loading</p>
+  </div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Scope chip</h3><div class="g-meta"><span><b>Use for.</b> The top of any screen others can see. Filled square is private, outlined square is shared.</span><span><b>Avoid.</b> Relying on the chip for safety. A shared view must not load private data at all.</span></div></div>
+  <div class="g-demo"><div class="ds-inline"><span class="ds-scope" data-scope="private">Private to Barrett</span><span class="ds-scope" data-scope="shared">Shared with Jen, private items hidden</span></div></div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Next action</h3><div class="g-meta"><span><b>Use for.</b> One recommendation, one action, with its source.</span><span><b>Avoid.</b> Reusing the verdict card, which opens reports and carries the accent chip.</span></div></div>
+  <div class="g-demo"><div class="ds-next"><span class="ds-eyebrow">Start here</span><p class="ds-next__claim">Send the reply that is due before noon.</p><div class="ds-inline"><button class="ds-btn" type="button">Open draft</button><span class="ds-source" data-state="fresh">Gmail, updated 22:31</span></div></div></div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Wall mode</h3><div class="g-meta"><span><b>Use for.</b> Read-only wall screens such as the Echo Show. Sizes <code>--text-wall-md</code> 28 to <code>--text-wall-2xl</code> 96.</span><span><b>Avoid.</b> Buttons, private items, and relying on the browser staying open.</span></div></div>
+  <div class="g-demo"><div class="ds-wall" role="img" aria-label="Wall display example"><div class="ds-wall__title">Saturday</div><div class="ds-wall__row"><span class="ds-wall__time">09:00</span><span>Fisher day: Barrett</span></div><div class="ds-wall__row"><span class="ds-wall__time">18:30</span><span>Dinner: from the meal plan</span></div></div></div></div>
+
+  <div class="g-spec"><div><h3 class="ds-h3">Density, three-panel layout and touch</h3><div class="g-meta"><span><b>Use for.</b> <code>data-density="compact"</code> on a container for tighter rows. <code>.ds-layout--3</code> for three equal panels from 900px. On touch screens (<code>pointer: coarse</code>) checks and small buttons grow to 44px at any width.</span></div></div>
+  <div class="g-demo"><div class="ds-grid ds-g2">
+    <div><span class="ds-eyebrow">Default</span><ul class="ds-agenda"><li data-person="barrett"><span class="ds-agenda__time">09:00</span><span class="ds-agenda__title">Stand-up</span><span></span></li></ul></div>
+    <div data-density="compact"><span class="ds-eyebrow">Compact</span><ul class="ds-agenda"><li data-person="barrett"><span class="ds-agenda__time">09:00</span><span class="ds-agenda__title">Stand-up</span><span></span></li></ul></div>
+  </div>
+  <div class="ds-layout--3"><div class="ds-card ds-card--sunken"><h4 class="ds-h4">This week</h4></div><div class="ds-card ds-card--sunken"><h4 class="ds-h4">Dinners</h4></div><div class="ds-card ds-card--sunken"><h4 class="ds-h4">Shared tasks</h4></div></div></div></div>
+</section>
+
 <div class="ds-toast" id="toast" role="status"><span id="toastMsg">Done</span></div>
 
 <script>

@@ -3,7 +3,7 @@
    Requires tokens.css. All values come from tokens. No hex codes in this file.
    Naming: .ds-<component>, .ds-<component>--<variant>, .ds-<component>__<part>
    Sections: 1 Base · 2 Layout · 3 Type · 4 Actions · 5 Forms · 6 Feedback · 7 Containers
-             8 Navigation · 9 Data display · 10 Audit/report · 11 Editorial · 12 Overlays
+             8 Navigation · 9 Data display · 10 Audit/report · 11 Editorial · 12 Overlays · 13 App and wall screens
    ========================================================================== */
 
 /* 1. Base ------------------------------------------------------------------ */
@@ -335,3 +335,75 @@
 .ds-modal__foot { display: flex; justify-content: flex-end; gap: var(--space-200); border-top: 1px solid var(--border-faint); background: var(--bg-sunken); }
 .ds-tooltip { position: relative; }
 .ds-tooltip[data-tip]:hover::after, .ds-tooltip[data-tip]:focus-visible::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--bg-invert); color: var(--text-on-invert); font-size: var(--text-xs); padding: var(--space-100) var(--space-200); border-radius: var(--radius-sm); white-space: nowrap; z-index: var(--z-popover); }
+
+/* 13. App and wall screens (v1.2) ------------------------------------------ */
+/* Person marker: initial plus name. Colour identifies the owner, never the state. */
+.ds-person { --p: var(--text-secondary); display: inline-flex; align-items: center; gap: var(--space-150); font-size: var(--text-sm); font-weight: 500; }
+.ds-person::before { content: attr(data-initial); display: grid; place-items: center; width: 20px; height: 20px; border-radius: var(--radius-sm); background: var(--p); color: var(--bg-base); font: 700 var(--text-2xs)/1 var(--font-sans); }
+.ds-person[data-person="barrett"] { --p: var(--person-barrett); }
+.ds-person[data-person="jen"] { --p: var(--person-jen); }
+.ds-person[data-person="fisher"] { --p: var(--person-fisher); }
+
+/* Agenda row: time, title, owner bar, state badge */
+.ds-agenda > li { --p: var(--border-strong); display: grid; grid-template-columns: 56px 1fr auto; gap: var(--space-300); align-items: center; padding: var(--space-300); border-bottom: 1px solid var(--border-faint); border-left: 3px solid var(--p); min-height: var(--control-lg); }
+.ds-agenda > li[data-person="barrett"] { --p: var(--person-barrett); }
+.ds-agenda > li[data-person="jen"] { --p: var(--person-jen); }
+.ds-agenda > li[data-person="fisher"] { --p: var(--person-fisher); }
+.ds-agenda > li[data-state="now"] { background: var(--bg-sunken); }
+.ds-agenda > li[data-state="past"] .ds-agenda__title { color: var(--text-secondary); }
+.ds-agenda__time { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.ds-agenda__title { font-weight: 600; font-size: var(--text-md); }
+.ds-agenda__meta { font-size: var(--text-xs); color: var(--text-secondary); }
+@media (max-width: 600px) { .ds-agenda > li { grid-template-columns: 48px 1fr; } .ds-agenda > li > :last-child { grid-column: 2; justify-self: start; } }
+
+/* Task row: 44px tick target, title, area, state badge */
+.ds-task { display: grid; grid-template-columns: var(--control-lg) 1fr auto; align-items: center; border-bottom: 1px solid var(--border-faint); min-height: var(--control-lg); }
+.ds-task > label { display: grid; place-items: center; height: var(--control-lg); cursor: pointer; }
+.ds-task input { width: 20px; height: 20px; accent-color: var(--action-bg); margin: 0; cursor: pointer; }
+.ds-task__title { font-weight: 600; font-size: var(--text-md); }
+.ds-task__meta { font-size: var(--text-xs); color: var(--text-secondary); }
+.ds-task[data-state="done"] .ds-task__title { color: var(--text-secondary); text-decoration: line-through; font-weight: 400; }
+.ds-task > :last-child { padding-right: var(--space-200); }
+
+/* Domain marker: area emoji with a text name */
+.ds-domain { display: inline-flex; align-items: center; gap: var(--space-100); font-size: var(--text-xs); color: var(--text-secondary); }
+
+/* Source and freshness: always a word, never colour alone */
+.ds-source { display: inline-flex; align-items: center; gap: var(--space-200); font-size: var(--text-xs); color: var(--text-secondary); }
+.ds-source::before { content: ""; width: 7px; height: 7px; border-radius: 1px; background: var(--status-success); flex: none; }
+.ds-source[data-state="stale"]::before { background: var(--status-warning); }
+.ds-source[data-state="failed"]::before { background: var(--status-danger); }
+.ds-source[data-state="loading"]::before { background: var(--text-muted); }
+.ds-source[data-state="stale"] { color: var(--status-warning-text); }
+.ds-source[data-state="failed"] { color: var(--status-danger-text); }
+
+/* Scope chip: filled square is private, outlined square is shared */
+.ds-scope { display: inline-flex; align-items: center; gap: var(--space-200); padding: var(--space-100) var(--space-300); border: 1px solid var(--border-strong); border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 600; background: var(--bg-raised); }
+.ds-scope::before { content: ""; width: 8px; height: 8px; background: var(--text-primary); border-radius: 1px; }
+.ds-scope[data-scope="shared"]::before { background: none; border: 2px solid var(--text-primary); }
+
+/* Next action: one recommendation, one action, with its source */
+.ds-next { display: grid; gap: var(--space-300); padding: var(--space-400); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); background: var(--bg-raised); }
+.ds-next__claim { font-family: var(--font-display); font-size: var(--text-2xl); line-height: var(--lh-snug); letter-spacing: -.015em; }
+
+/* Wall mode: read-only, 10-foot type, inverted surface */
+.ds-wall { background: var(--bg-invert); color: var(--text-on-invert); border-radius: var(--radius-lg); padding: var(--space-800); display: grid; gap: var(--space-600); }
+.ds-wall__title { font-family: var(--font-display); font-size: var(--text-wall-xl); line-height: 1.05; letter-spacing: -.02em; }
+.ds-wall__row { display: grid; grid-template-columns: auto 1fr; gap: var(--space-600); align-items: baseline; font-size: var(--text-wall-md); border-top: 1px solid color-mix(in srgb, var(--text-on-invert) 25%, transparent); padding-top: var(--space-300); }
+.ds-wall__time { font-family: var(--font-mono); opacity: .8; }
+@media (max-width: 600px) { .ds-wall { padding: var(--space-400); } .ds-wall__title { font-size: var(--text-3xl); } .ds-wall__row { font-size: var(--text-xl); gap: var(--space-300); } }
+
+/* Compact density: set data-density="compact" on any container */
+[data-density="compact"] .ds-agenda > li { padding-block: var(--space-150); min-height: var(--control-md); }
+[data-density="compact"] .ds-task, [data-density="compact"] .ds-task > label { min-height: var(--control-md); height: auto; }
+
+/* Three-panel layout */
+.ds-layout--3 { display: grid; gap: var(--space-400); grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 900px) { .ds-layout--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Touch sizing: any coarse pointer gets 44px targets, at any width */
+@media (pointer: coarse) {
+  .ds-check { min-height: var(--control-lg); align-items: center; }
+  .ds-check input { width: 22px; height: 22px; }
+  .ds-btn--sm { min-height: var(--control-lg); }
+}

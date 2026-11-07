@@ -1,4 +1,4 @@
-# Barrett Ahern Design System v1.1
+# Barrett Ahern Design System v1.2
 
 One system. Paper neutrals and editorial type from barrettahern.com, a clean app-UI structure and patterns, British racing green as the single accent, and audit components for data and reports. It replaces the earlier three-palette version: there is no palette switch any more.
 
@@ -15,7 +15,7 @@ One system. Paper neutrals and editorial type from barrettahern.com, a clean app
 3. **Colour never carries meaning alone.** Every status has a word and a square marker. Every delta has an arrow and a stated comparison period.
 4. **Every number has a client, a period and a source.** Label anything modelled or illustrative where it appears. Never invent figures.
 5. **Reuse before you build.** If a component exists, copy it. A new pattern uses the same tokens, gets a gallery entry and a row in the component reference.
-6. **Accessible by default.** Text 4.5:1 or better (validated in `build_tokens.py`), visible 2px focus ring, 44px touch targets on mobile, reduced motion honoured, one `h1` per page.
+6. **Accessible by default.** Text 4.5:1 or better (validated in `build_tokens.py`), visible 2px focus ring, 44px touch targets on mobile and on any touch screen (`pointer: coarse`), reduced motion honoured, one `h1` per page.
 7. **Copy.** British spelling. No em dashes. Sentence case. Numbers in tabular figures (`.ds-num`).
 
 ## 2. Colour
@@ -49,6 +49,8 @@ Typography is DM Serif Display for display, DM Sans for text and numerals (tabul
 - **Space (4px grid):** `--space-100` 4px, 200 8, 300 12, 400 16, 600 24, 800 32, 1200 48, 1600 64.
 - **Shape:** `--radius-sm` 4, `--radius-md` 8, `--radius-lg` 12. Cards are flat with hairlines; only overlays use `--shadow-pop`.
 - **Controls:** `--control-sm` 28, `--control-md` 36, `--control-lg` 44.
+- **People:** `--person-barrett` (peacock blue), `--person-jen` (basil green), `--person-fisher` (stone, same as `--accent-2`). Identify the owner of an item, always with an initial and a name. Never used for status. Contrast validated in `build_tokens.py`.
+- **Wall scale:** `--text-wall-md` 28, `-lg` 40, `-xl` 64, `-2xl` 96. Wall mode only.
 - **Motion:** `--ease` cubic-bezier(.16,1,.3,1), 120 / 200 / 360ms.
 
 Compatibility aliases (`--color-bg`, `--color-ink`, `--color-rule` and so on) are included so the existing site stylesheet runs on these tokens unchanged.
@@ -73,6 +75,8 @@ Compatibility aliases (`--color-bg`, `--color-ink`, `--color-rule` and so on) ar
 - Grids: gap 12px, auto-fit (`.ds-g2` 320, `.ds-g3` 260, `.ds-g4` 210).
 - App pages: breadcrumb, `.ds-page-header` with one primary action, then `.ds-layout` (main two thirds, secondary one third). Settings pages use `.ds-annotated`.
 - Breakpoints: 600 (nav wraps), 768 (gutters, bands), 900 (two-column layouts).
+
+- App screens: every panel states its source and freshness (`.ds-source`). A screen others can see shows a scope chip (`.ds-scope`) and must not load private data. Wall screens are read-only (`.ds-wall`).
 
 ## 6. Report spine (client audits)
 

@@ -32,6 +32,14 @@ Class names are `ds-<component>`, variants `ds-<component>--<variant>`, parts `d
 | Steps | `.ds-steps` | Numbered process | |
 | Hero, stat, service, publication, event, testimonial, footer | `.ds-hero` `.ds-stat` `.ds-service` `.ds-pub` `.ds-event` `.ds-testimonial` `.ds-footer` | barrettahern.com pages | In dense app screens |
 | Modal, tooltip | `.ds-modal` (native `<dialog>`), `.ds-tooltip[data-tip]` | Confirm irreversible actions | Forms with more than five fields |
+| Person marker | `.ds-person[data-person][data-initial]`, tokens `--person-*` | Who an item belongs to: initial plus name | Person colour for state |
+| Agenda row | `.ds-agenda > li[data-person][data-state]` `__time` `__title` `__meta` | Any timed list: calendar, rota, schedule. Owner bar, state badge | State by colour alone |
+| Task row | `.ds-task[data-state=done]` `__title` `__meta`, `.ds-domain` | A task with a 44px tick target, priority and state as words, area as emoji plus text name | Marking Done from email or calendar evidence alone |
+| Source and freshness | `.ds-source[data-state]` | Every panel header: source, time and state in words | Hiding a failure; a failed panel keeps its last copy and says so |
+| Scope chip | `.ds-scope[data-scope]` | Top of any screen others can see | Using the chip as the safety control; shared views must not load private data |
+| Next action | `.ds-next` `__claim` | One recommendation, one action, with its source | The verdict card outside reports |
+| Wall mode | `.ds-wall` `__title` `__row` `__time`, tokens `--text-wall-*` | Read-only 10-foot screens such as the Echo Show | Buttons, private items, relying on the browser staying open |
+| Density, three-panel layout | `[data-density=compact]`, `.ds-layout--3` | Tighter rows on a container; three equal panels from 900px | Compact density on touch screens |
 
 ## Not yet built (add to the gallery first, then here)
 

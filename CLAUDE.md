@@ -1,5 +1,5 @@
 # Design system
-Follow the Barrett Ahern Design System v1.1 (tokens.css, components.css, gallery in design-system/).
+Follow the Barrett Ahern Design System v1.2 (tokens.css, components.css, gallery in design-system/).
 - One palette (paper + racing green). Link tokens.css then components.css. body class "ds-root".
 - Use var(--token) only. No hex values in new CSS. Reuse .ds-* components; if you add one, add it to design-system/index.html and COMPONENT_REFERENCE.md.
 - The legacy css/style.css maps onto the tokens through the compatibility aliases in tokens.css. When touching a page, migrate its classes to .ds-* rather than adding new legacy classes.

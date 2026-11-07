@@ -15,6 +15,8 @@
   /* Type scale (app-sized body, editorial display) */
   --text-2xs: 11px;  --text-xs: 12px;  --text-sm: 13px;  --text-md: 14px;
   --text-lg: 16px;   --text-xl: 20px;  --text-2xl: 24px; --text-3xl: 32px; --text-4xl: 44px;
+  /* Wall scale (10-foot screens, wall mode only) */
+  --text-wall-md: 28px; --text-wall-lg: 40px; --text-wall-xl: 64px; --text-wall-2xl: 96px;
   --lh-tight: 1.15;  --lh-snug: 1.3;   --lh-body: 1.55;
 
   /* Spacing: 4px grid (space-100 = 4px) */
@@ -62,6 +64,8 @@
   --accent-ink: #FAFAF8;
   --accent-text: #0F4C3A;
   --accent-2: #736046;
+  --person-barrett: #1D6A8A;
+  --person-jen: #3B7A3E;
   --accent-on-invert: #94C3B4;
   --accent-on-invert-ink: #041F16;
   --action-bg: #1C1B19;
@@ -72,6 +76,7 @@
   --shadow-pop: 0 8px 24px -6px rgba(28,27,25,.18);
   --chart-ink: #1C1B19;
   --chart-accent: #0F4C3A;
+  --person-fisher: var(--accent-2);
   --status-success: #1F7A4C;
   --status-success-tint: #CBEBD3;
   --status-success-ink: #14513A;
@@ -117,6 +122,8 @@
   --accent-ink: #1C1B19;
   --accent-text: #7FB8A4;
   --accent-2: #C4B091;
+  --person-barrett: #6FB6D2;
+  --person-jen: #8CC48F;
   --accent-on-invert: #0F4C3A;
   --accent-on-invert-ink: #F4F3EF;
   --action-bg: #F4F3EF;
@@ -127,6 +134,7 @@
   --shadow-pop: 0 8px 24px -6px rgba(0,0,0,.6);
   --chart-ink: #F4F3EF;
   --chart-accent: #62A390;
+  --person-fisher: var(--accent-2);
   --status-success: #1F7A4C;
   --status-success-tint: #CBEBD3;
   --status-success-ink: #14513A;
@@ -172,6 +180,8 @@
   --accent-ink: #1C1B19;
   --accent-text: #7FB8A4;
   --accent-2: #C4B091;
+  --person-barrett: #6FB6D2;
+  --person-jen: #8CC48F;
   --accent-on-invert: #0F4C3A;
   --accent-on-invert-ink: #F4F3EF;
   --action-bg: #F4F3EF;
@@ -182,6 +192,7 @@
   --shadow-pop: 0 8px 24px -6px rgba(0,0,0,.6);
   --chart-ink: #F4F3EF;
   --chart-accent: #62A390;
+  --person-fisher: var(--accent-2);
   --status-success: #1F7A4C;
   --status-success-tint: #CBEBD3;
   --status-success-ink: #14513A;
